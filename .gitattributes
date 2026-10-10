@@ -1,2 +1,10 @@
 # Unified diff artifacts need a context marker on otherwise empty lines.
 evals/results/**/*.patch -whitespace
+
+# Outputs fully owned by make sync; collapse them in reviews and language stats.
+# package.json and .ai-rulez/config.toml only mirror generated fields, so stay visible.
+skills/** linguist-generated
+plugins/ghost-library-skills/** linguist-generated
+.claude-plugin/** linguist-generated
+.codex-plugin/** linguist-generated
+.agents/plugins/marketplace.json linguist-generated
