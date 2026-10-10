@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ghost Init"
-  short_description: "Create a bounded ghost-library contract and fixtures"
-  default_prompt: "Use $ghost-init to turn this idea into a ghost-library contract."

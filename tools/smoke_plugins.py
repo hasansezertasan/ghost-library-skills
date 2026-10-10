@@ -91,7 +91,7 @@ def app_server(cwd: Path, command: list[str] | None = None):
 def claude_validation(bundle: Path, repository: bool = False) -> dict:
     base = bundle if repository else bundle / "claude"
     targets = {
-        "manifest": base if repository else base / "plugins/ghost-library-skills",
+        "manifest": base,
         "marketplace": base / ".claude-plugin/marketplace.json",
     }
     results = {}
@@ -112,7 +112,7 @@ def claude_validation(bundle: Path, repository: bool = False) -> dict:
 def codex_smoke(bundle: Path, workspace: Path | None = None, target: str = "contract", repository: bool = False) -> dict:
     base = bundle if repository else bundle / "codex"
     marketplace = base / ".agents/plugins/marketplace.json"
-    plugin = base / "plugins/ghost-library-skills"
+    plugin = base
     with app_server(workspace or base) as server:
         detail = server.request("plugin/read", {"marketplacePath": str(marketplace), "pluginName": "ghost-library-skills"})["plugin"]
         expected = {f"ghost-library-skills:{skill.parent.name}" for skill in (plugin / "skills").glob("*/SKILL.md")}

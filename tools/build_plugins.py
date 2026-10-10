@@ -19,15 +19,15 @@ except ImportError:
 HOSTS = {"claude": ".claude-plugin", "codex": ".codex-plugin"}
 CATALOGS = {"claude": ".claude-plugin", "codex": ".agents/plugins"}
 SKILL_PATHS = {
-    "claude": "plugins/ghost-library-skills/skills",
-    "codex": "plugins/ghost-library-skills/skills",
+    "claude": "skills",
+    "codex": "skills",
     "opencode": ".opencode/skills",
     "pi": "skills",
 }
 
 
 def build_plugins(root: Path, output: Path) -> dict[str, int]:
-    shared = metadata(root)
+    metadata(root)
     problems = sync(root, check=True)
     if problems:
         raise ValueError('Stale native packaging; run make sync: ' + '; '.join(problems))
@@ -47,12 +47,11 @@ def build_plugins(root: Path, output: Path) -> dict[str, int]:
         for host, manifest_directory in HOSTS.items():
             manifest = load_object(root / manifest_directory / 'plugin.json')
             marketplace = load_object(root / CATALOGS[host] / 'marketplace.json')
-            if host == 'claude':
-                marketplace['plugins'][0]['source'] = './plugins/ghost-library-skills'
+            # Like the repository, each bundle is a single-plugin root whose
+            # catalog installs "./", without maintainer content beside it.
             host_root = staging / host
-            plugin = host_root / "plugins" / shared["name"]
-            counts[host] = build(root, plugin / "skills")
-            write_json(plugin / manifest_directory / "plugin.json", manifest)
+            counts[host] = build(root, host_root / SKILL_PATHS[host])
+            write_json(host_root / manifest_directory / "plugin.json", manifest)
             write_json(host_root / CATALOGS[host] / "marketplace.json", marketplace)
         counts["opencode"] = build(root, staging / "opencode" / SKILL_PATHS["opencode"])
         package = load_object(root / 'package.json')

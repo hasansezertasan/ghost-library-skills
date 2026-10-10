@@ -25,3 +25,11 @@ capabilities = ["Read", "Write"]
 default_prompt = ["Audit this ghost library's contract and portable fixture coverage."]
 long_description = "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence."
 developer_name = "Hasan Sezer Tasan"
+
+# Single-plugin catalogs point at the repository root ("./");
+# ai-rulez fills the description and owner from [plugin].
+[plugin.codex]
+marketplace = true
+
+[marketplace]
+name = "ghost-library-skills-marketplace"

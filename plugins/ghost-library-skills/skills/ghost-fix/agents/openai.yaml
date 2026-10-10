@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ghost Fix"
-  short_description: "Diagnose downstream bugs and preserve portable behavior"
-  default_prompt: "Use $ghost-fix to reproduce and repair this ghost-library failure."

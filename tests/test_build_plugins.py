@@ -15,13 +15,13 @@ class BuildPluginsTests(unittest.TestCase):
             output = Path(temporary) / "plugins"
             self.assertEqual(build_plugins(ROOT, output), dict.fromkeys(SKILL_PATHS, 7))
             for host, directory in HOSTS.items():
-                plugin = output / host / "plugins/ghost-library-skills"
+                plugin = output / host
                 manifest = json.loads((plugin / directory / "plugin.json").read_text())
                 self.assertEqual(manifest["name"], "ghost-library-skills")
                 self.assertEqual(manifest["version"], "0.1.0")
                 validate_links(plugin, list(plugin.rglob("*.md")))
                 self.assertEqual(len(list((plugin / "skills").glob("*/SKILL.md"))), 7)
-            claude = output / "claude/plugins/ghost-library-skills/skills"
+            claude = output / "claude/skills"
             for source in claude.rglob("*"):
                 if source.is_file():
                     for host, path in SKILL_PATHS.items():
@@ -35,8 +35,8 @@ class BuildPluginsTests(unittest.TestCase):
             self.assertEqual(pi["pi"]["extensions"], [])
             claude_catalog = json.loads((output / "claude/.claude-plugin/marketplace.json").read_text())
             codex_catalog = json.loads((output / "codex/.agents/plugins/marketplace.json").read_text())
-            self.assertTrue((output / "claude" / claude_catalog["plugins"][0]["source"]).is_dir())
-            self.assertTrue((output / "codex" / codex_catalog["plugins"][0]["source"]["path"]).is_dir())
+            self.assertEqual(claude_catalog["plugins"][0]["source"], "./")
+            self.assertEqual(codex_catalog["plugins"][0]["source"]["path"], "./")
 
     def test_nonempty_output_is_preserved(self):
         with tempfile.TemporaryDirectory() as temporary:

@@ -5,7 +5,8 @@ Canonical skills and shared resources now live under `.ai-rulez/`;
 root `skills/` is a generated, self-contained installation surface.
 
 
-The subsequent [ai-rulez integration](ai-rulez.md) changes native JSON generation and points both host catalogs at the self-contained `plugins/ghost-library` member.
+The subsequent [ai-rulez integration](ai-rulez.md) changes native JSON generation.
+Both host catalogs first pointed at a self-contained `plugins/ghost-library` member; they now install the repository root as a single plugin.
 The layout and original Flow reasoning below describe the earlier implementation.
 Canonical root skills and Pi/OpenCode discovery paths are preserved.
 

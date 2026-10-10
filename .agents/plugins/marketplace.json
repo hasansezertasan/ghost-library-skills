@@ -8,7 +8,7 @@
       "name": "ghost-library-skills",
       "source": {
         "source": "local",
-        "path": "./plugins/ghost-library-skills"
+        "path": "./"
       },
       "policy": {
         "installation": "AVAILABLE",

@@ -4,13 +4,13 @@ Seven generated skills are available directly from this checkout. Claude and Cod
 
 | Host | Evidence and limits |
 | --- | --- |
-| Claude Code 2.1.289 | Strict root manifest/catalog validation; private-profile root installation and version replacement; seven discovered commands. Authenticated workflows remain weekly-quota blocked |
-| Codex CLI 0.160.0 | Root catalog parsing/discovery; network-disabled container installation and version replacement; seven discovered skills. Earlier model trials are recorded separately |
-| OpenCode 1.18.34 | Root configuration discovers seven generated skills when run from the checkout; replacement and resource checks pass. Relative skill paths resolve from the working directory. Model workflows untested |
-| Pi 1.0.1 | Private-profile root-package installation and local-path update; native resource loader discovers seven skills and resolves shared resources. Model workflows untested |
+| Claude Code 2.1.296 | Strict root manifest/catalog validation; private-profile root installation and version replacement; installation from a GitHub branch; seven discovered commands. Authenticated workflows remain weekly-quota blocked |
+| Codex CLI 0.162.1 | Root catalog parsing/discovery; network-disabled container installation and version replacement; installation from a GitHub branch; seven discovered skills. Earlier model trials are recorded separately |
+| OpenCode 1.18.35 | Root configuration discovers seven generated skills when run from the checkout; replacement and resource checks pass. Relative skill paths resolve from the working directory. Model workflows untested |
+| Pi 1.0.3 | Private-profile root-package installation and local-path update; native resource loader discovers seven skills and resolves shared resources. Model workflows untested |
 | Hermes, Antigravity | Standalone skill folders; native integrations not implemented |
 
-The [repository installation report](../evals/results/hosts/repository/README.md) records the migrated layout. The earlier [bundle installation report](../evals/results/hosts/installation/README.md), [six-workflow assessment](../evals/results/native/README.md), and [wheredirs evaluation](../evals/wheredirs/README.md) retain their original scope. Packaging checks and completed model turns do not establish task success by themselves. Desktop applications and npm/Git package upgrades have not been evaluated.
+The [single-plugin report](../evals/results/automation/single-plugin/README.md) records the current layout, in which both catalogs install the repository root. The earlier [repository installation report](../evals/results/hosts/repository/README.md) records the member layout. The earlier [bundle installation report](../evals/results/hosts/installation/README.md), [six-workflow assessment](../evals/results/native/README.md), and [wheredirs evaluation](../evals/wheredirs/README.md) retain their original scope. Packaging checks and completed model turns do not establish task success by themselves. Desktop applications and npm/Git package upgrades have not been evaluated.
 
 ## Install from a checkout
 
@@ -31,9 +31,9 @@ claude plugin update ghost-library-skills@ghost-library-skills-marketplace
 ```
 
 Restart or reload plugins afterward.
-The root catalog points at `./plugins/ghost-library-skills`,
-the same self-contained payload used by Codex.
-For a session-local trial, use `claude --plugin-dir /absolute/path/to/ghost-library-skills/plugins/ghost-library-skills`.
+The root catalog installs the repository root (`./`) as the plugin;
+Claude loads the seven skills from root `skills/`, the same payload used by Codex, Pi, and OpenCode.
+For a session-local trial, use `claude --plugin-dir /absolute/path/to/ghost-library-skills`.
 See [Claude plugins](https://code.claude.com/docs/en/plugins).
 
 ### Codex
@@ -43,7 +43,7 @@ codex plugin marketplace add /absolute/path/to/ghost-library-skills
 codex plugin add ghost-library-skills@ghost-library-skills-marketplace
 ```
 
-Select `ghost-library-skills:ghost-audit` and provide a task. The root catalog points at generated `plugins/ghost-library-skills/`, which contains real, self-contained skill folders. For a local version update, refresh the checkout, repeat `codex plugin add ghost-library-skills@ghost-library-skills-marketplace`, and start a fresh session. The tested CLI has no `plugin update`; `plugin marketplace upgrade` refreshes Git marketplace snapshots. See the [OpenAI plugin build guide](https://developers.openai.com/plugins/build/plugins).
+Select `ghost-library-skills:ghost-audit` and provide a task. The root catalog installs the repository root (`./`); Codex loads the self-contained skill folders in root `skills/`. For a local version update, refresh the checkout, repeat `codex plugin add ghost-library-skills@ghost-library-skills-marketplace`, and start a fresh session. The tested CLI has no `plugin update`; `plugin marketplace upgrade` refreshes Git marketplace snapshots. See the [OpenAI plugin build guide](https://developers.openai.com/plugins/build/plugins).
 
 ### Pi
 
@@ -92,7 +92,7 @@ make sync
 make check
 ```
 
-`make check` reports stale generated files without repairing them, validates resource links, and runs unit tests. Keep generated root `skills/`, manifests, and `plugins/ghost-library-skills/` in version control.
+`make check` reports stale generated files without repairing them, validates resource links, and runs unit tests. Keep generated root `skills/`, manifests, and catalogs in version control. It also fails when the root gains a path Claude or Codex would load from the installed plugin, such as `.mcp.json` or `hooks/`.
 Author skill procedures under `.ai-rulez/skills/`, shared resources under `.ai-rulez/references/` and `.ai-rulez/templates/`,
 and plugin metadata in `.ai-rulez/config.toml`.
 `package.json` remains the release version authority.

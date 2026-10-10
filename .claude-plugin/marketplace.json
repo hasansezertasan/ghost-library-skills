@@ -9,7 +9,20 @@
     {
       "name": "ghost-library-skills",
       "description": "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence.",
-      "source": "./plugins/ghost-library-skills"
+      "version": "0.1.0",
+      "source": "./",
+      "category": "Productivity",
+      "keywords": [
+        "ghost-library",
+        "specifications",
+        "conformance",
+        "skills",
+        "pi-package"
+      ],
+      "author": {
+        "name": "Hasan Sezer Tasan",
+        "url": "https://github.com/hasansezertasan"
+      }
     }
   ]
 }

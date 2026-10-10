@@ -8,7 +8,7 @@ import unittest
 
 from tools.build_skills import ROOT, validate_links
 from tools.smoke_installation import fingerprint
-from tools.sync_packaging import PACKAGE, sync
+from tools.sync_packaging import HOST_LOADED_PATHS, MARKETPLACE, sync
 
 
 class SyncPackagingTests(unittest.TestCase):
@@ -24,24 +24,37 @@ class SyncPackagingTests(unittest.TestCase):
         self.metadata = (self.root / 'package.json').read_bytes()
         sync(self.root)
 
-    def test_generation_preserves_sources_and_resolves_both_layouts(self):
+    def test_generation_preserves_sources_and_installs_the_root(self):
         self.assertEqual(sync(self.root, check=True), [])
         self.assertEqual(fingerprint(self.root / '.ai-rulez'), self.canonical)
         validate_links(self.root, list((self.root / 'skills').rglob('*.md')))
-        validate_links(self.root / PACKAGE, list((self.root / PACKAGE).rglob('*.md')))
-        catalog = json.loads((self.root / '.claude-plugin/marketplace.json').read_text())
-        self.assertEqual(catalog['plugins'][0]['source'], './plugins/ghost-library-skills')
+        claude = json.loads((self.root / '.claude-plugin/marketplace.json').read_text())
+        codex = json.loads((self.root / '.agents/plugins/marketplace.json').read_text())
+        self.assertEqual((claude['name'], claude['plugins'][0]['source']), (MARKETPLACE, './'))
+        self.assertEqual((codex['name'], codex['plugins'][0]['source']['path']), (MARKETPLACE, './'))
         self.assertEqual((self.root / 'package.json').read_bytes(), self.metadata)
         self.assertTrue((self.root / '.ai-rulez/config.toml').is_file())
-        self.assertFalse((self.root / PACKAGE / 'payload').exists())
-        self.assertFalse((self.root / PACKAGE / '.ai-rulez-generated.json').exists())
+        self.assertFalse((self.root / 'plugins').exists())
+        self.assertFalse((self.root / 'payload').exists())
+        self.assertFalse((self.root / '.ai-rulez-generated.json').exists())
+
+    def test_host_loaded_root_paths_are_reported_without_repair(self):
+        for name in ('.mcp.json', 'hooks'):
+            self.assertIn(name, HOST_LOADED_PATHS)
+        (self.root / '.mcp.json').write_text('{}')
+        (self.root / 'hooks').mkdir()
+        before = fingerprint(self.root)
+        errors = sync(self.root, check=True)
+        self.assertIn('host-loaded root path: .mcp.json', errors)
+        self.assertIn('host-loaded root path: hooks', errors)
+        self.assertEqual(fingerprint(self.root), before)
 
     def test_drift_check_reports_changed_missing_extra_without_repair(self):
-        package = self.root / PACKAGE
-        changed = package / 'skills/ghost-audit/SKILL.md'
+        skills = self.root / 'skills'
+        changed = skills / 'ghost-audit/SKILL.md'
         changed.write_text('stale payload')
-        (package / 'skills/ghost-audit/references/contract-rules.md').unlink()
-        (package / 'obsolete.txt').write_text('old release only')
+        (skills / 'ghost-audit/references/contract-rules.md').unlink()
+        (skills / 'obsolete.txt').write_text('old release only')
         before = fingerprint(self.root)
         errors = sync(self.root, check=True)
         self.assertTrue(any('changed:' in e and 'SKILL.md' in e for e in errors))
@@ -59,7 +72,7 @@ class SyncPackagingTests(unittest.TestCase):
         path.write_text(json.dumps(package))
         before = fingerprint(self.root)
         errors = sync(self.root, check=True)
-        for target in ('.claude-plugin/plugin.json', '.codex-plugin/plugin.json', str(PACKAGE)):
+        for target in ('.claude-plugin/plugin.json', '.codex-plugin/plugin.json', '.claude-plugin/marketplace.json'):
             self.assertTrue(any(target in error for error in errors))
         self.assertEqual(fingerprint(self.root), before)
         sync(self.root)
@@ -67,9 +80,9 @@ class SyncPackagingTests(unittest.TestCase):
             self.assertEqual(json.loads(path.read_text())['version'], '0.2.0')
 
     def test_symlinked_payload_is_rejected_and_external_target_preserved(self):
-        file = self.root / PACKAGE / 'skills/ghost-audit/SKILL.md'
+        file = self.root / 'skills/ghost-audit/SKILL.md'
         file.unlink()
-        file.symlink_to(self.root / 'skills/ghost-audit/SKILL.md')
+        file.symlink_to(self.root / '.ai-rulez/skills/ghost-audit/SKILL.md')
         errors = sync(self.root, check=True)
         self.assertTrue(any('symlink:' in e for e in errors))
         self.assertTrue(file.is_symlink())
@@ -82,7 +95,6 @@ class SyncPackagingTests(unittest.TestCase):
         self.assertTrue(any('extra:' in error and 'ghost-init' in error for error in errors))
         self.assertEqual(fingerprint(self.root), before)
         sync(self.root)
-        self.assertFalse((self.root / PACKAGE / 'skills/ghost-init').exists())
         self.assertFalse((self.root / 'skills/ghost-init').exists())
         self.assertEqual(sync(self.root, check=True), [])
 
@@ -92,7 +104,7 @@ class SyncPackagingTests(unittest.TestCase):
         errors = sync(self.root, check=True)
         self.assertTrue(any('.codex-plugin/plugin.json' in error for error in errors))
         sync(self.root)
-        for path in (self.root / '.codex-plugin/plugin.json', self.root / PACKAGE / '.codex-plugin/plugin.json'):
+        for path in (self.root / '.codex-plugin/plugin.json',):
             self.assertEqual(json.loads(path.read_text())['interface']['displayName'], 'Changed display name')
 
     def test_root_skill_drift_is_detected_without_repair(self):

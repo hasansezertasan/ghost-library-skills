@@ -19,9 +19,15 @@ except ImportError:
 
 
 MARKETPLACE = 'ghost-library-skills-marketplace'
-PACKAGE = Path('plugins/ghost-library-skills')
 METADATA_KEYS = ('name', 'version', 'description', 'author', 'repository', 'keywords')
 PI_RESOURCES = {'skills': ['./skills'], 'extensions': [], 'prompts': [], 'themes': []}
+# Both catalogs install the repository root, so any root path a host loads by
+# default would ship to users. Claude: plugins-reference "Standard layout";
+# Codex: plugins/build. skills/ and the manifest directories are intended.
+HOST_LOADED_PATHS = (
+    'commands', 'agents', 'hooks', 'output-styles', 'workflows', 'themes', 'monitors', 'bin',
+    '.mcp.json', '.lsp.json', 'settings.json', 'SKILL.md', 'CLAUDE.md', 'plugin.json', 'mcp.json',
+)
 
 
 def load_object(path: Path) -> dict:
@@ -61,7 +67,18 @@ def configuration(root: Path) -> dict:
         raise ValueError('Expected the generated plugin version mirror in TOML')
     if plugin.get('runtimes') != ['claude', 'codex']:
         raise ValueError('Only the validated Claude/Codex plugin runtimes are enabled')
+    marketplace = value.get('marketplace', {})
+    if marketplace.get('name') != MARKETPLACE or marketplace.get('members'):
+        raise ValueError(f'Expected a single-plugin {MARKETPLACE} catalog')
+    if plugin.get('codex', {}).get('marketplace') is not True:
+        raise ValueError('Expected the single-plugin Codex catalog to be enabled')
     return value
+
+
+def host_loaded_paths(root: Path) -> list[str]:
+    """Name root paths Claude or Codex would load from the installed plugin."""
+    return [f'host-loaded root path: {name}' for name in HOST_LOADED_PATHS
+            if (root / name).exists() or (root / name).is_symlink()]
 
 
 MANIFEST_PATHS = (
@@ -105,17 +122,11 @@ def generate(root: Path, output: Path) -> None:
     config = configuration(root)
     with tempfile.TemporaryDirectory(prefix='ghost-ai-rulez-') as temporary:
         staging = Path(temporary)
-        member = staging / PACKAGE
         # Assemble authored shared resources and supply the npm version before
-        # rendering the released marketplace/member format in a fresh tree.
-        build(root, member / 'payload/skills')
-        write_toml(staging / '.ai-rulez/config.toml', {
-            'version': '5.0', 'name': MARKETPLACE, 'gitignore': False,
-            'marketplace': {'name': MARKETPLACE, 'description': shared['description'],
-                            'members': [str(PACKAGE)], 'owner': shared['author']},
-        })
+        # rendering the single-plugin catalogs in a fresh tree.
+        build(root, staging / 'payload/skills')
         config['plugin'].update(version=shared['version'], content_root='payload')
-        write_toml(member / '.ai-rulez/config.toml', config)
+        write_toml(staging / '.ai-rulez/config.toml', config)
         executable = ROOT / 'node_modules/.bin/ai-rulez'
         for action in ('generate', 'verify'):
             result = subprocess.run([str(executable), action, '--plugin'], cwd=staging,
@@ -123,18 +134,12 @@ def generate(root: Path, output: Path) -> None:
             if result.returncode:
                 raise ValueError(f'ai-rulez {action} failed: {result.stderr}')
         for path in MANIFEST_PATHS:
-            source = member / path if path.name == 'plugin.json' else staging / path
             destination = output / path
             destination.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(source, destination)
+            shutil.copyfile(staging / path, destination)
         # Publish plain canonical content with portable resource links, rather
         # than tool provenance headers in user-facing templates and procedures.
-        build(root, output / PACKAGE / 'skills')
-        shutil.copytree(output / PACKAGE / 'skills', output / 'skills')
-        for directory in ('.claude-plugin', '.codex-plugin'):
-            destination = output / PACKAGE / directory / 'plugin.json'
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(member / directory / 'plugin.json', destination)
+        build(root, output / 'skills')
         # npm tooling and Pi declarations remain authored; plugin metadata is
         # derived from TOML, while the npm version remains the release authority.
         package.update(shared)
@@ -178,7 +183,7 @@ def sync(root: Path, check: bool = False) -> list[str]:
     with tempfile.TemporaryDirectory(prefix='ghost-packaging-') as temporary:
         expected = Path(temporary)
         generate(root, expected)
-        directory_targets = (PACKAGE, Path('skills'))
+        directory_targets = (Path('skills'),)
         targets = [*MANIFEST_PATHS, *directory_targets, Path('package.json'), SOURCE / 'config.toml']
         for target in targets:
             destination = root / target
@@ -188,7 +193,7 @@ def sync(root: Path, check: bool = False) -> list[str]:
                 if parent.is_symlink():
                     raise ValueError(f'Symlinked generated path: {parent}')
         if check:
-            problems = []
+            problems = host_loaded_paths(root)
             for target in targets:
                 destination = root / target
                 if target in directory_targets:

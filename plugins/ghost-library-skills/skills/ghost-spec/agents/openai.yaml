@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ghost Spec"
-  short_description: "Define precise behavior and compatibility changes"
-  default_prompt: "Use $ghost-spec to update this ghost library's behavioral contract."

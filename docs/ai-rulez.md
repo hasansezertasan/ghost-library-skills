@@ -29,8 +29,8 @@ ai-rulez documents supporting resources within each skill;
 our builder copies the shared sources into each distributed skill and rewrites their links.
 Generated skills can be moved independently, including their `agents/openai.yaml` metadata.
 
-Root `skills/`, `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/marketplace.json`,
-and `plugins/ghost-library-skills/` are generated distribution surfaces.
+Root `skills/`, `.claude-plugin/`, `.codex-plugin/`, and `.agents/plugins/marketplace.json`
+are generated distribution surfaces.
 Keep them in version control so consumers need no generator installation.
 Edit their sources and regenerate instead of editing generated content directly.
 
@@ -49,11 +49,19 @@ The wrapper then runs ai-rulez `generate --plugin` and `verify --plugin` in stag
 Python tooling uses the standard library;
 CI interpreter versions are selected by `.python-version` and `.node-version`.
 
-Released ai-rulez's marketplace/member configuration generates both catalogs,
-with one staged member at `plugins/ghost-library-skills`.
-This is a catalog compatibility step, not a second authored plugin project.
-The committed `.ai-rulez/config.toml` supplies the member's plugin configuration.
-Both catalogs install the same tracked, self-contained member.
+ai-rulez generates both catalogs in single-plugin mode:
+`[marketplace]` sets only the catalog name, `[plugin.codex] marketplace = true` enables the Codex catalog,
+and both entries install the repository root (`"./"`).
+Claude and Codex load the seven skills from root `skills/`,
+the same tree Pi and OpenCode discover, so each skill is generated once.
+
+Installing the root means each host's plugin cache also holds maintainer content
+such as `evals/`, `docs/`, and `tools/`; the hosts load none of it.
+They do load default component paths, so `make check` fails when the root gains one
+(for example `.mcp.json`, `hooks/`, `agents/`, `commands/`, `bin/`, or `settings.json`).
+Claude also runs a best-effort npm install for root `package.json`;
+it adds only the ai-rulez wrapper, and installation succeeds without npm or network.
+See [the single-plugin evidence](../evals/results/automation/single-plugin/README.md).
 
 Only ai-rulez native JSON output is promoted into the checkout.
 Distributed skill content comes from our resource builder,

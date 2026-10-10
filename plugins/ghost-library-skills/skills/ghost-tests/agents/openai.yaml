@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ghost Tests"
-  short_description: "Write portable fixtures and map behavioral coverage"
-  default_prompt: "Use $ghost-tests to improve this ghost library's portable coverage."

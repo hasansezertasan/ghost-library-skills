@@ -71,7 +71,7 @@ jobs:
           uv python install
           make sync PYTHON="uv run --no-project python"
           make check-all PYTHON="uv run --no-project python"
-          git add -- .claude-plugin .codex-plugin .agents/plugins/marketplace.json plugins/ghost-library-skills skills package.json .ai-rulez/config.toml
+          git add -- .claude-plugin .codex-plugin .agents/plugins/marketplace.json skills package.json .ai-rulez/config.toml
           if git diff --cached --quiet; then
             echo "Generated packaging already matches the release version."
             exit 0

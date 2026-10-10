@@ -84,8 +84,7 @@ def exercise(bundle: Path, archive: Path, pi_loader: Path, output: Path, reposit
     claude_path = Path('.') if repository else Path('claude')
     catalog = load_object(current / claude_path / '.claude-plugin/marketplace.json')['name']
     plugin_id = f'ghost-library-skills@{catalog}'
-    selected_paths = ({'claude': 'plugins/ghost-library-skills/skills', 'codex': 'plugins/ghost-library-skills/skills',
-                       'pi': 'skills', 'opencode': 'skills'} if repository else SKILL_PATHS)
+    selected_paths = dict.fromkeys(SKILL_PATHS, 'skills') if repository else SKILL_PATHS
     version = load_object(current / pi_path / 'package.json')['version']
     if version == '0.0.0':
         raise ValueError('Current bundle must differ from synthetic version 0.0.0')

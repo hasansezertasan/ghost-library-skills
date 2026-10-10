@@ -11,7 +11,8 @@ This repository distributes skills for maintaining ghost libraries. It contains 
 - Edit the release version, npm tooling, and Pi declarations in `package.json`.
   It is the sole authored plugin version source;
   its identity fields are generated from TOML.
-- Generate root `skills/`, `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/marketplace.json`, and `plugins/ghost-library-skills/` with `make sync`.
+- Generate root `skills/`, `.claude-plugin/`, `.codex-plugin/`, and `.agents/plugins/marketplace.json` with `make sync`.
+  Both catalogs install the repository root, so keep host-loaded paths such as `.mcp.json`, `hooks/`, `agents/`, and `commands/` out of it.
   Do not independently edit these outputs.
 - Keep maintainer governance here and in contributor documentation; do not inject it into distributed skills.
 

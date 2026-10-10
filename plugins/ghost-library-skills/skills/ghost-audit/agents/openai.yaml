@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ghost Audit"
-  short_description: "Review ghost-library contracts and fixture coverage"
-  default_prompt: "Use $ghost-audit to review this ghost library and report located findings."

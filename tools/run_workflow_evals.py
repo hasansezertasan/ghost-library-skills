@@ -92,7 +92,7 @@ def main() -> None:
         parser.error("Unknown scenario")
     output.mkdir(parents=True)
     build_plugins(ROOT, output / "bundle")
-    plugin = output / "bundle/codex/plugins/ghost-library-skills"
+    plugin = output / "bundle/codex"
     results = []
     for case in cases:
         if case["skill"] not in selected:

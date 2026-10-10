@@ -1,7 +1,8 @@
 # Release and ai-rulez evaluation results
 
 Historical prototype results.
-The subsequent [integration evaluation](adoption/README.md) adopts ai-rulez for native JSON rendering with a local staging/resource wrapper.
+The subsequent [integration evaluation](adoption/README.md) adopts ai-rulez for native JSON rendering with a local staging/resource wrapper,
+and the [single-plugin evaluation](single-plugin/README.md) records the current root-installed catalogs.
 The initial observations below remain accurate for raw `4.24.2` behavior;
 their original rejection decision is superseded.
 

@@ -53,8 +53,7 @@ The output directory must be absent or empty. Each built folder includes its ski
 - `skills/`: generated self-contained workflows for Pi, OpenCode, and direct use.
 - `package.json`: authored release version, Pi declaration, and pinned development tooling;
   plugin identity fields are generated from TOML.
-- `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/`: native manifests and catalogs.
-- `plugins/ghost-library-skills/`: generated Claude/Codex package; regenerate with `make sync`.
+- `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/`: generated native manifests and single-plugin catalogs that install the repository root.
 - `opencode.json`: generated skill discovery when running from this checkout.
 - `tools/`: local packaging, resource-link validation, and native smoke checks.
 - `evals/`: realistic workflow cases and pilot evidence.
