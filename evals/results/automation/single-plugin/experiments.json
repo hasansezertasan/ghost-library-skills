@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-11",
+  "versions": {
+    "ai_rulez": "5.0.0",
+    "claude": "2.1.296 (Claude Code)",
+    "codex": "codex-cli 0.162.1"
+  },
+  "profiles": "Fresh CLAUDE_CONFIG_DIR and CODEX_HOME per run; real profiles unchanged",
+  "marketplace_name_override": {
+    "config": "[marketplace] name only, no members",
+    "catalog_name": "ghost-library-skills-marketplace",
+    "description_and_owner": "Filled from [plugin]; identical to setting them explicitly"
+  },
+  "github_source_install": {
+    "source": "Temporary branch chore/single-plugin-layout-experiment, deleted after the run",
+    "claude": {"marketplace_add": true, "install": true, "discovered_skills": 7},
+    "codex": {"marketplace_add": true, "install": true, "discovered_skills": 7, "skill_root": "skills"}
+  },
+  "claude_dependency_install": {
+    "trigger": "package.json at the plugin root",
+    "results": {
+      "npm_available": {"install": true, "node_modules": ["ai-rulez"], "loaded_skills": null},
+      "npm_missing_from_path": {"install": true, "node_modules": [], "loaded_skills": 7},
+      "registry_unreachable": {"install": true, "node_modules": [], "loaded_skills": 7},
+      "package_json_without_dependencies": {"install": true, "node_modules": []}
+    },
+    "note": "The ai-rulez wrapper only; its binary downloads on first run and was absent (44 KB)"
+  },
+  "github_install_footprint_kb": {
+    "member_layout": {
+      "claude": {"marketplace_clone": 2772, "plugin_cache": 428},
+      "codex": {"marketplace_clone": 2784, "plugin_cache": 428}
+    },
+    "single_plugin_layout": {
+      "claude": {"marketplace_clone": 2332, "plugin_cache": 1940},
+      "codex": {"marketplace_clone": 2344, "plugin_cache": 2344}
+    },
+    "note": "Codex copies the repository .git directory into the plugin cache when the plugin path is ./"
+  },
+  "version_replacement_local": {
+    "claude": "marketplace update and plugin update replaced 0.1.0 with 0.1.1 content",
+    "codex": "plugin add replaced 0.1.0 with 0.1.1 content"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "ai_rulez_version": "5.0.0",
+  "configuration_valid": true,
+  "python": "3.12",
+  "tests_passed": 46,
+  "host_bundles": {
+    "claude": 7,
+    "codex": 7,
+    "opencode": 7,
+    "pi": 7
+  },
+  "catalog_source": "./",
+  "catalog_name": "ghost-library-skills-marketplace",
+  "workflow_lint": {
+    "tool": "actionlint",
+    "version": "1.7.12",
+    "success": true
+  },
+  "pi_package": {
+    "entry_count": 93,
+    "top_level": ["README.md", "package.json", "skills"]
+  },
+  "git_diff_check": true
+}

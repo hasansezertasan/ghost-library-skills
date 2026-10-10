@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-05",
+  "requested_skill": "ghost-library:ghost-audit",
+  "version": "2.1.289",
+  "model": "claude-opus-5-5",
+  "discovered_skills": [
+    "ghost-library:ghost-audit",
+    "ghost-library:ghost-fix",
+    "ghost-library:ghost-init",
+    "ghost-library:ghost-release",
+    "ghost-library:ghost-spec",
+    "ghost-library:ghost-tests",
+    "ghost-library:ghost-verify"
+  ],
+  "status": "blocked",
+  "model_completed": false,
+  "reason": "You've hit your weekly limit \u00b7 resets 1pm (Europe/Istanbul)",
+  "api_error_status": 429,
+  "terminal_reason": "api_error",
+  "total_cost_usd": 0,
+  "profile": "existing authentication; session-local plugin; settings disabled; no session persistence"
+}

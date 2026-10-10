@@ -1,0 +1,111 @@
+[
+  {
+    "skill": "ghost-init",
+    "request": "Start cronwords, a ghost library that describes cron expressions in English. This repository has a README and an existing license. I have not decided which cron dialect it should accept. Progress on independent work and surface material decisions as questions in your final response. Write appropriate draft artifacts here; do not generate an implementation.",
+    "read_only": false,
+    "files": {
+      "README.md": "# cronwords\nA cron expression parsing to human-readable text, with no code.\n",
+      "LICENSE": "Existing license fixture: retained verbatim for this evaluation.\n"
+    }
+  },
+  {
+    "skill": "ghost-spec",
+    "request": "Change fit to count Unicode code points and never normalize strings. Update examples and affected fixtures. This is an intentional change from the existing UTF-16 code-unit contract. Write the patch here and explain compatibility.",
+    "read_only": false,
+    "files": {
+      "SPEC.md": "# fit(s, limit)\nIf the UTF-16 code-unit length exceeds limit, return the first limit\ncode units. Otherwise return s. limit is a nonnegative integer.\n",
+      "tests.yaml": "fit:\n  - name: ascii\n    input: [abc, 2]\n    output: ab\n"
+    }
+  },
+  {
+    "skill": "ghost-tests",
+    "request": "Add meaningful portable coverage for this contract. Preserve its invariant-based format. Write the fixture changes and document new assertion or scenario semantics. No implementation is available.",
+    "read_only": false,
+    "files": {
+      "SPEC.md": "# shuffle(seq, rng)\nReturn a new sequence with the same multiset and length. Do not mutate seq.\nA fixed seed reproduces a stream within one implementation.\nDifferent languages may use different PRNG algorithms and streams.\n",
+      "tests.yaml": "shuffle_invariants:\n  - name: length\n    seed: 1\n    seq: [a, b, c]\n    preserves_length: true\n"
+    }
+  },
+  {
+    "skill": "ghost-verify",
+    "request": "Verify the supplied implementation and runner. Report its conformance; do not fix or edit them. Distinguish runner output from implementation conformance and record what you executed.",
+    "read_only": true,
+    "files": {
+      "SPEC.md": "# reciprocal(x)\nFor x != 0 return 1 / x. Zero raises a detectable error.\n",
+      "tests.yaml": "reciprocal:\n  - name: normal\n    input: 2\n    output: 0.5\n  - name: zero\n    input: 0\n    raises: true\n",
+      "impl.py": "def reciprocal(x):\n    return 1 / x if x else 0\n",
+      "runner.py": "from impl import reciprocal\nassert reciprocal(2) == 0.5\nprint(\"all tests passed\")\n"
+    }
+  },
+  {
+    "skill": "ghost-fix",
+    "request": "Diagnose and repair a downstream padding bug. The consumer expects left_pad(\"😊\", 3) to return \"  😊\" but receives \" 😊\". Keep the upstream SPEC.md unchanged. Add a downstream regression before repairing the implementation and execute relevant checks.",
+    "read_only": false,
+    "files": {
+      "SPEC.md": "# left_pad(s, length)\nCount Unicode code points without normalization. Prepend spaces until\nthe target code-point length is reached. Never truncate s.\n",
+      "impl.js": "export function left_pad(s, length) {\n  return \" \".repeat(Math.max(0, length - s.length)) + s;\n}\n",
+      "package.json": "{\"private\":true,\"type\":\"module\"}\n"
+    }
+  },
+  {
+    "skill": "ghost-release",
+    "request": "Prepare release notes and recommend a version under SemVer. Current contract version is 1.2.0. Compare old.md and new.md; the maintainer note describes the available evidence. Write reviewable release preparation here. Do not tag or publish.",
+    "read_only": false,
+    "files": {
+      "old.md": "map_keys returns keys in an implementation-defined order.\n",
+      "new.md": "map_keys returns keys in lexicographic order.\n",
+      "maintainer-note.txt": "I called this a clarification because the API name did not change.\nOne Python implementation passes the new fixtures. No other evaluation exists.\n",
+      "VERSION": "1.2.0\n"
+    }
+  },
+  {
+    "skill": "ghost-summon",
+    "request": "Generate clamp from the contract in contract/ into consumer/clamp.py, build and run a harness against every case, and record a receipt in consumer/. Do not edit contract/. Git is not available for this contract; record content identity instead.",
+    "read_only": false,
+    "files": {
+      "contract/SPEC.md": "# clamp(value, low, high)\nReturn value limited to the inclusive range [low, high].\nIf low > high, raise a detectable error. Integers only.\n",
+      "contract/tests.yaml": "clamp:\n  - {name: inside, input: [5, 1, 10], output: 5}\n  - {name: below, input: [-3, 0, 4], output: 0}\n  - {name: above, input: [9, 0, 4], output: 4}\n  - {name: equal_bounds, input: [7, 2, 2], output: 2}\n  - {name: inverted, input: [1, 5, 0], raises: true}\n"
+    }
+  },
+  {
+    "skill": "ghost-evaluate",
+    "request": "Plan and run a two-language generation evaluation of this contract. Only Python and Node are available; do not invoke other agents. Generate each cell in its own subdirectory of eval/ with a copy of the contract. Do not edit SPEC.md or tests.yaml.",
+    "read_only": false,
+    "files": {
+      "SPEC.md": "# truncate(s, limit)\nReturn the first limit characters of s, or s when it is shorter.\n",
+      "tests.yaml": "truncate:\n  - {name: ascii, input: [abcdef, 3], output: abc}\n  - {name: short, input: [ab, 5], output: ab}\n  - {name: astral, input: [\"😊😊\", 1], output: \"😊\"}\n"
+    }
+  },
+  {
+    "skill": "ghost-extract",
+    "request": "Derive a ghost-library contract for slugify from the module in source/. Preserve attribution. Write the draft contract and fixtures into contract/.",
+    "read_only": false,
+    "files": {
+      "source/LICENSE": "MIT License\n\nCopyright (c) 2024 Example Author\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software, to deal in the Software without restriction, subject to including this notice in all copies.\n",
+      "source/slugify.js": "// Lowercase, replace runs of non-alphanumerics with \"-\", trim dashes.\nexport function slugify(s) {\n  return s.toLowerCase().replace(/[^a-z0-9]+/g, \"-\").replace(/^-|-$/g, \"\");\n}\n",
+      "source/README.md": "slugify(\"Hello World\") === \"hello-world\"\n",
+      "source/package.json": "{\"private\":true,\"type\":\"module\"}\n"
+    }
+  },
+  {
+    "skill": "ghost-upgrade",
+    "request": "Upgrade consumer/pad.py from contract-v1 to contract-v2. Keep the consumer's local extension. Re-verify and update consumer/RECEIPT.md.",
+    "read_only": false,
+    "files": {
+      "contract-v1/SPEC.md": "# left_pad(s, length, fill=\" \")\nPrepend fill until s reaches length code points. Never truncate.\n",
+      "contract-v2/SPEC.md": "# left_pad(s, length, fill=\" \")\nPrepend fill until s reaches length code points. Never truncate.\nfill must be exactly one code point; otherwise raise a detectable error.\n",
+      "consumer/pad.py": "def left_pad(s, length, fill=\" \"):\n    # Local extension: multi-character fill repeats and is cut to fit.\n    out = s\n    while len(out) < length:\n        out = fill + out\n    return out[-length:] if len(out) > length else out\n",
+      "consumer/RECEIPT.md": "# Receipt\n\nSource: contract-v1\nGenerated: consumer/pad.py\nLocal extension: a multi-character fill repeats and is cut to fit the target length.\n"
+    }
+  },
+  {
+    "skill": "ghost-catalog",
+    "request": "Check whether this repository is ready for an awesome-list entry and draft the entry. The list requires a license, a specification, portable tests, and generation instructions. Report only; do not edit files or submit anything.",
+    "read_only": true,
+    "files": {
+      "README.md": "# timewords\nZero dependencies, zero maintenance, works in every language. 50 tests.\nSee SPEC.md and INSTALL.md.\n",
+      "SPEC.md": "# timewords\n\n## ago(seconds)\nDescribe a past duration in English.\n\n## until(seconds)\nDescribe a future duration in English.\n",
+      "tests.yaml": "ago:\n  - {name: ago_0, input: 0, output: \"0 seconds ago\"}\n  - {name: ago_1, input: 1, output: \"1 seconds ago\"}\n  - {name: ago_2, input: 2, output: \"2 seconds ago\"}\n  - {name: ago_3, input: 3, output: \"3 seconds ago\"}\n  - {name: ago_4, input: 4, output: \"4 seconds ago\"}\n  - {name: ago_5, input: 5, output: \"5 seconds ago\"}\n  - {name: ago_6, input: 6, output: \"6 seconds ago\"}\n  - {name: ago_7, input: 7, output: \"7 seconds ago\"}\n  - {name: ago_8, input: 8, output: \"8 seconds ago\"}\n  - {name: ago_9, input: 9, output: \"9 seconds ago\"}\n  - {name: ago_10, input: 10, output: \"10 seconds ago\"}\n  - {name: ago_11, input: 11, output: \"11 seconds ago\"}\n  - {name: ago_12, input: 12, output: \"12 seconds ago\"}\n  - {name: ago_13, input: 13, output: \"13 seconds ago\"}\n  - {name: ago_14, input: 14, output: \"14 seconds ago\"}\n  - {name: ago_15, input: 15, output: \"15 seconds ago\"}\n  - {name: ago_16, input: 16, output: \"16 seconds ago\"}\n  - {name: ago_17, input: 17, output: \"17 seconds ago\"}\n  - {name: ago_18, input: 18, output: \"18 seconds ago\"}\n  - {name: ago_19, input: 19, output: \"19 seconds ago\"}\n  - {name: ago_20, input: 20, output: \"20 seconds ago\"}\nuntil:\n  - {name: until_0, input: 0, output: \"in 0 seconds\"}\n  - {name: until_1, input: 1, output: \"in 1 seconds\"}\n  - {name: until_2, input: 2, output: \"in 2 seconds\"}\n  - {name: until_3, input: 3, output: \"in 3 seconds\"}\n  - {name: until_4, input: 4, output: \"in 4 seconds\"}\n  - {name: until_5, input: 5, output: \"in 5 seconds\"}\n  - {name: until_6, input: 6, output: \"in 6 seconds\"}\n  - {name: until_7, input: 7, output: \"in 7 seconds\"}\n  - {name: until_8, input: 8, output: \"in 8 seconds\"}\n  - {name: until_9, input: 9, output: \"in 9 seconds\"}\n  - {name: until_10, input: 10, output: \"in 10 seconds\"}\n  - {name: until_11, input: 11, output: \"in 11 seconds\"}\n  - {name: until_12, input: 12, output: \"in 12 seconds\"}\n  - {name: until_13, input: 13, output: \"in 13 seconds\"}\n  - {name: until_14, input: 14, output: \"in 14 seconds\"}\n  - {name: until_15, input: 15, output: \"in 15 seconds\"}\n  - {name: until_16, input: 16, output: \"in 16 seconds\"}\n  - {name: until_17, input: 17, output: \"in 17 seconds\"}\n  - {name: until_18, input: 18, output: \"in 18 seconds\"}\n  - {name: until_19, input: 19, output: \"in 19 seconds\"}\n"
+    }
+  }
+]

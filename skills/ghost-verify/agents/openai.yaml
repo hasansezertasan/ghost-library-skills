@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ghost Verify"
+  short_description: "Verify implementations with trustworthy case accounting"
+  default_prompt: "Use $ghost-verify to assess this downstream implementation's conformance."

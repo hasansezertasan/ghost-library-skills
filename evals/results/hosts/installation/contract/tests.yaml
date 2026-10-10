@@ -1,0 +1,4 @@
+reciprocal:
+  - name: normal
+    input: 2
+    output: 0.5

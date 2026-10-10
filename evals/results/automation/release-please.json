@@ -1,0 +1,31 @@
+{
+  "release_please_version": "17.6.0",
+  "config": ".config/release-please-config.json",
+  "success": true,
+  "cases": [
+    {
+      "name": "first-release",
+      "version": "0.1.0",
+      "package_fields_preserved": true,
+      "changelog_update": true
+    },
+    {
+      "name": "patch",
+      "version": "0.1.1",
+      "package_fields_preserved": true,
+      "changelog_update": true
+    },
+    {
+      "name": "feature",
+      "version": "0.2.0",
+      "package_fields_preserved": true,
+      "changelog_update": true
+    },
+    {
+      "name": "breaking-before-one",
+      "version": "0.2.0",
+      "package_fields_preserved": true,
+      "changelog_update": true
+    }
+  ]
+}

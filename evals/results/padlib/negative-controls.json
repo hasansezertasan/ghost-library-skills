@@ -1,0 +1,93 @@
+[
+  {
+    "control": "wrong-expectation",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 117,
+      "executed": 117,
+      "passed": 116,
+      "failed": 1,
+      "skipped": 0,
+      "unsupported": 0
+    },
+    "fatal_error": null
+  },
+  {
+    "control": "wrong-return",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 117,
+      "executed": 117,
+      "passed": 52,
+      "failed": 65,
+      "skipped": 0,
+      "unsupported": 0
+    },
+    "fatal_error": null
+  },
+  {
+    "control": "error-returns-normally",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 117,
+      "executed": 117,
+      "passed": 114,
+      "failed": 3,
+      "skipped": 0,
+      "unsupported": 0
+    },
+    "fatal_error": null
+  },
+  {
+    "control": "unknown-assertion",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 117,
+      "executed": 116,
+      "passed": 116,
+      "failed": 0,
+      "skipped": 0,
+      "unsupported": 1
+    },
+    "fatal_error": null
+  },
+  {
+    "control": "empty-suite",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 0,
+      "executed": 0,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "unsupported": 0
+    },
+    "fatal_error": null
+  },
+  {
+    "control": "duplicate-key",
+    "exit_code": 1,
+    "decision": "incomplete",
+    "totals": null,
+    "fatal_error": "ValueError: Duplicate YAML key: left_pad"
+  },
+  {
+    "control": "continued-center-pattern",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 117,
+      "executed": 117,
+      "passed": 116,
+      "failed": 1,
+      "skipped": 0,
+      "unsupported": 0
+    },
+    "fatal_error": null
+  }
+]

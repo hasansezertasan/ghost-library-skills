@@ -1,0 +1,88 @@
+version: "0.1.0"
+observations:
+  - name: missing-runtime-warns
+    function: runtime_dir
+    args: {app: MyApp}
+    strategy: xdg
+    platform: linux
+    env: {HOME: /fixture/home}
+    output: $HOME/.cache/MyApp
+    warning: true
+  - name: empty-runtime-warns
+    function: runtime_dir
+    args: {app: MyApp}
+    strategy: xdg
+    platform: linux
+    env: {HOME: /fixture/home, XDG_RUNTIME_DIR: ""}
+    output: $HOME/.cache/MyApp
+    warning: true
+  - name: relative-runtime-warns
+    function: runtime_dir
+    args: {app: MyApp}
+    strategy: xdg
+    platform: linux
+    env: {HOME: /fixture/home, XDG_RUNTIME_DIR: relative/runtime}
+    output: $HOME/.cache/MyApp
+    warning: true
+  - name: custom-cache-fallback-warns
+    function: runtime_dir
+    args: {app: MyApp}
+    strategy: xdg
+    platform: macos
+    env: {HOME: /fixture/home, XDG_CACHE_HOME: /fixture/cache}
+    output: $XDG_CACHE_HOME/MyApp
+    warning: true
+  - name: explicit-runtime-does-not-warn
+    function: runtime_dir
+    args: {app: MyApp}
+    strategy: xdg
+    platform: linux
+    env: {HOME: /fixture/home, XDG_RUNTIME_DIR: /fixture/run}
+    output: $XDG_RUNTIME_DIR/MyApp
+    warning: false
+  - name: ignored-xdg-author-does-not-warn
+    function: config_dir
+    args: {app: MyApp, author: Ignored}
+    strategy: xdg
+    platform: linux
+    env: {HOME: /fixture/home}
+    output: $HOME/.config/MyApp
+    warning: false
+  - name: ignored-single-folder-author-does-not-warn
+    function: config_dir
+    args: {app: MyApp, author: Ignored}
+    strategy: single-folder
+    platform: linux
+    env: {HOME: /fixture/home}
+    output: $HOME/.myapp
+    warning: false
+  - name: apple-null-runtime-does-not-warn
+    function: runtime_dir
+    args: {app: MyApp}
+    strategy: apple
+    platform: macos
+    env: {HOME: /fixture/home}
+    output: null
+    warning: false
+  - name: windows-null-runtime-does-not-warn
+    function: runtime_dir
+    args: {app: MyApp}
+    strategy: windows
+    platform: windows
+    env: {LOCALAPPDATA: "C:/Fixture/Local"}
+    output: null
+    warning: false
+  - name: missing-xdg-home-raises
+    function: config_dir
+    args: {app: MyApp}
+    strategy: xdg
+    platform: linux
+    env: {}
+    raises: true
+  - name: missing-windows-fallbacks-raises
+    function: config_dir
+    args: {app: MyApp}
+    strategy: windows
+    platform: windows
+    env: {}
+    raises: true

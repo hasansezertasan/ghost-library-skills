@@ -1,0 +1,823 @@
+{
+  "baseline_execution": {
+    "command": [
+      "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+      "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py"
+    ],
+    "cwd": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs",
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exit_code": 0,
+    "stdout": "passed 155 / total 155\n",
+    "stderr": ""
+  },
+  "baseline_identity": {
+    "fixtures": {
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/contract/tests.yaml",
+      "sha256": "ec5e107b50d33959683168b47c3f5ec1873b0d0a0fda94bedacffb57f8589402"
+    },
+    "implementation": {
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/wheredirs.py",
+      "sha256": "7654f0907e892632ccd7991638b0899fd5d3b2c760163733d5132abf58fdfa9b"
+    },
+    "runner": {
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+      "sha256": "5d6908f22fe21b297657b707e0733f8562da810344d9808d9d3d8b36e7feb4b9"
+    },
+    "inventory": {
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/inventory.json",
+      "sha256": "28886880d0a3eac457a5ab9028cb95ae74766c930d5d25f807f72f1bfcb30d87"
+    }
+  },
+  "negative_controls": [
+    {
+      "label": "wrong-expectation",
+      "injection": "changed expected output to /intentionally/wrong",
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-expectation",
+      "execution": {
+        "command": [
+          "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "--fixtures",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-expectation/tests.yaml",
+          "--implementation",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-expectation/wheredirs.py",
+          "--report",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-expectation/results.json"
+        ],
+        "cwd": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs",
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 1,
+        "stdout": "FAIL xdg-config-default: [{\"kind\": \"return\", \"expected\": \"/intentionally/wrong\", \"actual\": \"/home/alice/.config/MyApp\", \"passed\": false, \"stage\": \"comparison\"}]\npassed 154 / total 155\n",
+        "stderr": ""
+      },
+      "target_case": {
+        "name": "xdg-config-default",
+        "group": "xdg",
+        "index": 0,
+        "status": "failed",
+        "assertions": [
+          {
+            "kind": "return",
+            "expected": "/intentionally/wrong",
+            "actual": "/home/alice/.config/MyApp",
+            "passed": false,
+            "stage": "comparison"
+          }
+        ],
+        "warnings": [],
+        "reasons": [],
+        "actual": "/home/alice/.config/MyApp",
+        "error": null
+      },
+      "totals": {
+        "discovered": 155,
+        "executed": 155,
+        "passed": 154,
+        "failed": 1,
+        "skipped": 0,
+        "unsupported": 0
+      },
+      "identity": {
+        "fixtures": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-expectation/tests.yaml",
+          "sha256": "eaaf20a009bf6406996b0c044fe47c7b2626f8b807df103c2f075a919960df33"
+        },
+        "implementation": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-expectation/wheredirs.py",
+          "sha256": "7654f0907e892632ccd7991638b0899fd5d3b2c760163733d5132abf58fdfa9b"
+        },
+        "runner": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "sha256": "5d6908f22fe21b297657b707e0733f8562da810344d9808d9d3d8b36e7feb4b9"
+        },
+        "inventory": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/inventory.json",
+          "sha256": "28886880d0a3eac457a5ab9028cb95ae74766c930d5d25f807f72f1bfcb30d87"
+        }
+      },
+      "detected_for_intended_reason": true
+    },
+    {
+      "label": "wrong-return",
+      "injection": "which_strategy('linux') returns 'intentionally-wrong'",
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-return",
+      "execution": {
+        "command": [
+          "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "--fixtures",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-return/tests.yaml",
+          "--implementation",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-return/wheredirs.py",
+          "--report",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-return/results.json"
+        ],
+        "cwd": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs",
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 1,
+        "stdout": "FAIL linux-picks-xdg: [{\"kind\": \"return\", \"expected\": \"xdg\", \"actual\": \"intentionally-wrong\", \"passed\": false, \"stage\": \"comparison\"}]\nFAIL xdg-auto-on-linux: [{\"kind\": \"return\", \"expected\": \"/home/alice/.config/MyApp\", \"actual\": {\"type\": \"ValueError\", \"message\": \"Unknown strategy: 'intentionally-wrong'\"}, \"passed\": false, \"stage\": \"invocation\"}]\nFAIL wheredirs-self-config-linux: [{\"kind\": \"return\", \"expected\": \"/home/dev/.config/wheredirs\", \"actual\": {\"type\": \"ValueError\", \"message\": \"Unknown strategy: 'intentionally-wrong'\"}, \"passed\": false, \"stage\": \"invocation\"}]\npassed 152 / total 155\n",
+        "stderr": ""
+      },
+      "target_case": {
+        "name": "linux-picks-xdg",
+        "group": "which_strategy",
+        "index": 0,
+        "status": "failed",
+        "assertions": [
+          {
+            "kind": "return",
+            "expected": "xdg",
+            "actual": "intentionally-wrong",
+            "passed": false,
+            "stage": "comparison"
+          }
+        ],
+        "warnings": [],
+        "reasons": [],
+        "actual": "intentionally-wrong",
+        "error": null
+      },
+      "totals": {
+        "discovered": 155,
+        "executed": 155,
+        "passed": 152,
+        "failed": 3,
+        "skipped": 0,
+        "unsupported": 0
+      },
+      "identity": {
+        "fixtures": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-return/tests.yaml",
+          "sha256": "5809ce851c9855d6c564577797787b2fd1403c0e985230d125e2191ed91ece67"
+        },
+        "implementation": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-return/wheredirs.py",
+          "sha256": "14fdc30a4318f3613cbef9b47864ca1fe6f7fbbee73a21f195b4335bbd263fa7"
+        },
+        "runner": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "sha256": "5d6908f22fe21b297657b707e0733f8562da810344d9808d9d3d8b36e7feb4b9"
+        },
+        "inventory": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/inventory.json",
+          "sha256": "28886880d0a3eac457a5ab9028cb95ae74766c930d5d25f807f72f1bfcb30d87"
+        }
+      },
+      "detected_for_intended_reason": true
+    },
+    {
+      "label": "error-returns-normally",
+      "injection": "empty app returns a path instead of raising",
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/error-returns-normally",
+      "execution": {
+        "command": [
+          "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "--fixtures",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/error-returns-normally/tests.yaml",
+          "--implementation",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/error-returns-normally/wheredirs.py",
+          "--report",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/error-returns-normally/results.json"
+        ],
+        "cwd": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs",
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 1,
+        "stdout": "FAIL err-empty-app: [{\"kind\": \"raises\", \"expected\": \"an exception\", \"actual\": \"/incorrect/normal-return\", \"passed\": false, \"stage\": \"invocation\"}]\npassed 154 / total 155\n",
+        "stderr": ""
+      },
+      "target_case": {
+        "name": "err-empty-app",
+        "group": "errors",
+        "index": 2,
+        "status": "failed",
+        "assertions": [
+          {
+            "kind": "raises",
+            "expected": "an exception",
+            "actual": "/incorrect/normal-return",
+            "passed": false,
+            "stage": "invocation"
+          }
+        ],
+        "warnings": [],
+        "reasons": [],
+        "actual": "/incorrect/normal-return",
+        "error": null
+      },
+      "totals": {
+        "discovered": 155,
+        "executed": 155,
+        "passed": 154,
+        "failed": 1,
+        "skipped": 0,
+        "unsupported": 0
+      },
+      "identity": {
+        "fixtures": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/error-returns-normally/tests.yaml",
+          "sha256": "5809ce851c9855d6c564577797787b2fd1403c0e985230d125e2191ed91ece67"
+        },
+        "implementation": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/error-returns-normally/wheredirs.py",
+          "sha256": "43df1fa83361708c98414eeb963907316416c9266d033d2e39a17b07194bee03"
+        },
+        "runner": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "sha256": "5d6908f22fe21b297657b707e0733f8562da810344d9808d9d3d8b36e7feb4b9"
+        },
+        "inventory": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/inventory.json",
+          "sha256": "28886880d0a3eac457a5ab9028cb95ae74766c930d5d25f807f72f1bfcb30d87"
+        }
+      },
+      "detected_for_intended_reason": true
+    },
+    {
+      "label": "warning-suppressed",
+      "injection": "suppressed warnings.warn",
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/warning-suppressed",
+      "execution": {
+        "command": [
+          "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "--fixtures",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/warning-suppressed/tests.yaml",
+          "--implementation",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/warning-suppressed/wheredirs.py",
+          "--report",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/warning-suppressed/results.json"
+        ],
+        "cwd": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs",
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 1,
+        "stdout": "FAIL xdg-runtime-fallback-to-cache: [{\"kind\": \"runtime_fallback_warning\", \"expected\": \"at least one warning\", \"actual\": 0, \"passed\": false, \"stage\": \"warning\"}]\nFAIL xdg-runtime-relative-is-unset: [{\"kind\": \"runtime_fallback_warning\", \"expected\": \"at least one warning\", \"actual\": 0, \"passed\": false, \"stage\": \"warning\"}]\nFAIL xdg-runtime-empty-is-unset: [{\"kind\": \"runtime_fallback_warning\", \"expected\": \"at least one warning\", \"actual\": 0, \"passed\": false, \"stage\": \"warning\"}]\nFAIL xdg-runtime-fallback-honours-xdg-cache-home: [{\"kind\": \"runtime_fallback_warning\", \"expected\": \"at least one warning\", \"actual\": 0, \"passed\": false, \"stage\": \"warning\"}]\nFAIL xdg-runtime-fallback-rejects-relative-xdg-cache-home: [{\"kind\": \"runtime_fallback_warning\", \"expected\": \"at least one warning\", \"actual\": 0, \"passed\": false, \"stage\": \"warning\"}]\nFAIL xdg-on-windows-runtime-falls-back-to-cache: [{\"kind\": \"runtime_fallback_warning\", \"expected\": \"at least one warning\", \"actual\": 0, \"passed\": false, \"stage\": \"warning\"}]\npassed 149 / total 155\n",
+        "stderr": ""
+      },
+      "target_case": {
+        "name": "xdg-runtime-fallback-to-cache",
+        "group": "xdg",
+        "index": 6,
+        "status": "failed",
+        "assertions": [
+          {
+            "kind": "return",
+            "expected": "/home/alice/.cache/MyApp",
+            "actual": "/home/alice/.cache/MyApp",
+            "passed": true,
+            "stage": "comparison"
+          },
+          {
+            "kind": "runtime_fallback_warning",
+            "expected": "at least one warning",
+            "actual": 0,
+            "passed": false,
+            "stage": "warning"
+          }
+        ],
+        "warnings": [],
+        "reasons": [],
+        "actual": "/home/alice/.cache/MyApp",
+        "error": null
+      },
+      "totals": {
+        "discovered": 155,
+        "executed": 155,
+        "passed": 149,
+        "failed": 6,
+        "skipped": 0,
+        "unsupported": 0
+      },
+      "identity": {
+        "fixtures": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/warning-suppressed/tests.yaml",
+          "sha256": "5809ce851c9855d6c564577797787b2fd1403c0e985230d125e2191ed91ece67"
+        },
+        "implementation": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/warning-suppressed/wheredirs.py",
+          "sha256": "3287ccd16e3010c46ab8f0310c9b3b8af329b9cc756557cb169c86470e775bcf"
+        },
+        "runner": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "sha256": "5d6908f22fe21b297657b707e0733f8562da810344d9808d9d3d8b36e7feb4b9"
+        },
+        "inventory": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/inventory.json",
+          "sha256": "28886880d0a3eac457a5ab9028cb95ae74766c930d5d25f807f72f1bfcb30d87"
+        }
+      },
+      "detected_for_intended_reason": true
+    },
+    {
+      "label": "wrong-null",
+      "injection": "Apple state returns empty string instead of None",
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-null",
+      "execution": {
+        "command": [
+          "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "--fixtures",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-null/tests.yaml",
+          "--implementation",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-null/wheredirs.py",
+          "--report",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-null/results.json"
+        ],
+        "cwd": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs",
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 1,
+        "stdout": "FAIL apple-state-is-null: [{\"kind\": \"null\", \"expected\": null, \"actual\": \"\", \"passed\": false, \"stage\": \"comparison\"}]\nFAIL apple-state-with-author-still-null: [{\"kind\": \"null\", \"expected\": null, \"actual\": \"\", \"passed\": false, \"stage\": \"comparison\"}]\npassed 153 / total 155\n",
+        "stderr": ""
+      },
+      "target_case": {
+        "name": "apple-state-is-null",
+        "group": "apple",
+        "index": 3,
+        "status": "failed",
+        "assertions": [
+          {
+            "kind": "null",
+            "expected": null,
+            "actual": "",
+            "passed": false,
+            "stage": "comparison"
+          }
+        ],
+        "warnings": [],
+        "reasons": [],
+        "actual": "",
+        "error": null
+      },
+      "totals": {
+        "discovered": 155,
+        "executed": 155,
+        "passed": 153,
+        "failed": 2,
+        "skipped": 0,
+        "unsupported": 0
+      },
+      "identity": {
+        "fixtures": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-null/tests.yaml",
+          "sha256": "5809ce851c9855d6c564577797787b2fd1403c0e985230d125e2191ed91ece67"
+        },
+        "implementation": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/wrong-null/wheredirs.py",
+          "sha256": "b891b0596886a4b8e3295ba4c4c3a4366ccc87d40d03ae977c1123c34eec1a7f"
+        },
+        "runner": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "sha256": "5d6908f22fe21b297657b707e0733f8562da810344d9808d9d3d8b36e7feb4b9"
+        },
+        "inventory": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/inventory.json",
+          "sha256": "28886880d0a3eac457a5ab9028cb95ae74766c930d5d25f807f72f1bfcb30d87"
+        }
+      },
+      "detected_for_intended_reason": true
+    },
+    {
+      "label": "unknown-assertion",
+      "injection": "added unsupported must_be_atomic assertion field",
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/unknown-assertion",
+      "execution": {
+        "command": [
+          "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "--fixtures",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/unknown-assertion/tests.yaml",
+          "--implementation",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/unknown-assertion/wheredirs.py",
+          "--report",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/unknown-assertion/results.json"
+        ],
+        "cwd": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs",
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "exit_code": 1,
+        "stdout": "FAIL linux-picks-xdg: [\"Unsupported field 'must_be_atomic'\"]\npassed 154 / total 155\n",
+        "stderr": ""
+      },
+      "target_case": {
+        "name": "linux-picks-xdg",
+        "group": "which_strategy",
+        "index": 0,
+        "status": "unsupported",
+        "assertions": [],
+        "warnings": [],
+        "reasons": [
+          "Unsupported field 'must_be_atomic'"
+        ]
+      },
+      "totals": {
+        "discovered": 155,
+        "executed": 154,
+        "passed": 154,
+        "failed": 0,
+        "skipped": 0,
+        "unsupported": 1
+      },
+      "identity": {
+        "fixtures": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/unknown-assertion/tests.yaml",
+          "sha256": "1b86212159224387e0896907c5adbd6553548cafbac7909f09638e4d85722100"
+        },
+        "implementation": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/negative-controls/unknown-assertion/wheredirs.py",
+          "sha256": "7654f0907e892632ccd7991638b0899fd5d3b2c760163733d5132abf58fdfa9b"
+        },
+        "runner": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "sha256": "5d6908f22fe21b297657b707e0733f8562da810344d9808d9d3d8b36e7feb4b9"
+        },
+        "inventory": {
+          "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/inventory.json",
+          "sha256": "28886880d0a3eac457a5ab9028cb95ae74766c930d5d25f807f72f1bfcb30d87"
+        }
+      },
+      "detected_for_intended_reason": true
+    }
+  ],
+  "supplemental_checks": [
+    {
+      "name": "public exports",
+      "passed": true,
+      "observation": [
+        "config_dir",
+        "data_dir",
+        "cache_dir",
+        "state_dir",
+        "logs_dir",
+        "runtime_dir",
+        "which_strategy"
+      ]
+    },
+    {
+      "name": "signature cache_dir",
+      "passed": true,
+      "observation": "(app: str, author: str | None = None, *, strategy: str | None = None) -> str | None"
+    },
+    {
+      "name": "signature config_dir",
+      "passed": true,
+      "observation": "(app: str, author: str | None = None, *, strategy: str | None = None) -> str | None"
+    },
+    {
+      "name": "signature data_dir",
+      "passed": true,
+      "observation": "(app: str, author: str | None = None, *, strategy: str | None = None) -> str | None"
+    },
+    {
+      "name": "signature logs_dir",
+      "passed": true,
+      "observation": "(app: str, author: str | None = None, *, strategy: str | None = None) -> str | None"
+    },
+    {
+      "name": "signature runtime_dir",
+      "passed": true,
+      "observation": "(app: str, author: str | None = None, *, strategy: str | None = None) -> str | None"
+    },
+    {
+      "name": "signature state_dir",
+      "passed": true,
+      "observation": "(app: str, author: str | None = None, *, strategy: str | None = None) -> str | None"
+    },
+    {
+      "name": "internal signature",
+      "passed": true,
+      "observation": "(platform, env, function_name, args) -> str | None"
+    },
+    {
+      "name": "undeclared placeholders stay literal",
+      "passed": true,
+      "observation": "Full variable token matching; longest-first declared names"
+    },
+    {
+      "name": "longest placeholder name",
+      "passed": true,
+      "observation": "Overlapping declared names"
+    },
+    {
+      "name": "separator normalization",
+      "passed": true,
+      "observation": "Backslashes, repeated and trailing slashes"
+    },
+    {
+      "name": "ASCII-only case conversion",
+      "passed": true,
+      "observation": "Non-ASCII uppercase remains unchanged"
+    },
+    {
+      "name": "validation before env access",
+      "passed": true,
+      "observation": [
+        [
+          "xdg",
+          null
+        ],
+        [
+          "xdg",
+          ""
+        ],
+        [
+          "xdg",
+          " \t\n"
+        ],
+        [
+          "xdg",
+          "."
+        ],
+        [
+          "xdg",
+          ".."
+        ],
+        [
+          "xdg",
+          ".bad"
+        ],
+        [
+          "xdg",
+          "bad."
+        ],
+        [
+          "xdg",
+          "a/b"
+        ],
+        [
+          "xdg",
+          "a\\b"
+        ],
+        [
+          "xdg",
+          "a\u0000b"
+        ],
+        [
+          "apple",
+          null
+        ],
+        [
+          "apple",
+          ""
+        ],
+        [
+          "apple",
+          " \t\n"
+        ],
+        [
+          "apple",
+          "."
+        ],
+        [
+          "apple",
+          ".."
+        ],
+        [
+          "apple",
+          ".bad"
+        ],
+        [
+          "apple",
+          "bad."
+        ],
+        [
+          "apple",
+          "a/b"
+        ],
+        [
+          "apple",
+          "a\\b"
+        ],
+        [
+          "apple",
+          "a\u0000b"
+        ],
+        [
+          "windows",
+          null
+        ],
+        [
+          "windows",
+          ""
+        ],
+        [
+          "windows",
+          " \t\n"
+        ],
+        [
+          "windows",
+          "."
+        ],
+        [
+          "windows",
+          ".."
+        ],
+        [
+          "windows",
+          ".bad"
+        ],
+        [
+          "windows",
+          "bad."
+        ],
+        [
+          "windows",
+          "a/b"
+        ],
+        [
+          "windows",
+          "a\\b"
+        ],
+        [
+          "windows",
+          "a\u0000b"
+        ],
+        [
+          "single-folder",
+          null
+        ],
+        [
+          "single-folder",
+          ""
+        ],
+        [
+          "single-folder",
+          " \t\n"
+        ],
+        [
+          "single-folder",
+          "."
+        ],
+        [
+          "single-folder",
+          ".."
+        ],
+        [
+          "single-folder",
+          ".bad"
+        ],
+        [
+          "single-folder",
+          "bad."
+        ],
+        [
+          "single-folder",
+          "a/b"
+        ],
+        [
+          "single-folder",
+          "a\\b"
+        ],
+        [
+          "single-folder",
+          "a\u0000b"
+        ]
+      ]
+    },
+    {
+      "name": "fixtures and input dicts not mutated",
+      "passed": true,
+      "observation": "All pinned directory calls repeated for non-mutation check"
+    },
+    {
+      "name": "public process environment and native auto mode",
+      "passed": true,
+      "observation": {
+        "execution": {
+          "command": [
+            "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+            "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/public_probe.py"
+          ],
+          "cwd": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs",
+          "environment_overrides": {
+            "PYTHONDONTWRITEBYTECODE": "1",
+            "HOME": "/pinned/home/",
+            "LOCALAPPDATA": "C:/pinned/local/",
+            "USERPROFILE": "C:/pinned/profile",
+            "XDG_CONFIG_HOME": "",
+            "XDG_DATA_HOME": "",
+            "XDG_CACHE_HOME": "",
+            "XDG_STATE_HOME": "",
+            "XDG_RUNTIME_DIR": ""
+          },
+          "exit_code": 0,
+          "stdout": "{\"results\": {\"xdg\": {\"config_dir\": \"/pinned/home/.config/MyApp\", \"data_dir\": \"/pinned/home/.local/share/MyApp\", \"cache_dir\": \"/pinned/home/.cache/MyApp\", \"state_dir\": \"/pinned/home/.local/state/MyApp\", \"logs_dir\": \"/pinned/home/.local/state/MyApp/logs\", \"runtime_dir\": \"/pinned/home/.cache/MyApp\"}, \"apple\": {\"config_dir\": \"/pinned/home/Library/Application Support/Acme.MyApp\", \"data_dir\": \"/pinned/home/Library/Application Support/Acme.MyApp\", \"cache_dir\": \"/pinned/home/Library/Caches/Acme.MyApp\", \"state_dir\": null, \"logs_dir\": \"/pinned/home/Library/Logs/Acme.MyApp\", \"runtime_dir\": null}, \"windows\": {\"config_dir\": \"C:/pinned/local/Acme/MyApp\", \"data_dir\": \"C:/pinned/local/Acme/MyApp\", \"cache_dir\": \"C:/pinned/local/Acme/MyApp/Cache\", \"state_dir\": null, \"logs_dir\": \"C:/pinned/local/Acme/MyApp/Logs\", \"runtime_dir\": null}, \"single-folder\": {\"config_dir\": \"/pinned/home/.myapp\", \"data_dir\": \"/pinned/home/.myapp\", \"cache_dir\": \"/pinned/home/.myapp\", \"state_dir\": \"/pinned/home/.myapp\", \"logs_dir\": \"/pinned/home/.myapp\", \"runtime_dir\": \"/pinned/home/.myapp\"}, \"None\": {\"config_dir\": \"/pinned/home/Library/Application Support/Acme.MyApp\", \"data_dir\": \"/pinned/home/Library/Application Support/Acme.MyApp\", \"cache_dir\": \"/pinned/home/Library/Caches/Acme.MyApp\", \"state_dir\": null, \"logs_dir\": \"/pinned/home/Library/Logs/Acme.MyApp\", \"runtime_dir\": null}}, \"warning_count\": 1, \"platform\": \"darwin\"}\n",
+          "stderr": ""
+        },
+        "observed": {
+          "results": {
+            "xdg": {
+              "config_dir": "/pinned/home/.config/MyApp",
+              "data_dir": "/pinned/home/.local/share/MyApp",
+              "cache_dir": "/pinned/home/.cache/MyApp",
+              "state_dir": "/pinned/home/.local/state/MyApp",
+              "logs_dir": "/pinned/home/.local/state/MyApp/logs",
+              "runtime_dir": "/pinned/home/.cache/MyApp"
+            },
+            "apple": {
+              "config_dir": "/pinned/home/Library/Application Support/Acme.MyApp",
+              "data_dir": "/pinned/home/Library/Application Support/Acme.MyApp",
+              "cache_dir": "/pinned/home/Library/Caches/Acme.MyApp",
+              "state_dir": null,
+              "logs_dir": "/pinned/home/Library/Logs/Acme.MyApp",
+              "runtime_dir": null
+            },
+            "windows": {
+              "config_dir": "C:/pinned/local/Acme/MyApp",
+              "data_dir": "C:/pinned/local/Acme/MyApp",
+              "cache_dir": "C:/pinned/local/Acme/MyApp/Cache",
+              "state_dir": null,
+              "logs_dir": "C:/pinned/local/Acme/MyApp/Logs",
+              "runtime_dir": null
+            },
+            "single-folder": {
+              "config_dir": "/pinned/home/.myapp",
+              "data_dir": "/pinned/home/.myapp",
+              "cache_dir": "/pinned/home/.myapp",
+              "state_dir": "/pinned/home/.myapp",
+              "logs_dir": "/pinned/home/.myapp",
+              "runtime_dir": "/pinned/home/.myapp"
+            },
+            "None": {
+              "config_dir": "/pinned/home/Library/Application Support/Acme.MyApp",
+              "data_dir": "/pinned/home/Library/Application Support/Acme.MyApp",
+              "cache_dir": "/pinned/home/Library/Caches/Acme.MyApp",
+              "state_dir": null,
+              "logs_dir": "/pinned/home/Library/Logs/Acme.MyApp",
+              "runtime_dir": null
+            }
+          },
+          "warning_count": 1,
+          "platform": "darwin"
+        },
+        "public_calls": 30
+      }
+    },
+    {
+      "name": "ambient environment does not affect pinned cases",
+      "passed": true,
+      "observation": {
+        "command": [
+          "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "--report",
+          "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/isolation-results.json"
+        ],
+        "cwd": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs",
+        "environment_overrides": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "HOME": "/ambient/poison",
+          "LOCALAPPDATA": "/ambient/poison",
+          "USERPROFILE": "/ambient/poison",
+          "XDG_CONFIG_HOME": "/ambient/poison",
+          "XDG_DATA_HOME": "/ambient/poison",
+          "XDG_CACHE_HOME": "/ambient/poison",
+          "XDG_STATE_HOME": "/ambient/poison",
+          "XDG_RUNTIME_DIR": "/ambient/poison"
+        },
+        "exit_code": 0,
+        "stdout": "passed 155 / total 155\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "final implementation unmodified by controls",
+      "passed": true,
+      "observation": "7654f0907e892632ccd7991638b0899fd5d3b2c760163733d5132abf58fdfa9b"
+    },
+    {
+      "name": "contract unchanged",
+      "passed": true,
+      "observation": {
+        "tests.yaml": "ec5e107b50d33959683168b47c3f5ec1873b0d0a0fda94bedacffb57f8589402",
+        "LICENSE": "f0c31a246be4a7e915fc9b9d5a6ad90d3794fc772fd73309edbb5a19a164db7c",
+        "INSTALL.md": "d42210df8807146e71dc62c8802921d6cc1e2068bc1685053da426ab6d223f9f",
+        "README.md": "7cb1fafcfdc13bbcb79cf51b48b54457f8a9cc2ae4808dc276a5a6bf4d600bec",
+        "SPEC.md": "09f23fd6adec3fa0ddf2634b4a736197ddc601628925c1a3d0fbd4fa8bec7c34"
+      }
+    }
+  ],
+  "supplemental_totals": {
+    "checks": 18,
+    "passed": 18
+  },
+  "final_hashes": {
+    "runner.py": "5d6908f22fe21b297657b707e0733f8562da810344d9808d9d3d8b36e7feb4b9",
+    "public_probe.py": "912ee5f8dfc48f06908c8c618c5c0d12fa28b8690b30afbf1d17c577d9b76634",
+    "wheredirs.py": "7654f0907e892632ccd7991638b0899fd5d3b2c760163733d5132abf58fdfa9b",
+    "verify.py": "742beb56ef4f3a0a79eb54bc7bed775cba3371c88f175834fc47c461e034a024",
+    "inventory.py": "57c33c84148e0d9ba2e6b320ad0356b4a6ebb746907e46e3f567e68b8943a6bf"
+  }
+}

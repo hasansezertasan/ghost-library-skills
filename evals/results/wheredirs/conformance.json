@@ -1,0 +1,896 @@
+{
+  "full_conformance": true,
+  "runtime": "3.13.15",
+  "totals": {
+    "discovered": 166,
+    "executed": 166,
+    "passed": 166,
+    "failed": 0,
+    "skipped": 0,
+    "unsupported": 0,
+    "warning_assertions": 15
+  },
+  "suite_issues": [],
+  "cases": [
+    {
+      "id": "which_strategy/linux-picks-xdg",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/macos-picks-apple",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/darwin-alias-of-macos",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/windows-picks-windows",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/win32-alias-of-windows",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/freebsd-picks-xdg",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/openbsd-picks-xdg",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/netbsd-picks-xdg",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/dragonfly-picks-xdg",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/which-strategy-rejects-titlecase-linux",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/which-strategy-rejects-uppercase-macos",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/which-strategy-rejects-titlecase-windows",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "which_strategy/which-strategy-rejects-whitespace-only",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-config-default",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-data-default",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-cache-default",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-state-default",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-logs-under-state",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-runtime-set",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-runtime-fallback-to-cache",
+      "warning_count": 1,
+      "warning_expected": true,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-config-honors-env",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-data-honors-env",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-cache-honors-env",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-state-honors-env",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-logs-tracks-state-env",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-logs-empty-state-env-falls-back-to-default",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-logs-relative-state-env-is-unset",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-config-empty-env-is-unset",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-config-relative-env-is-unset",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-data-empty-env-is-unset",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-data-relative-env-is-unset",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-cache-empty-env-is-unset",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-cache-relative-env-is-unset",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-state-empty-env-is-unset",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-state-relative-env-is-unset",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-cache-trailing-slash-stripped",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-data-trailing-slash-stripped",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-state-trailing-slash-stripped",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-runtime-trailing-slash-stripped",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-runtime-relative-is-unset",
+      "warning_count": 1,
+      "warning_expected": true,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-config-app-with-space-preserved",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-config-author-ignored",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-auto-on-linux",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-explicit-on-macos",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-auto-on-freebsd",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-runtime-empty-is-unset",
+      "warning_count": 1,
+      "warning_expected": true,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-runtime-fallback-honours-xdg-cache-home",
+      "warning_count": 1,
+      "warning_expected": true,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-runtime-fallback-rejects-relative-xdg-cache-home",
+      "warning_count": 1,
+      "warning_expected": true,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-home-trailing-slash-stripped",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-home-multiple-trailing-slashes-collapsed",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-home-non-absolute-used-verbatim",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-runtime-ignores-author",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-logs-ignores-xdg-runtime-dir",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-on-windows-honours-xdg-config-home",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-on-windows-runtime-falls-back-to-cache",
+      "warning_count": 1,
+      "warning_expected": true,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-app-cjk-passes-through-verbatim",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-app-cyrillic-passes-through-verbatim",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "xdg/xdg-explicit-on-windows",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-config",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-data-same-as-config",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-cache",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-state-is-null",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-state-with-author-still-null",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-logs",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-runtime-is-null",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-config-with-author",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-cache-with-author",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-logs-with-author",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-config-reverse-dns-author",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-config-author-with-existing-dot",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-config-author-omitted-falls-back",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-app-with-space-preserved",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-ignores-xdg-env",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-explicit-on-linux",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-auto-on-macos",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-auto-on-darwin",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-data-with-author",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-author-empty-string-treated-as-none",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-cache-author-empty-treated-as-none",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-logs-author-empty-treated-as-none",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-author-with-space-preserved",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-author-with-backslash-preserved",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-app-cjk-passes-through-verbatim",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "apple/apple-author-with-slash-yields-two-segments",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-config-local-default",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-data-local-default",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-cache-suffix",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-state-is-null",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-state-with-author-still-null",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-logs-suffix",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-runtime-is-null",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-runtime-with-author-still-null",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-config-with-author",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-logs-with-author",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-data-with-author",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-cache-with-author",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-author-empty-string-treated-as-none",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-localappdata-unset-uses-userprofile",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-no-userprofile-falls-to-home",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-empty-localappdata-treated-as-unset",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-userprofile-trailing-slash-stripped",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-localappdata-trailing-slash-stripped",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-localappdata-trailing-backslash-stripped",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-author-with-slash-yields-multiple-segments",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-config-app-with-space-preserved",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-auto-on-windows",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-non-absolute-localappdata-verbatim",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-unc-localappdata-verbatim",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-whitespace-only-localappdata-not-empty",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "windows/win-explicit-on-macos",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-config",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-data-same-folder",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-cache-same-folder",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-state-same-folder",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-logs-same-folder",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-runtime-same-folder",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-mangles-uppercase",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-mangles-spaces",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-collapses-multiple-spaces",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-collapses-tabs-and-mixed-whitespace",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-trims-leading-trailing-whitespace",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-author-ignored",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-all-transforms-combined",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "single-folder/single-nbsp-not-collapsed",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-bad-strategy",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-empty-strategy",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-empty-app",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-null-app",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-with-nul-byte",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-with-forward-slash",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-with-backslash",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-with-backslash-on-linux",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-which-strategy-unknown-platform",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-which-strategy-empty-string",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-which-strategy-null",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-whitespace-only",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-whitespace-only-xdg",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-tabs-only",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-newlines-only",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-dot",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-dotdot",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-leading-dot",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-trailing-dot",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-app-embedded-dot-is-legal",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-strategy-uppercase-xdg",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-windows-all-env-empty-raises",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "errors/err-xdg-home-empty-raises",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "project/wheredirs-self-config-linux",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "project/wheredirs-self-config-macos-auto",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "project/wheredirs-self-config-macos-xdg-opt-in",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "project/wheredirs-self-config-macos-apple",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "project/wheredirs-self-config-windows",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "project/windows-author-with-space",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "project/server-state-custom-xdg",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "project/dotfile-style-single-folder",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "observations/missing-runtime-warns",
+      "warning_count": 1,
+      "warning_expected": true,
+      "status": "passed"
+    },
+    {
+      "id": "observations/empty-runtime-warns",
+      "warning_count": 1,
+      "warning_expected": true,
+      "status": "passed"
+    },
+    {
+      "id": "observations/relative-runtime-warns",
+      "warning_count": 1,
+      "warning_expected": true,
+      "status": "passed"
+    },
+    {
+      "id": "observations/custom-cache-fallback-warns",
+      "warning_count": 1,
+      "warning_expected": true,
+      "status": "passed"
+    },
+    {
+      "id": "observations/explicit-runtime-does-not-warn",
+      "warning_count": 0,
+      "warning_expected": false,
+      "status": "passed"
+    },
+    {
+      "id": "observations/ignored-xdg-author-does-not-warn",
+      "warning_count": 0,
+      "warning_expected": false,
+      "status": "passed"
+    },
+    {
+      "id": "observations/ignored-single-folder-author-does-not-warn",
+      "warning_count": 0,
+      "warning_expected": false,
+      "status": "passed"
+    },
+    {
+      "id": "observations/apple-null-runtime-does-not-warn",
+      "warning_count": 0,
+      "warning_expected": false,
+      "status": "passed"
+    },
+    {
+      "id": "observations/windows-null-runtime-does-not-warn",
+      "warning_count": 0,
+      "warning_expected": false,
+      "status": "passed"
+    },
+    {
+      "id": "observations/missing-xdg-home-raises",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    },
+    {
+      "id": "observations/missing-windows-fallbacks-raises",
+      "error_type": "ValueError",
+      "warning_count": 0,
+      "status": "passed"
+    }
+  ],
+  "identity": {
+    "fixtures_sha256": "ec5e107b50d33959683168b47c3f5ec1873b0d0a0fda94bedacffb57f8589402",
+    "implementation_sha256": "7654f0907e892632ccd7991638b0899fd5d3b2c760163733d5132abf58fdfa9b",
+    "harness_sha256": "74c0aa473770ec8bede672442bd9119cd995a7cc7254f6111b1519501d377789",
+    "observations_sha256": "7d12d688473816b2404ca94d4e4f95b991038efad8e20de5bda65b6812a0406a"
+  },
+  "decision": "conformant"
+}

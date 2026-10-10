@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ghost Catalog"
+  short_description: "Check listing readiness and draft catalog entries"
+  default_prompt: "Use $ghost-catalog to check whether this ghost library is ready to list."

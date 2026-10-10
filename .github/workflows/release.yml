@@ -1,0 +1,82 @@
+name: release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Preserve running tag/release operations; queued runs can still be superseded.
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  validate:
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+    uses: ./.github/workflows/check.yml
+
+  release-please:
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      # release-please can otherwise release an older pending, failed merge on a
+      # later green push. Require a single pending release at the validated SHA.
+      - name: Select the validated release merge
+        id: release-merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          gh api --paginate --slurp "repos/$REPO/pulls?state=closed&base=main&per_page=100" > "$RUNNER_TEMP/closed-prs.json"
+          python3 tools/release_guard.py --pulls "$RUNNER_TEMP/closed-prs.json" --sha "$SHA" >> "$GITHUB_OUTPUT"
+      - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
+        id: release-please
+        with:
+          config-file: .config/release-please-config.json
+          manifest-file: .config/release-please-manifest.json
+          skip-github-release: ${{ steps.release-merge.outputs.is-release-merge != 'true' }}
+      # GITHUB_TOKEN-created PRs do not start PR workflows. Validate the
+      # regenerated tree here, and support a manual check run for PR status.
+      - name: Check out the release PR branch
+        if: steps.release-please.outputs.prs_created == 'true'
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ fromJSON(steps.release-please.outputs.pr || '{}').headBranchName }}
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        if: steps.release-please.outputs.prs_created == 'true'
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
+        if: steps.release-please.outputs.prs_created == 'true'
+        with:
+          enable-cache: false
+      - name: Regenerate, validate, and commit release packaging
+        if: steps.release-please.outputs.prs_created == 'true'
+        env:
+          PR: ${{ steps.release-please.outputs.pr }}
+        run: |
+          BRANCH=$(jq -er .headBranchName <<< "$PR")
+          uv python install
+          make sync PYTHON="uv run --no-project python"
+          make check-all PYTHON="uv run --no-project python"
+          git add -- .claude-plugin .codex-plugin .agents/plugins/marketplace.json skills package.json .ai-rulez/config.toml
+          if git diff --cached --quiet; then
+            echo "Generated packaging already matches the release version."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: regenerate host packages for the release"
+          git push origin "HEAD:$BRANCH"

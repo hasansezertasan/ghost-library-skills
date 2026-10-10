@@ -1,0 +1,20 @@
+{
+  "name": "ghost-library-skills-marketplace",
+  "interface": {
+    "displayName": "ghost-library-skills-marketplace"
+  },
+  "plugins": [
+    {
+      "name": "ghost-library-skills",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

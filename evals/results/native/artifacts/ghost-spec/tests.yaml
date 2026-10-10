@@ -1,0 +1,55 @@
+fit:
+  - name: ascii
+    input: [abc, 2]
+    output: ab
+  - name: ascii_exact_limit
+    input: [abc, 3]
+    output: abc
+  - name: empty
+    input: ["", 2]
+    output: ""
+  - name: zero_limit
+    input: ["😀x", 0]
+    output: ""
+  - name: supplementary_prefix
+    input: ["😀x", 1]
+    output: "😀"
+  - name: supplementary_exact_limit
+    input: ["😀x", 2]
+    output: "😀x"
+  - name: supplementary_above_limit
+    input: ["😀x", 3]
+    output: "😀x"
+  - name: supplementary_after_ascii
+    input: ["a😀b", 2]
+    output: "a😀"
+  - name: consecutive_supplementary
+    input: ["😀💻x", 2]
+    output: "😀💻"
+  - name: combining_mark_counts_separately
+    input: ["e\u0301x", 1]
+    output: e
+  - name: decomposed_prefix_preserved
+    input: ["e\u0301x", 2]
+    output: "e\u0301"
+  - name: decomposed_exact_limit_preserved
+    input: ["e\u0301", 2]
+    output: "e\u0301"
+  - name: decomposed_above_limit_preserved
+    input: ["e\u0301", 3]
+    output: "e\u0301"
+  - name: composed_prefix_preserved
+    input: ["\u00E9x", 1]
+    output: "\u00E9"
+  - name: composed_unchanged_preserved
+    input: ["\u00E9", 2]
+    output: "\u00E9"
+  - name: combining_mark_order_preserved
+    input: ["a\u0315\u0300x", 3]
+    output: "a\u0315\u0300"
+  - name: joiner_counts_separately
+    input: ["👩\u200D💻x", 2]
+    output: "👩\u200D"
+  - name: joined_emoji_three_code_points
+    input: ["👩\u200D💻x", 3]
+    output: "👩\u200D💻"

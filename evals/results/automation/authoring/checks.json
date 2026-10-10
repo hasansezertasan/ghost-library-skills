@@ -1,0 +1,25 @@
+{
+  "ai_rulez_version": "4.24.2",
+  "configuration_valid": true,
+  "configuration_warnings": [
+    "Source skill agents/ metadata is not a recognized resource kind; our builder preserves agents/openai.yaml in both distributed trees."
+  ],
+  "python": "3.12",
+  "tests_passed": 45,
+  "host_bundles": {
+    "claude": 7,
+    "codex": 7,
+    "opencode": 7,
+    "pi": 7
+  },
+  "workflow_lint": {
+    "tool": "actionlint",
+    "version": "1.7.12",
+    "success": true
+  },
+  "raw_prototype_reproduction": {
+    "all_modes_generated": true,
+    "each_standalone_skill_count": 7
+  },
+  "git_diff_check": true
+}

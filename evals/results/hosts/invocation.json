@@ -1,0 +1,33 @@
+{
+  "claude": {
+    "version": "2.1.289",
+    "discovered_commands": [
+      "ghost-library:ghost-audit",
+      "ghost-library:ghost-fix",
+      "ghost-library:ghost-init",
+      "ghost-library:ghost-release",
+      "ghost-library:ghost-spec",
+      "ghost-library:ghost-tests",
+      "ghost-library:ghost-verify"
+    ],
+    "source": "ghost-library@inline",
+    "invocation": "blocked",
+    "reason": "Weekly usage limit",
+    "model_completed": false,
+    "total_cost_usd": 0
+  },
+  "codex": {
+    "version": "0.160.0",
+    "invocation": "completed",
+    "duration_ms": 84833,
+    "packaged_resources_read": [
+      "contract-rules.md",
+      "fixture-profiles.md",
+      "harness-contract.md"
+    ],
+    "audit_fixture_count": 116,
+    "installed": false
+  },
+  "host_installation_performed": false,
+  "host_update_flow_tested": false
+}

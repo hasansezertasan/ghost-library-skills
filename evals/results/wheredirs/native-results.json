@@ -1,0 +1,3275 @@
+{
+  "complete": true,
+  "conforms": true,
+  "timestamp_utc": "2026-10-04T23:26:11.712971+00:00",
+  "command": [
+    "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+    "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py"
+  ],
+  "scope": "all seven fixture groups; pinned-input Python resolver",
+  "source": {
+    "revision": "7c83fe3e04be50144099eba87d01c36617f404c5",
+    "hashes": {
+      "tests.yaml": "ec5e107b50d33959683168b47c3f5ec1873b0d0a0fda94bedacffb57f8589402",
+      "LICENSE": "f0c31a246be4a7e915fc9b9d5a6ad90d3794fc772fd73309edbb5a19a164db7c",
+      "INSTALL.md": "d42210df8807146e71dc62c8802921d6cc1e2068bc1685053da426ab6d223f9f",
+      "README.md": "7cb1fafcfdc13bbcb79cf51b48b54457f8a9cc2ae4808dc276a5a6bf4d600bec",
+      "SPEC.md": "09f23fd6adec3fa0ddf2634b4a736197ddc601628925c1a3d0fbd4fa8bec7c34"
+    }
+  },
+  "identity": {
+    "fixtures": {
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/contract/tests.yaml",
+      "sha256": "ec5e107b50d33959683168b47c3f5ec1873b0d0a0fda94bedacffb57f8589402"
+    },
+    "implementation": {
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/wheredirs.py",
+      "sha256": "7654f0907e892632ccd7991638b0899fd5d3b2c760163733d5132abf58fdfa9b"
+    },
+    "runner": {
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+      "sha256": "5d6908f22fe21b297657b707e0733f8562da810344d9808d9d3d8b36e7feb4b9"
+    },
+    "inventory": {
+      "path": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/inventory.json",
+      "sha256": "28886880d0a3eac457a5ab9028cb95ae74766c930d5d25f807f72f1bfcb30d87"
+    }
+  },
+  "environment": {
+    "python": "3.13.15 (main, Aug 14 2026, 15:24:40) [Clang 22.1.3 ]",
+    "executable": "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+    "sys_platform": "darwin",
+    "pyyaml": "6.0.3",
+    "input_isolation": "explicit case dict; no os.environ mutation or reads by runner"
+  },
+  "totals": {
+    "discovered": 155,
+    "executed": 155,
+    "passed": 155,
+    "failed": 0,
+    "skipped": 0,
+    "unsupported": 0
+  },
+  "groups": {
+    "which_strategy": {
+      "passed": 13
+    },
+    "xdg": {
+      "passed": 45
+    },
+    "apple": {
+      "passed": 26
+    },
+    "windows": {
+      "passed": 26
+    },
+    "single-folder": {
+      "passed": 14
+    },
+    "errors": {
+      "passed": 23
+    },
+    "project": {
+      "passed": 8
+    }
+  },
+  "assertion_totals": {
+    "attempted": 161,
+    "passed": 161,
+    "failed": 0,
+    "by_kind": {
+      "return": 122,
+      "raises": 26,
+      "runtime_fallback_warning": 6,
+      "null": 7
+    }
+  },
+  "suite_errors": [],
+  "cases": [
+    {
+      "name": "linux-picks-xdg",
+      "group": "which_strategy",
+      "index": 0,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "xdg",
+          "actual": "xdg",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "xdg",
+      "error": null
+    },
+    {
+      "name": "macos-picks-apple",
+      "group": "which_strategy",
+      "index": 1,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "apple",
+          "actual": "apple",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "apple",
+      "error": null
+    },
+    {
+      "name": "darwin-alias-of-macos",
+      "group": "which_strategy",
+      "index": 2,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "apple",
+          "actual": "apple",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "apple",
+      "error": null
+    },
+    {
+      "name": "windows-picks-windows",
+      "group": "which_strategy",
+      "index": 3,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "windows",
+          "actual": "windows",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "windows",
+      "error": null
+    },
+    {
+      "name": "win32-alias-of-windows",
+      "group": "which_strategy",
+      "index": 4,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "windows",
+          "actual": "windows",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "windows",
+      "error": null
+    },
+    {
+      "name": "freebsd-picks-xdg",
+      "group": "which_strategy",
+      "index": 5,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "xdg",
+          "actual": "xdg",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "xdg",
+      "error": null
+    },
+    {
+      "name": "openbsd-picks-xdg",
+      "group": "which_strategy",
+      "index": 6,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "xdg",
+          "actual": "xdg",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "xdg",
+      "error": null
+    },
+    {
+      "name": "netbsd-picks-xdg",
+      "group": "which_strategy",
+      "index": 7,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "xdg",
+          "actual": "xdg",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "xdg",
+      "error": null
+    },
+    {
+      "name": "dragonfly-picks-xdg",
+      "group": "which_strategy",
+      "index": 8,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "xdg",
+          "actual": "xdg",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "xdg",
+      "error": null
+    },
+    {
+      "name": "which-strategy-rejects-titlecase-linux",
+      "group": "which_strategy",
+      "index": 9,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Unrecognised platform: 'Linux'"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Unrecognised platform: 'Linux'"
+      }
+    },
+    {
+      "name": "which-strategy-rejects-uppercase-macos",
+      "group": "which_strategy",
+      "index": 10,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Unrecognised platform: 'MACOS'"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Unrecognised platform: 'MACOS'"
+      }
+    },
+    {
+      "name": "which-strategy-rejects-titlecase-windows",
+      "group": "which_strategy",
+      "index": 11,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Unrecognised platform: 'Windows'"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Unrecognised platform: 'Windows'"
+      }
+    },
+    {
+      "name": "which-strategy-rejects-whitespace-only",
+      "group": "which_strategy",
+      "index": 12,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Unrecognised platform: '   '"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Unrecognised platform: '   '"
+      }
+    },
+    {
+      "name": "xdg-config-default",
+      "group": "xdg",
+      "index": 0,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/MyApp",
+          "actual": "/home/alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-data-default",
+      "group": "xdg",
+      "index": 1,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.local/share/MyApp",
+          "actual": "/home/alice/.local/share/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.local/share/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-cache-default",
+      "group": "xdg",
+      "index": 2,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.cache/MyApp",
+          "actual": "/home/alice/.cache/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.cache/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-state-default",
+      "group": "xdg",
+      "index": 3,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.local/state/MyApp",
+          "actual": "/home/alice/.local/state/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.local/state/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-logs-under-state",
+      "group": "xdg",
+      "index": 4,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.local/state/MyApp/logs",
+          "actual": "/home/alice/.local/state/MyApp/logs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.local/state/MyApp/logs",
+      "error": null
+    },
+    {
+      "name": "xdg-runtime-set",
+      "group": "xdg",
+      "index": 5,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/run/user/1000/MyApp",
+          "actual": "/run/user/1000/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/run/user/1000/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-runtime-fallback-to-cache",
+      "group": "xdg",
+      "index": 6,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.cache/MyApp",
+          "actual": "/home/alice/.cache/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        },
+        {
+          "kind": "runtime_fallback_warning",
+          "expected": "at least one warning",
+          "actual": 1,
+          "passed": true,
+          "stage": "warning"
+        }
+      ],
+      "warnings": [
+        {
+          "category": "RuntimeWarning",
+          "message": "XDG_RUNTIME_DIR is unset, empty, or non-absolute; using cache_dir. This fallback has no runtime directory permission or lifetime guarantees.",
+          "filename": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "lineno": 107
+        }
+      ],
+      "reasons": [],
+      "actual": "/home/alice/.cache/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-config-honors-env",
+      "group": "xdg",
+      "index": 7,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/tmp/cfg/MyApp",
+          "actual": "/tmp/cfg/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/tmp/cfg/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-data-honors-env",
+      "group": "xdg",
+      "index": 8,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/srv/data/MyApp",
+          "actual": "/srv/data/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/srv/data/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-cache-honors-env",
+      "group": "xdg",
+      "index": 9,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/var/cache/alice/MyApp",
+          "actual": "/var/cache/alice/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/var/cache/alice/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-state-honors-env",
+      "group": "xdg",
+      "index": 10,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/var/state/alice/MyApp",
+          "actual": "/var/state/alice/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/var/state/alice/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-logs-tracks-state-env",
+      "group": "xdg",
+      "index": 11,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/var/state/alice/MyApp/logs",
+          "actual": "/var/state/alice/MyApp/logs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/var/state/alice/MyApp/logs",
+      "error": null
+    },
+    {
+      "name": "xdg-logs-empty-state-env-falls-back-to-default",
+      "group": "xdg",
+      "index": 12,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.local/state/MyApp/logs",
+          "actual": "/home/alice/.local/state/MyApp/logs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.local/state/MyApp/logs",
+      "error": null
+    },
+    {
+      "name": "xdg-logs-relative-state-env-is-unset",
+      "group": "xdg",
+      "index": 13,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.local/state/MyApp/logs",
+          "actual": "/home/alice/.local/state/MyApp/logs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.local/state/MyApp/logs",
+      "error": null
+    },
+    {
+      "name": "xdg-config-empty-env-is-unset",
+      "group": "xdg",
+      "index": 14,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/MyApp",
+          "actual": "/home/alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-config-relative-env-is-unset",
+      "group": "xdg",
+      "index": 15,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/MyApp",
+          "actual": "/home/alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-data-empty-env-is-unset",
+      "group": "xdg",
+      "index": 16,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.local/share/MyApp",
+          "actual": "/home/alice/.local/share/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.local/share/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-data-relative-env-is-unset",
+      "group": "xdg",
+      "index": 17,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.local/share/MyApp",
+          "actual": "/home/alice/.local/share/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.local/share/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-cache-empty-env-is-unset",
+      "group": "xdg",
+      "index": 18,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.cache/MyApp",
+          "actual": "/home/alice/.cache/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.cache/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-cache-relative-env-is-unset",
+      "group": "xdg",
+      "index": 19,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.cache/MyApp",
+          "actual": "/home/alice/.cache/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.cache/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-state-empty-env-is-unset",
+      "group": "xdg",
+      "index": 20,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.local/state/MyApp",
+          "actual": "/home/alice/.local/state/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.local/state/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-state-relative-env-is-unset",
+      "group": "xdg",
+      "index": 21,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.local/state/MyApp",
+          "actual": "/home/alice/.local/state/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.local/state/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-cache-trailing-slash-stripped",
+      "group": "xdg",
+      "index": 22,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/var/cache/alice/MyApp",
+          "actual": "/var/cache/alice/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/var/cache/alice/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-data-trailing-slash-stripped",
+      "group": "xdg",
+      "index": 23,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/srv/data/MyApp",
+          "actual": "/srv/data/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/srv/data/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-state-trailing-slash-stripped",
+      "group": "xdg",
+      "index": 24,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/var/state/alice/MyApp",
+          "actual": "/var/state/alice/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/var/state/alice/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-runtime-trailing-slash-stripped",
+      "group": "xdg",
+      "index": 25,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/run/user/1000/MyApp",
+          "actual": "/run/user/1000/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/run/user/1000/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-runtime-relative-is-unset",
+      "group": "xdg",
+      "index": 26,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.cache/MyApp",
+          "actual": "/home/alice/.cache/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        },
+        {
+          "kind": "runtime_fallback_warning",
+          "expected": "at least one warning",
+          "actual": 1,
+          "passed": true,
+          "stage": "warning"
+        }
+      ],
+      "warnings": [
+        {
+          "category": "RuntimeWarning",
+          "message": "XDG_RUNTIME_DIR is unset, empty, or non-absolute; using cache_dir. This fallback has no runtime directory permission or lifetime guarantees.",
+          "filename": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "lineno": 107
+        }
+      ],
+      "reasons": [],
+      "actual": "/home/alice/.cache/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-config-app-with-space-preserved",
+      "group": "xdg",
+      "index": 27,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/My App",
+          "actual": "/home/alice/.config/My App",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/My App",
+      "error": null
+    },
+    {
+      "name": "xdg-config-author-ignored",
+      "group": "xdg",
+      "index": 28,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/MyApp",
+          "actual": "/home/alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-auto-on-linux",
+      "group": "xdg",
+      "index": 29,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/MyApp",
+          "actual": "/home/alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-explicit-on-macos",
+      "group": "xdg",
+      "index": 30,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/.config/MyApp",
+          "actual": "/Users/alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-auto-on-freebsd",
+      "group": "xdg",
+      "index": 31,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/MyApp",
+          "actual": "/home/alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-runtime-empty-is-unset",
+      "group": "xdg",
+      "index": 32,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.cache/MyApp",
+          "actual": "/home/alice/.cache/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        },
+        {
+          "kind": "runtime_fallback_warning",
+          "expected": "at least one warning",
+          "actual": 1,
+          "passed": true,
+          "stage": "warning"
+        }
+      ],
+      "warnings": [
+        {
+          "category": "RuntimeWarning",
+          "message": "XDG_RUNTIME_DIR is unset, empty, or non-absolute; using cache_dir. This fallback has no runtime directory permission or lifetime guarantees.",
+          "filename": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "lineno": 107
+        }
+      ],
+      "reasons": [],
+      "actual": "/home/alice/.cache/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-runtime-fallback-honours-xdg-cache-home",
+      "group": "xdg",
+      "index": 33,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/custom/cache/MyApp",
+          "actual": "/custom/cache/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        },
+        {
+          "kind": "runtime_fallback_warning",
+          "expected": "at least one warning",
+          "actual": 1,
+          "passed": true,
+          "stage": "warning"
+        }
+      ],
+      "warnings": [
+        {
+          "category": "RuntimeWarning",
+          "message": "XDG_RUNTIME_DIR is unset, empty, or non-absolute; using cache_dir. This fallback has no runtime directory permission or lifetime guarantees.",
+          "filename": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "lineno": 107
+        }
+      ],
+      "reasons": [],
+      "actual": "/custom/cache/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-runtime-fallback-rejects-relative-xdg-cache-home",
+      "group": "xdg",
+      "index": 34,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.cache/MyApp",
+          "actual": "/home/alice/.cache/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        },
+        {
+          "kind": "runtime_fallback_warning",
+          "expected": "at least one warning",
+          "actual": 1,
+          "passed": true,
+          "stage": "warning"
+        }
+      ],
+      "warnings": [
+        {
+          "category": "RuntimeWarning",
+          "message": "XDG_RUNTIME_DIR is unset, empty, or non-absolute; using cache_dir. This fallback has no runtime directory permission or lifetime guarantees.",
+          "filename": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "lineno": 107
+        }
+      ],
+      "reasons": [],
+      "actual": "/home/alice/.cache/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-home-trailing-slash-stripped",
+      "group": "xdg",
+      "index": 35,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/MyApp",
+          "actual": "/home/alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-home-multiple-trailing-slashes-collapsed",
+      "group": "xdg",
+      "index": 36,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/MyApp",
+          "actual": "/home/alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-home-non-absolute-used-verbatim",
+      "group": "xdg",
+      "index": 37,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "alice/.config/MyApp",
+          "actual": "alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-runtime-ignores-author",
+      "group": "xdg",
+      "index": 38,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/run/user/1000/MyApp",
+          "actual": "/run/user/1000/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/run/user/1000/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-logs-ignores-xdg-runtime-dir",
+      "group": "xdg",
+      "index": 39,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/custom/state/MyApp/logs",
+          "actual": "/custom/state/MyApp/logs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/custom/state/MyApp/logs",
+      "error": null
+    },
+    {
+      "name": "xdg-on-windows-honours-xdg-config-home",
+      "group": "xdg",
+      "index": 40,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/.xdg/config/MyApp",
+          "actual": "/Users/alice/.xdg/config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/.xdg/config/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-on-windows-runtime-falls-back-to-cache",
+      "group": "xdg",
+      "index": 41,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/.cache/MyApp",
+          "actual": "/Users/alice/.cache/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        },
+        {
+          "kind": "runtime_fallback_warning",
+          "expected": "at least one warning",
+          "actual": 1,
+          "passed": true,
+          "stage": "warning"
+        }
+      ],
+      "warnings": [
+        {
+          "category": "RuntimeWarning",
+          "message": "XDG_RUNTIME_DIR is unset, empty, or non-absolute; using cache_dir. This fallback has no runtime directory permission or lifetime guarantees.",
+          "filename": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer/runner.py",
+          "lineno": 107
+        }
+      ],
+      "reasons": [],
+      "actual": "/Users/alice/.cache/MyApp",
+      "error": null
+    },
+    {
+      "name": "xdg-app-cjk-passes-through-verbatim",
+      "group": "xdg",
+      "index": 42,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/日本語アプリ",
+          "actual": "/home/alice/.config/日本語アプリ",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/日本語アプリ",
+      "error": null
+    },
+    {
+      "name": "xdg-app-cyrillic-passes-through-verbatim",
+      "group": "xdg",
+      "index": 43,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.local/share/МойПриложение",
+          "actual": "/home/alice/.local/share/МойПриложение",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.local/share/МойПриложение",
+      "error": null
+    },
+    {
+      "name": "xdg-explicit-on-windows",
+      "group": "xdg",
+      "index": 44,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/.config/MyApp",
+          "actual": "/Users/alice/.config/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/.config/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-config",
+      "group": "apple",
+      "index": 0,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/MyApp",
+          "actual": "/Users/alice/Library/Application Support/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-data-same-as-config",
+      "group": "apple",
+      "index": 1,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/MyApp",
+          "actual": "/Users/alice/Library/Application Support/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-cache",
+      "group": "apple",
+      "index": 2,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Caches/MyApp",
+          "actual": "/Users/alice/Library/Caches/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Caches/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-state-is-null",
+      "group": "apple",
+      "index": 3,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "null",
+          "expected": null,
+          "actual": null,
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": null
+    },
+    {
+      "name": "apple-state-with-author-still-null",
+      "group": "apple",
+      "index": 4,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "null",
+          "expected": null,
+          "actual": null,
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": null
+    },
+    {
+      "name": "apple-logs",
+      "group": "apple",
+      "index": 5,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Logs/MyApp",
+          "actual": "/Users/alice/Library/Logs/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Logs/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-runtime-is-null",
+      "group": "apple",
+      "index": 6,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "null",
+          "expected": null,
+          "actual": null,
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": null
+    },
+    {
+      "name": "apple-config-with-author",
+      "group": "apple",
+      "index": 7,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/Acme.MyApp",
+          "actual": "/Users/alice/Library/Application Support/Acme.MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/Acme.MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-cache-with-author",
+      "group": "apple",
+      "index": 8,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Caches/Acme.MyApp",
+          "actual": "/Users/alice/Library/Caches/Acme.MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Caches/Acme.MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-logs-with-author",
+      "group": "apple",
+      "index": 9,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Logs/Acme.MyApp",
+          "actual": "/Users/alice/Library/Logs/Acme.MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Logs/Acme.MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-config-reverse-dns-author",
+      "group": "apple",
+      "index": 10,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/com.acme.MyApp",
+          "actual": "/Users/alice/Library/Application Support/com.acme.MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/com.acme.MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-config-author-with-existing-dot",
+      "group": "apple",
+      "index": 11,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/io.github.acme.myapp",
+          "actual": "/Users/alice/Library/Application Support/io.github.acme.myapp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/io.github.acme.myapp",
+      "error": null
+    },
+    {
+      "name": "apple-config-author-omitted-falls-back",
+      "group": "apple",
+      "index": 12,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/MyApp",
+          "actual": "/Users/alice/Library/Application Support/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-app-with-space-preserved",
+      "group": "apple",
+      "index": 13,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/My App",
+          "actual": "/Users/alice/Library/Application Support/My App",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/My App",
+      "error": null
+    },
+    {
+      "name": "apple-ignores-xdg-env",
+      "group": "apple",
+      "index": 14,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/MyApp",
+          "actual": "/Users/alice/Library/Application Support/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-explicit-on-linux",
+      "group": "apple",
+      "index": 15,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/Library/Application Support/MyApp",
+          "actual": "/home/alice/Library/Application Support/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/Library/Application Support/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-auto-on-macos",
+      "group": "apple",
+      "index": 16,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/MyApp",
+          "actual": "/Users/alice/Library/Application Support/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-auto-on-darwin",
+      "group": "apple",
+      "index": 17,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/MyApp",
+          "actual": "/Users/alice/Library/Application Support/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-data-with-author",
+      "group": "apple",
+      "index": 18,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/Acme.MyApp",
+          "actual": "/Users/alice/Library/Application Support/Acme.MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/Acme.MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-author-empty-string-treated-as-none",
+      "group": "apple",
+      "index": 19,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/MyApp",
+          "actual": "/Users/alice/Library/Application Support/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-cache-author-empty-treated-as-none",
+      "group": "apple",
+      "index": 20,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Caches/MyApp",
+          "actual": "/Users/alice/Library/Caches/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Caches/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-logs-author-empty-treated-as-none",
+      "group": "apple",
+      "index": 21,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Logs/MyApp",
+          "actual": "/Users/alice/Library/Logs/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Logs/MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-author-with-space-preserved",
+      "group": "apple",
+      "index": 22,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/Acme Corp.MyApp",
+          "actual": "/Users/alice/Library/Application Support/Acme Corp.MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/Acme Corp.MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-author-with-backslash-preserved",
+      "group": "apple",
+      "index": 23,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/a/b.MyApp",
+          "actual": "/Users/alice/Library/Application Support/a/b.MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/a/b.MyApp",
+      "error": null
+    },
+    {
+      "name": "apple-app-cjk-passes-through-verbatim",
+      "group": "apple",
+      "index": 24,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/日本語アプリ",
+          "actual": "/Users/alice/Library/Application Support/日本語アプリ",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/日本語アプリ",
+      "error": null
+    },
+    {
+      "name": "apple-author-with-slash-yields-two-segments",
+      "group": "apple",
+      "index": 25,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/alice/Library/Application Support/a/b.MyApp",
+          "actual": "/Users/alice/Library/Application Support/a/b.MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/alice/Library/Application Support/a/b.MyApp",
+      "error": null
+    },
+    {
+      "name": "win-config-local-default",
+      "group": "windows",
+      "index": 0,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-data-local-default",
+      "group": "windows",
+      "index": 1,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-cache-suffix",
+      "group": "windows",
+      "index": 2,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp/Cache",
+          "actual": "C:/Users/alice/AppData/Local/MyApp/Cache",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp/Cache",
+      "error": null
+    },
+    {
+      "name": "win-state-is-null",
+      "group": "windows",
+      "index": 3,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "null",
+          "expected": null,
+          "actual": null,
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": null
+    },
+    {
+      "name": "win-state-with-author-still-null",
+      "group": "windows",
+      "index": 4,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "null",
+          "expected": null,
+          "actual": null,
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": null
+    },
+    {
+      "name": "win-logs-suffix",
+      "group": "windows",
+      "index": 5,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp/Logs",
+          "actual": "C:/Users/alice/AppData/Local/MyApp/Logs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp/Logs",
+      "error": null
+    },
+    {
+      "name": "win-runtime-is-null",
+      "group": "windows",
+      "index": 6,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "null",
+          "expected": null,
+          "actual": null,
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": null
+    },
+    {
+      "name": "win-runtime-with-author-still-null",
+      "group": "windows",
+      "index": 7,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "null",
+          "expected": null,
+          "actual": null,
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": null
+    },
+    {
+      "name": "win-config-with-author",
+      "group": "windows",
+      "index": 8,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/Acme/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/Acme/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/Acme/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-logs-with-author",
+      "group": "windows",
+      "index": 9,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/Acme/MyApp/Logs",
+          "actual": "C:/Users/alice/AppData/Local/Acme/MyApp/Logs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/Acme/MyApp/Logs",
+      "error": null
+    },
+    {
+      "name": "win-data-with-author",
+      "group": "windows",
+      "index": 10,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/Acme/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/Acme/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/Acme/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-cache-with-author",
+      "group": "windows",
+      "index": 11,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/Acme/MyApp/Cache",
+          "actual": "C:/Users/alice/AppData/Local/Acme/MyApp/Cache",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/Acme/MyApp/Cache",
+      "error": null
+    },
+    {
+      "name": "win-author-empty-string-treated-as-none",
+      "group": "windows",
+      "index": 12,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-localappdata-unset-uses-userprofile",
+      "group": "windows",
+      "index": 13,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-no-userprofile-falls-to-home",
+      "group": "windows",
+      "index": 14,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-empty-localappdata-treated-as-unset",
+      "group": "windows",
+      "index": 15,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-userprofile-trailing-slash-stripped",
+      "group": "windows",
+      "index": 16,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-localappdata-trailing-slash-stripped",
+      "group": "windows",
+      "index": 17,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-localappdata-trailing-backslash-stripped",
+      "group": "windows",
+      "index": 18,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-author-with-slash-yields-multiple-segments",
+      "group": "windows",
+      "index": 19,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/Acme/Sub/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/Acme/Sub/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/Acme/Sub/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-config-app-with-space-preserved",
+      "group": "windows",
+      "index": 20,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/My App",
+          "actual": "C:/Users/alice/AppData/Local/My App",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/My App",
+      "error": null
+    },
+    {
+      "name": "win-auto-on-windows",
+      "group": "windows",
+      "index": 21,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/Acme/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/Acme/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/Acme/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-non-absolute-localappdata-verbatim",
+      "group": "windows",
+      "index": 22,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "relative/path/MyApp",
+          "actual": "relative/path/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "relative/path/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-unc-localappdata-verbatim",
+      "group": "windows",
+      "index": 23,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/server/share/AppData/MyApp",
+          "actual": "/server/share/AppData/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "//server/share/AppData/MyApp",
+      "error": null
+    },
+    {
+      "name": "win-whitespace-only-localappdata-not-empty",
+      "group": "windows",
+      "index": 24,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "   /MyApp",
+          "actual": "   /MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "   /MyApp",
+      "error": null
+    },
+    {
+      "name": "win-explicit-on-macos",
+      "group": "windows",
+      "index": 25,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/alice/AppData/Local/Acme/MyApp",
+          "actual": "C:/Users/alice/AppData/Local/Acme/MyApp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/alice/AppData/Local/Acme/MyApp",
+      "error": null
+    },
+    {
+      "name": "single-config",
+      "group": "single-folder",
+      "index": 0,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.myapp",
+          "actual": "/home/alice/.myapp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.myapp",
+      "error": null
+    },
+    {
+      "name": "single-data-same-folder",
+      "group": "single-folder",
+      "index": 1,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.myapp",
+          "actual": "/home/alice/.myapp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.myapp",
+      "error": null
+    },
+    {
+      "name": "single-cache-same-folder",
+      "group": "single-folder",
+      "index": 2,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.myapp",
+          "actual": "/home/alice/.myapp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.myapp",
+      "error": null
+    },
+    {
+      "name": "single-state-same-folder",
+      "group": "single-folder",
+      "index": 3,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.myapp",
+          "actual": "/home/alice/.myapp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.myapp",
+      "error": null
+    },
+    {
+      "name": "single-logs-same-folder",
+      "group": "single-folder",
+      "index": 4,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.myapp",
+          "actual": "/home/alice/.myapp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.myapp",
+      "error": null
+    },
+    {
+      "name": "single-runtime-same-folder",
+      "group": "single-folder",
+      "index": 5,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.myapp",
+          "actual": "/home/alice/.myapp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.myapp",
+      "error": null
+    },
+    {
+      "name": "single-mangles-uppercase",
+      "group": "single-folder",
+      "index": 6,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.myapp",
+          "actual": "/home/alice/.myapp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.myapp",
+      "error": null
+    },
+    {
+      "name": "single-mangles-spaces",
+      "group": "single-folder",
+      "index": 7,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.my-app",
+          "actual": "/home/alice/.my-app",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.my-app",
+      "error": null
+    },
+    {
+      "name": "single-collapses-multiple-spaces",
+      "group": "single-folder",
+      "index": 8,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.my-app",
+          "actual": "/home/alice/.my-app",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.my-app",
+      "error": null
+    },
+    {
+      "name": "single-collapses-tabs-and-mixed-whitespace",
+      "group": "single-folder",
+      "index": 9,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.my-app-name",
+          "actual": "/home/alice/.my-app-name",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.my-app-name",
+      "error": null
+    },
+    {
+      "name": "single-trims-leading-trailing-whitespace",
+      "group": "single-folder",
+      "index": 10,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.myapp",
+          "actual": "/home/alice/.myapp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.myapp",
+      "error": null
+    },
+    {
+      "name": "single-author-ignored",
+      "group": "single-folder",
+      "index": 11,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.myapp",
+          "actual": "/home/alice/.myapp",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.myapp",
+      "error": null
+    },
+    {
+      "name": "single-all-transforms-combined",
+      "group": "single-folder",
+      "index": 12,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.my-legacy-tool",
+          "actual": "/home/alice/.my-legacy-tool",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.my-legacy-tool",
+      "error": null
+    },
+    {
+      "name": "single-nbsp-not-collapsed",
+      "group": "single-folder",
+      "index": 13,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.my app",
+          "actual": "/home/alice/.my app",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.my app",
+      "error": null
+    },
+    {
+      "name": "err-bad-strategy",
+      "group": "errors",
+      "index": 0,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Unknown strategy: 'freedesktop'"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Unknown strategy: 'freedesktop'"
+      }
+    },
+    {
+      "name": "err-empty-strategy",
+      "group": "errors",
+      "index": 1,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Unknown strategy: ''"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Unknown strategy: ''"
+      }
+    },
+    {
+      "name": "err-empty-app",
+      "group": "errors",
+      "index": 2,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-null-app",
+      "group": "errors",
+      "index": 3,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-with-nul-byte",
+      "group": "errors",
+      "index": 4,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-with-forward-slash",
+      "group": "errors",
+      "index": 5,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-with-backslash",
+      "group": "errors",
+      "index": 6,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-with-backslash-on-linux",
+      "group": "errors",
+      "index": 7,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-which-strategy-unknown-platform",
+      "group": "errors",
+      "index": 8,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Unrecognised platform: 'plan9'"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Unrecognised platform: 'plan9'"
+      }
+    },
+    {
+      "name": "err-which-strategy-empty-string",
+      "group": "errors",
+      "index": 9,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Unrecognised platform: ''"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Unrecognised platform: ''"
+      }
+    },
+    {
+      "name": "err-which-strategy-null",
+      "group": "errors",
+      "index": 10,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Unrecognised platform: None"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Unrecognised platform: None"
+      }
+    },
+    {
+      "name": "err-app-whitespace-only",
+      "group": "errors",
+      "index": 11,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-whitespace-only-xdg",
+      "group": "errors",
+      "index": 12,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-tabs-only",
+      "group": "errors",
+      "index": 13,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-newlines-only",
+      "group": "errors",
+      "index": 14,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-dot",
+      "group": "errors",
+      "index": 15,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-dotdot",
+      "group": "errors",
+      "index": 16,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-leading-dot",
+      "group": "errors",
+      "index": 17,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-trailing-dot",
+      "group": "errors",
+      "index": 18,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Invalid app name"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Invalid app name"
+      }
+    },
+    {
+      "name": "err-app-embedded-dot-is-legal",
+      "group": "errors",
+      "index": 19,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/alice/.config/vim.tiny",
+          "actual": "/home/alice/.config/vim.tiny",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/alice/.config/vim.tiny",
+      "error": null
+    },
+    {
+      "name": "err-strategy-uppercase-xdg",
+      "group": "errors",
+      "index": 20,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "Unknown strategy: 'XDG'"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "Unknown strategy: 'XDG'"
+      }
+    },
+    {
+      "name": "err-windows-all-env-empty-raises",
+      "group": "errors",
+      "index": 21,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "LOCALAPPDATA, USERPROFILE, and HOME are unset or empty"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "LOCALAPPDATA, USERPROFILE, and HOME are unset or empty"
+      }
+    },
+    {
+      "name": "err-xdg-home-empty-raises",
+      "group": "errors",
+      "index": 22,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "raises",
+          "expected": "an exception",
+          "actual": {
+            "type": "ValueError",
+            "message": "HOME is required"
+          },
+          "passed": true,
+          "stage": "invocation"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": null,
+      "error": {
+        "type": "ValueError",
+        "message": "HOME is required"
+      }
+    },
+    {
+      "name": "wheredirs-self-config-linux",
+      "group": "project",
+      "index": 0,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/dev/.config/wheredirs",
+          "actual": "/home/dev/.config/wheredirs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/dev/.config/wheredirs",
+      "error": null
+    },
+    {
+      "name": "wheredirs-self-config-macos-auto",
+      "group": "project",
+      "index": 1,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/dev/Library/Application Support/wheredirs",
+          "actual": "/Users/dev/Library/Application Support/wheredirs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/dev/Library/Application Support/wheredirs",
+      "error": null
+    },
+    {
+      "name": "wheredirs-self-config-macos-xdg-opt-in",
+      "group": "project",
+      "index": 2,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/dev/.config/wheredirs",
+          "actual": "/Users/dev/.config/wheredirs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/dev/.config/wheredirs",
+      "error": null
+    },
+    {
+      "name": "wheredirs-self-config-macos-apple",
+      "group": "project",
+      "index": 3,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/Users/dev/Library/Application Support/wheredirs",
+          "actual": "/Users/dev/Library/Application Support/wheredirs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/Users/dev/Library/Application Support/wheredirs",
+      "error": null
+    },
+    {
+      "name": "wheredirs-self-config-windows",
+      "group": "project",
+      "index": 4,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/dev/AppData/Local/hasansezertasan/wheredirs",
+          "actual": "C:/Users/dev/AppData/Local/hasansezertasan/wheredirs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/dev/AppData/Local/hasansezertasan/wheredirs",
+      "error": null
+    },
+    {
+      "name": "windows-author-with-space",
+      "group": "project",
+      "index": 5,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "C:/Users/dev/AppData/Local/Acme Corp/MyApp/Logs",
+          "actual": "C:/Users/dev/AppData/Local/Acme Corp/MyApp/Logs",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "C:/Users/dev/AppData/Local/Acme Corp/MyApp/Logs",
+      "error": null
+    },
+    {
+      "name": "server-state-custom-xdg",
+      "group": "project",
+      "index": 6,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/var/lib/daemon/state/my-daemon",
+          "actual": "/var/lib/daemon/state/my-daemon",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/var/lib/daemon/state/my-daemon",
+      "error": null
+    },
+    {
+      "name": "dotfile-style-single-folder",
+      "group": "project",
+      "index": 7,
+      "status": "passed",
+      "assertions": [
+        {
+          "kind": "return",
+          "expected": "/home/dev/.legacy-tool",
+          "actual": "/home/dev/.legacy-tool",
+          "passed": true,
+          "stage": "comparison"
+        }
+      ],
+      "warnings": [],
+      "reasons": [],
+      "actual": "/home/dev/.legacy-tool",
+      "error": null
+    }
+  ]
+}

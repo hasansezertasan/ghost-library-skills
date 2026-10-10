@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ghost Evaluate"
+  short_description: "Measure generation quality across agents and languages"
+  default_prompt: "Use $ghost-evaluate to test how well this contract generates across languages."

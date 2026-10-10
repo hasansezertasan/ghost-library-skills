@@ -1,0 +1,1614 @@
+[
+  {
+    "control": "wrong-expectation",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 166,
+      "executed": 166,
+      "passed": 165,
+      "failed": 1,
+      "skipped": 0,
+      "unsupported": 0,
+      "warning_assertions": 15
+    },
+    "fatal_error": null,
+    "affected_cases": [
+      {
+        "id": "which_strategy/linux-picks-xdg",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      }
+    ]
+  },
+  {
+    "control": "wrong-return",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 166,
+      "executed": 166,
+      "passed": 16,
+      "failed": 150,
+      "skipped": 0,
+      "unsupported": 0,
+      "warning_assertions": 15
+    },
+    "fatal_error": null,
+    "affected_cases": [
+      {
+        "id": "xdg/xdg-config-default",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-data-default",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-cache-default",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-state-default",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-logs-under-state",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-set",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-fallback-to-cache",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed",
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-config-honors-env",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-data-honors-env",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-cache-honors-env",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-state-honors-env",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-logs-tracks-state-env",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-logs-empty-state-env-falls-back-to-default",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-logs-relative-state-env-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-config-empty-env-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-config-relative-env-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-data-empty-env-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-data-relative-env-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-cache-empty-env-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-cache-relative-env-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-state-empty-env-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-state-relative-env-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-cache-trailing-slash-stripped",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-data-trailing-slash-stripped",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-state-trailing-slash-stripped",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-trailing-slash-stripped",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-relative-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed",
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-config-app-with-space-preserved",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-config-author-ignored",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-auto-on-linux",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-explicit-on-macos",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-auto-on-freebsd",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-empty-is-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed",
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-fallback-honours-xdg-cache-home",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed",
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-fallback-rejects-relative-xdg-cache-home",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed",
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-home-trailing-slash-stripped",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-home-multiple-trailing-slashes-collapsed",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-home-non-absolute-used-verbatim",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-ignores-author",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-logs-ignores-xdg-runtime-dir",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-on-windows-honours-xdg-config-home",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-on-windows-runtime-falls-back-to-cache",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed",
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-app-cjk-passes-through-verbatim",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-app-cyrillic-passes-through-verbatim",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-explicit-on-windows",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-config",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-data-same-as-config",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-cache",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-state-is-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-state-with-author-still-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-logs",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-runtime-is-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-config-with-author",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-cache-with-author",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-logs-with-author",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-config-reverse-dns-author",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-config-author-with-existing-dot",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-config-author-omitted-falls-back",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-app-with-space-preserved",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-ignores-xdg-env",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-explicit-on-linux",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-auto-on-macos",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-auto-on-darwin",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-data-with-author",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-author-empty-string-treated-as-none",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-cache-author-empty-treated-as-none",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-logs-author-empty-treated-as-none",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-author-with-space-preserved",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-author-with-backslash-preserved",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-app-cjk-passes-through-verbatim",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-author-with-slash-yields-two-segments",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-config-local-default",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-data-local-default",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-cache-suffix",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-state-is-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-state-with-author-still-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-logs-suffix",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-runtime-is-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-runtime-with-author-still-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-config-with-author",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-logs-with-author",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-data-with-author",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-cache-with-author",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-author-empty-string-treated-as-none",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-localappdata-unset-uses-userprofile",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-no-userprofile-falls-to-home",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-empty-localappdata-treated-as-unset",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-userprofile-trailing-slash-stripped",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-localappdata-trailing-slash-stripped",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-localappdata-trailing-backslash-stripped",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-author-with-slash-yields-multiple-segments",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-config-app-with-space-preserved",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-auto-on-windows",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-non-absolute-localappdata-verbatim",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-unc-localappdata-verbatim",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-whitespace-only-localappdata-not-empty",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-explicit-on-macos",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-config",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-data-same-folder",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-cache-same-folder",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-state-same-folder",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-logs-same-folder",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-runtime-same-folder",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-mangles-uppercase",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-mangles-spaces",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-collapses-multiple-spaces",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-collapses-tabs-and-mixed-whitespace",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-trims-leading-trailing-whitespace",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-author-ignored",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-all-transforms-combined",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "single-folder/single-nbsp-not-collapsed",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "errors/err-bad-strategy",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-empty-strategy",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-empty-app",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-null-app",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-with-nul-byte",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-with-forward-slash",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-with-backslash",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-with-backslash-on-linux",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-whitespace-only",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-whitespace-only-xdg",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-tabs-only",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-newlines-only",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-dot",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-dotdot",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-leading-dot",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-trailing-dot",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-embedded-dot-is-legal",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "errors/err-strategy-uppercase-xdg",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-windows-all-env-empty-raises",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-xdg-home-empty-raises",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "project/wheredirs-self-config-linux",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "project/wheredirs-self-config-macos-auto",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "project/wheredirs-self-config-macos-xdg-opt-in",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "project/wheredirs-self-config-macos-apple",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "project/wheredirs-self-config-windows",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "project/windows-author-with-space",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "project/server-state-custom-xdg",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "project/dotfile-style-single-folder",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "observations/missing-runtime-warns",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed",
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/empty-runtime-warns",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed",
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/relative-runtime-warns",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed",
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/custom-cache-fallback-warns",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed",
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/explicit-runtime-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "observations/ignored-xdg-author-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "observations/ignored-single-folder-author-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "observations/apple-null-runtime-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "observations/windows-null-runtime-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "observations/missing-xdg-home-raises",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "observations/missing-windows-fallbacks-raises",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      }
+    ]
+  },
+  {
+    "control": "error-returns-normally",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 166,
+      "executed": 166,
+      "passed": 138,
+      "failed": 28,
+      "skipped": 0,
+      "unsupported": 0,
+      "warning_assertions": 15
+    },
+    "fatal_error": null,
+    "affected_cases": [
+      {
+        "id": "which_strategy/which-strategy-rejects-titlecase-linux",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "which_strategy/which-strategy-rejects-uppercase-macos",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "which_strategy/which-strategy-rejects-titlecase-windows",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "which_strategy/which-strategy-rejects-whitespace-only",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-bad-strategy",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-empty-strategy",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-empty-app",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-null-app",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-with-nul-byte",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-with-forward-slash",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-with-backslash",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-with-backslash-on-linux",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-which-strategy-unknown-platform",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-which-strategy-empty-string",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-which-strategy-null",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-whitespace-only",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-whitespace-only-xdg",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-tabs-only",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-newlines-only",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-dot",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-dotdot",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-leading-dot",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-app-trailing-dot",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-strategy-uppercase-xdg",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-windows-all-env-empty-raises",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "errors/err-xdg-home-empty-raises",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "observations/missing-xdg-home-raises",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "observations/missing-windows-fallbacks-raises",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      }
+    ]
+  },
+  {
+    "control": "null-becomes-empty",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 166,
+      "executed": 166,
+      "passed": 157,
+      "failed": 9,
+      "skipped": 0,
+      "unsupported": 0,
+      "warning_assertions": 15
+    },
+    "fatal_error": null,
+    "affected_cases": [
+      {
+        "id": "apple/apple-state-is-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-state-with-author-still-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "apple/apple-runtime-is-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-state-is-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-state-with-author-still-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-runtime-is-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "windows/win-runtime-with-author-still-null",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "observations/apple-null-runtime-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      },
+      {
+        "id": "observations/windows-null-runtime-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Output assertion failed"
+        ]
+      }
+    ]
+  },
+  {
+    "control": "warning-suppressed",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 166,
+      "executed": 166,
+      "passed": 156,
+      "failed": 10,
+      "skipped": 0,
+      "unsupported": 0,
+      "warning_assertions": 15
+    },
+    "fatal_error": null,
+    "affected_cases": [
+      {
+        "id": "xdg/xdg-runtime-fallback-to-cache",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-relative-is-unset",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-empty-is-unset",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-fallback-honours-xdg-cache-home",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-runtime-fallback-rejects-relative-xdg-cache-home",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "xdg/xdg-on-windows-runtime-falls-back-to-cache",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/missing-runtime-warns",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/empty-runtime-warns",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/relative-runtime-warns",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/custom-cache-fallback-warns",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      }
+    ]
+  },
+  {
+    "control": "spurious-warning",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 166,
+      "executed": 166,
+      "passed": 161,
+      "failed": 5,
+      "skipped": 0,
+      "unsupported": 0,
+      "warning_assertions": 15
+    },
+    "fatal_error": null,
+    "affected_cases": [
+      {
+        "id": "observations/explicit-runtime-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/ignored-xdg-author-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/ignored-single-folder-author-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/apple-null-runtime-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      },
+      {
+        "id": "observations/windows-null-runtime-does-not-warn",
+        "status": "failed",
+        "failures": [
+          "Warning observation failed"
+        ]
+      }
+    ]
+  },
+  {
+    "control": "ambient-environment-leak",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 166,
+      "executed": 166,
+      "passed": 164,
+      "failed": 2,
+      "skipped": 0,
+      "unsupported": 0,
+      "warning_assertions": 15
+    },
+    "fatal_error": null,
+    "affected_cases": [
+      {
+        "id": "observations/missing-xdg-home-raises",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      },
+      {
+        "id": "observations/missing-windows-fallbacks-raises",
+        "status": "failed",
+        "failures": [
+          "Required error returned normally"
+        ]
+      }
+    ]
+  },
+  {
+    "control": "unknown-assertion",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 166,
+      "executed": 165,
+      "passed": 165,
+      "failed": 0,
+      "skipped": 0,
+      "unsupported": 1,
+      "warning_assertions": 15
+    },
+    "fatal_error": null,
+    "affected_cases": [
+      {
+        "id": "which_strategy/linux-picks-xdg",
+        "status": "unsupported",
+        "reasons": [
+          "Unknown assertion fields: ['unknown_assertion']"
+        ]
+      }
+    ]
+  },
+  {
+    "control": "empty-suite",
+    "exit_code": 1,
+    "decision": "not-conformant",
+    "totals": {
+      "discovered": 0,
+      "executed": 0,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "unsupported": 0,
+      "warning_assertions": 0
+    },
+    "fatal_error": null,
+    "affected_cases": []
+  },
+  {
+    "control": "duplicate-key",
+    "exit_code": 1,
+    "decision": "incomplete",
+    "totals": null,
+    "fatal_error": "ValueError: Duplicate YAML key: xdg",
+    "affected_cases": []
+  }
+]

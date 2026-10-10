@@ -1,0 +1,734 @@
+{
+  "full_conformance": true,
+  "runtime": "3.13.15",
+  "totals": {
+    "discovered": 117,
+    "executed": 117,
+    "passed": 117,
+    "failed": 0,
+    "skipped": 0,
+    "unsupported": 0
+  },
+  "suite_issues": [],
+  "cases": [
+    {
+      "id": "left_pad/basic-space-padding",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/custom-char-padding",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/pad-to-ten",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/exact-length-no-padding-1",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/exact-length-no-padding-2",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/string-exceeds-target",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/long-string-unchanged",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/two-char-fill-pattern",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/three-char-fill-truncated",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/repeating-pattern-123",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/even-pattern-repetition",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/empty-string-spaces",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/empty-string-dashes",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/empty-string-zero-length",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/zero-target-length",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/negative-target-length",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/exact-match",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/pad-spaces-with-spaces",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/pad-with-leading-trailing-spaces",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/numeric-string",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/decimal-string",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/empty-fill-char",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/null-input",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/number-input-converted",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/boolean-input-converted",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "left_pad/float-input-converted",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/basic-space-padding",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/custom-char-padding",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/pad-to-ten",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/string-exceeds-target",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/two-char-fill-pattern",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/three-char-fill-truncated",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/empty-string-spaces",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/empty-string-dashes",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/zero-target-length",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/negative-target-length",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/exact-match",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/empty-fill-char",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "right_pad/null-input",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/even-padding",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/single-char-centered",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/two-chars-centered",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/odd-padding-extra-right",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/odd-padding-1-left-2-right",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/single-char-odd-total",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/center-with-dashes",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/odd-padding-with-dashes",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/two-char-fill-centered",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/three-char-fill-centered",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/partial-pattern-restarts-per-side",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/string-exceeds-target",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/empty-string-centered",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/exact-match",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/single-char-target-1",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/empty-fill-char",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "center_pad/null-input",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/default-position-left",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/explicit-left-position",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/left-custom-char",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/explicit-right-position",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/right-custom-char",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/explicit-center-position",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/center-custom-char",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/left-pad-dots",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/right-pad-dots",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/center-pad-dots",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/empty-fill-char-left",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "pad/null-input",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/single-digit-to-3",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/two-digits-to-5",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/three-digits-to-5",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/single-digit-to-4",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/number-exceeds-target",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/three-digits-target-2",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/zero-padded",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/zero-target-1",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/negative-single-digit",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/negative-two-digits",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/negative-exact-length",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/negative-to-6-chars",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/string-input-accepted",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/string-number",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/float-padded",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/float-less-than-1",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/negative-float",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/very-large-number",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/large-number-padded",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/scientific-notation-small",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/scientific-notation-large",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "zero_pad/null-input",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/left_pad/emoji-as-1-character",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/left_pad/accented-character",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/left_pad/japanese-characters",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/left_pad/chinese-dash-padding",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/left_pad/unicode-arrow-fill",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/left_pad/heart-symbol-fill",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/left_pad/emoji-as-fill",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/left_pad/decomposed-accent-no-normalization",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/left_pad/decomposed-fill-code-points",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/right_pad/emoji-as-1-character",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/right_pad/accented-character",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/right_pad/decomposed-accent-no-normalization",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/center_pad/emoji-centered",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/center_pad/kanji-centered",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/center_pad/decomposed-accent-odd-center",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "unicode/pad/decomposed-accent-general-center",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "exact-output"
+    },
+    {
+      "id": "errors/pad/invalid-position",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    },
+    {
+      "id": "errors/pad/case-sensitive-position",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    },
+    {
+      "id": "errors/pad/empty-position-string",
+      "function": "pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    },
+    {
+      "id": "errors/left_pad/non-integer-length",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    },
+    {
+      "id": "errors/left_pad/float-length",
+      "function": "left_pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    },
+    {
+      "id": "errors/right_pad/non-integer-length",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    },
+    {
+      "id": "errors/right_pad/float-length",
+      "function": "right_pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    },
+    {
+      "id": "errors/center_pad/non-integer-length",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    },
+    {
+      "id": "errors/center_pad/float-length",
+      "function": "center_pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    },
+    {
+      "id": "errors/zero_pad/non-integer-length",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    },
+    {
+      "id": "errors/zero_pad/float-length",
+      "function": "zero_pad",
+      "status": "passed",
+      "assertion": "detectable-error",
+      "error_type": "ValueError"
+    }
+  ],
+  "identity": {
+    "fixture_sha256": "1ba82175d1f81747f04cf16a285bb24e14dce6b68bb6dc04fdc94e170a46e2c3",
+    "implementation_sha256": "a718b2c596f1a3cc3f816d1653a60dea1a51964f68b05f92d8ca57e2ba4724aa",
+    "harness_sha256": "eb5523c28e049765cdbd51e5b74e16ddbd7980abcb7b372de3803df549f8919c"
+  },
+  "decision": "conformant"
+}

@@ -1,0 +1,117 @@
+--- a/SPEC.md
++++ b/SPEC.md
+@@ -243,6 +243,18 @@
+ - JavaScript: Use `[...string].length` for accurate count
+ - Rust: Use `.chars().count()`
+ 
++Decomposed examples (each combining accent remains a separate code point):
++
++```text
++left_pad("cafe\u0301", 6)          -> " cafe\u0301"
++right_pad("cafe\u0301", 6)         -> "cafe\u0301 "
++center_pad("cafe\u0301", 8)        -> " cafe\u0301  "
++pad("cafe\u0301", 8, ".", "center") -> ".cafe\u0301.."
++left_pad("x", 5, "e\u0301")        -> "e\u0301e\u0301x"
++```
++
++These examples cover the existing rule, not a different normalization policy.
++
+ **Note on Unicode normalization:** Strings are measured as-is without normalization. For example, "café" can be 4 code points (caf + é) or 5 (caf + e + combining accent) depending on normalization form. Implementations should not normalize input strings before measuring length.
+ 
+ ## Error Handling
+--- a/tests.yaml
++++ b/tests.yaml
+@@ -285,6 +285,11 @@
+     output: "abcxabc"
+     description: "Three-char fill centered"
+ 
++  - name: "partial-pattern-restarts-per-side"
++    input: ["ab", 6, "xyz"]
++    output: "xyabxy"
++    description: "Each side restarts a partially consumed pattern"
++
+   # String already exceeds target
+   - name: "string-exceeds-target"
+     input: ["foobar", 5]
+@@ -557,6 +562,16 @@
+       output: "💡💡💡💡test"
+       description: "Emoji as fill character"
+ 
++    - name: "decomposed-accent-no-normalization"
++      input: ["cafe\u0301", 6]
++      output: " cafe\u0301"
++      description: "Five code points remain decomposed"
++
++    - name: "decomposed-fill-code-points"
++      input: ["x", 5, "e\u0301"]
++      output: "e\u0301e\u0301x"
++      description: "Fill repeats and truncates by code points"
++
+   right_pad:
+     - name: "emoji-as-1-character"
+       input: ["\U0001F600", 3]
+@@ -568,6 +583,10 @@
+       output: "café  "
+       description: "Accented character"
+ 
++    - name: "decomposed-accent-no-normalization"
++      input: ["cafe\u0301", 6]
++      output: "cafe\u0301 "
++
+   center_pad:
+     - name: "emoji-centered"
+       input: ["\U0001F600", 5]
+@@ -579,6 +598,15 @@
+       output: "  漢  "
+       description: "Kanji centered"
+ 
++    - name: "decomposed-accent-odd-center"
++      input: ["cafe\u0301", 8]
++      output: " cafe\u0301  "
++
++  pad:
++    - name: "decomposed-accent-general-center"
++      input: ["cafe\u0301", 8, ".", "center"]
++      output: ".cafe\u0301.."
++
+ # =============================================================================
+ # Error cases (should raise errors)
+ # =============================================================================
+--- a/README.md
++++ b/README.md
+@@ -9,7 +9,7 @@
+ The repository contains three files:
+ 
+ - **SPEC.md** -- Complete behavioral specification
+-- **tests.yaml** -- 111 language-agnostic test cases as input/output pairs
++- **tests.yaml** -- 117 language-agnostic test cases as input/output pairs
+ - **INSTALL.md** -- Instructions for generating an implementation
+ 
+ ## Functions
+--- a/INSTALL.md
++++ b/INSTALL.md
+@@ -15,20 +15,20 @@
+    pad, zero_pad
+ 4. Run tests until all pass
+ 
+-All 111 test cases in tests.yaml must pass. See the "Error Handling"
++All 117 test cases in tests.yaml must pass. See the "Error Handling"
+ section in SPEC.md for error behavior.
+ ```
+ 
+ ## Verification
+ 
+-After generation, run the test suite. All 111 tests must pass:
++After generation, run the test suite. All 117 tests must pass:
+ 
+ | Function     | Tests |
+ | ------------ | ----- |
+ | `left_pad`   | 26    |
+ | `right_pad`  | 13    |
+-| `center_pad` | 16    |
++| `center_pad` | 17    |
+ | `pad`        | 12    |
+ | `zero_pad`   | 22    |
+-| Unicode      | 11    |
++| Unicode      | 16    |
+ | Errors       | 11    |

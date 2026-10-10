@@ -1,0 +1,446 @@
+{
+  "success": true,
+  "versions": {
+    "claude": "2.1.289 (Claude Code)",
+    "opencode": "1.18.34",
+    "pi": "1.0.1",
+    "codex": "codex-cli 0.160.0"
+  },
+  "before": {
+    "claude": {
+      "skills": [
+        "ghost-library:ghost-audit",
+        "ghost-library:ghost-fix",
+        "ghost-library:ghost-init",
+        "ghost-library:ghost-release",
+        "ghost-library:ghost-spec",
+        "ghost-library:ghost-tests",
+        "ghost-library:ghost-verify"
+      ],
+      "payload": {
+        "files": 92,
+        "sha256": "63f9883db900b0223066001e953ff3898d5bcbf4e26527ddf13fdd5433f71c12"
+      },
+      "old_marker": true,
+      "resource_links_valid": true,
+      "active_root": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/live/claude/plugins/ghost-library/skills",
+      "version": "0.0.0",
+      "model_invocation": "not_authenticated_in_private_profile"
+    },
+    "codex": {
+      "skills": [
+        "ghost-library:ghost-audit",
+        "ghost-library:ghost-fix",
+        "ghost-library:ghost-init",
+        "ghost-library:ghost-release",
+        "ghost-library:ghost-spec",
+        "ghost-library:ghost-tests",
+        "ghost-library:ghost-verify"
+      ],
+      "payload": {
+        "files": 92,
+        "sha256": "63f9883db900b0223066001e953ff3898d5bcbf4e26527ddf13fdd5433f71c12"
+      },
+      "old_marker": true,
+      "resource_links_valid": true,
+      "active_root": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/codex-cache-before/skills",
+      "version": "0.0.0"
+    },
+    "pi": {
+      "skills": [
+        "ghost-audit",
+        "ghost-fix",
+        "ghost-init",
+        "ghost-release",
+        "ghost-spec",
+        "ghost-tests",
+        "ghost-verify"
+      ],
+      "payload": {
+        "files": 92,
+        "sha256": "63f9883db900b0223066001e953ff3898d5bcbf4e26527ddf13fdd5433f71c12"
+      },
+      "old_marker": true,
+      "resource_links_valid": true,
+      "active_root": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/live/pi/skills"
+    },
+    "opencode": {
+      "skills": [
+        "ghost-audit",
+        "ghost-fix",
+        "ghost-init",
+        "ghost-release",
+        "ghost-spec",
+        "ghost-tests",
+        "ghost-verify"
+      ],
+      "payload": {
+        "files": 92,
+        "sha256": "63f9883db900b0223066001e953ff3898d5bcbf4e26527ddf13fdd5433f71c12"
+      },
+      "old_marker": true,
+      "resource_links_valid": true,
+      "active_root": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/opencode-profile/skills"
+    }
+  },
+  "after": {
+    "claude": {
+      "skills": [
+        "ghost-library:ghost-audit",
+        "ghost-library:ghost-fix",
+        "ghost-library:ghost-init",
+        "ghost-library:ghost-release",
+        "ghost-library:ghost-spec",
+        "ghost-library:ghost-tests",
+        "ghost-library:ghost-verify"
+      ],
+      "payload": {
+        "files": 91,
+        "sha256": "5e491528ab6100b6aa860befd4a90633043718146a03fc952a1e016d9987c13e"
+      },
+      "old_marker": false,
+      "resource_links_valid": true,
+      "active_root": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/live/claude/plugins/ghost-library/skills",
+      "version": "0.1.0",
+      "model_invocation": "not_authenticated_in_private_profile"
+    },
+    "codex": {
+      "skills": [
+        "ghost-library:ghost-audit",
+        "ghost-library:ghost-fix",
+        "ghost-library:ghost-init",
+        "ghost-library:ghost-release",
+        "ghost-library:ghost-spec",
+        "ghost-library:ghost-tests",
+        "ghost-library:ghost-verify"
+      ],
+      "payload": {
+        "files": 91,
+        "sha256": "5e491528ab6100b6aa860befd4a90633043718146a03fc952a1e016d9987c13e"
+      },
+      "old_marker": false,
+      "resource_links_valid": true,
+      "active_root": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/codex-cache-after/skills",
+      "version": "0.1.0"
+    },
+    "pi": {
+      "skills": [
+        "ghost-audit",
+        "ghost-fix",
+        "ghost-init",
+        "ghost-release",
+        "ghost-spec",
+        "ghost-tests",
+        "ghost-verify"
+      ],
+      "payload": {
+        "files": 91,
+        "sha256": "5e491528ab6100b6aa860befd4a90633043718146a03fc952a1e016d9987c13e"
+      },
+      "old_marker": false,
+      "resource_links_valid": true,
+      "active_root": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/live/pi/skills"
+    },
+    "opencode": {
+      "skills": [
+        "ghost-audit",
+        "ghost-fix",
+        "ghost-init",
+        "ghost-release",
+        "ghost-spec",
+        "ghost-tests",
+        "ghost-verify"
+      ],
+      "payload": {
+        "files": 91,
+        "sha256": "5e491528ab6100b6aa860befd4a90633043718146a03fc952a1e016d9987c13e"
+      },
+      "old_marker": false,
+      "resource_links_valid": true,
+      "active_root": "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/opencode-profile/skills"
+    }
+  },
+  "container_image": "sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b",
+  "codex_binary_sha256": "50b06603bdcdac39b714f5c3e68583c002b8ad8779ebfdaaf4932ff016b379c0",
+  "real_configuration_unchanged": true,
+  "model_inference_tested": false,
+  "changed_configuration_paths": [],
+  "replacement_methods": {
+    "claude": "marketplace update; plugin update; fresh process",
+    "codex": "plugin add again; fresh app-server",
+    "pi": "local path replaced; pi update; fresh resource loader",
+    "opencode": "skill directory replaced; fresh debug skill process"
+  },
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "run",
+        "-d",
+        "--name",
+        "ghost-install-0b13670506",
+        "--network",
+        "none",
+        "-v",
+        "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction:/evaluation",
+        "alpine:latest",
+        "sleep",
+        "1800"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "ghost-install-0b13670506",
+        "--format",
+        "{{.Image}}"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "claude",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "opencode",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "pi",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "ghost-install-0b13670506",
+        "/evaluation/codex-aarch64-unknown-linux-musl",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "claude",
+        "plugin",
+        "marketplace",
+        "add",
+        "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/live/claude"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "claude",
+        "plugin",
+        "install",
+        "ghost-library@ghost-library-local",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "ghost-install-0b13670506",
+        "/evaluation/codex-aarch64-unknown-linux-musl",
+        "plugin",
+        "marketplace",
+        "add",
+        "/evaluation/live/codex"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "ghost-install-0b13670506",
+        "/evaluation/codex-aarch64-unknown-linux-musl",
+        "plugin",
+        "add",
+        "ghost-library@ghost-library-local"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "pi",
+        "install",
+        "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/live/pi"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "claude",
+        "--print",
+        "--verbose",
+        "--output-format",
+        "stream-json",
+        "--no-session-persistence",
+        "--settings",
+        "{\"disableAllHooks\":true}",
+        "--strict-mcp-config",
+        "--mcp-config",
+        "{\"mcpServers\":{}}",
+        "--no-chrome",
+        "--permission-mode",
+        "dontAsk",
+        "--tools",
+        "",
+        "--",
+        "/ghost-library:ghost-audit Audit this empty workspace."
+      ],
+      "exit_code": 1,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/pi-discover.mjs"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "opencode",
+        "debug",
+        "skill",
+        "--pure"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "cp",
+        "ghost-install-0b13670506:/root/.codex/plugins/cache/ghost-library-local/ghost-library/0.0.0",
+        "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/codex-cache-before"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "claude",
+        "plugin",
+        "marketplace",
+        "update",
+        "ghost-library-local"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "claude",
+        "plugin",
+        "update",
+        "ghost-library@ghost-library-local"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "ghost-install-0b13670506",
+        "/evaluation/codex-aarch64-unknown-linux-musl",
+        "plugin",
+        "add",
+        "ghost-library@ghost-library-local"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "pi",
+        "update",
+        "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/live/pi"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "claude",
+        "--print",
+        "--verbose",
+        "--output-format",
+        "stream-json",
+        "--no-session-persistence",
+        "--settings",
+        "{\"disableAllHooks\":true}",
+        "--strict-mcp-config",
+        "--mcp-config",
+        "{\"mcpServers\":{}}",
+        "--no-chrome",
+        "--permission-mode",
+        "dontAsk",
+        "--tools",
+        "",
+        "--",
+        "/ghost-library:ghost-audit Audit this empty workspace."
+      ],
+      "exit_code": 1,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/pi-discover.mjs"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "opencode",
+        "debug",
+        "skill",
+        "--pure"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "docker",
+        "cp",
+        "ghost-install-0b13670506:/root/.codex/plugins/cache/ghost-library-local/ghost-library/0.1.0",
+        "/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-install-evals-0n4ohtnw/final-reproduction/codex-cache-after"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "date": "2026-10-05"
+}

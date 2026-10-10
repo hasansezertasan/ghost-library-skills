@@ -1,0 +1,21 @@
+version = "4.0"
+name = "ghost-library"
+gitignore = false
+[header]
+timestamp = false
+[plugin]
+name = "ghost-library"
+version = "0.1.1"
+description = "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence."
+repository = "https://github.com/hasansezertasan/ghost-library-skills"
+runtimes = ["claude", "codex"]
+[plugin.author]
+name = "Hasan Sezer Tasan"
+[plugin.interface]
+display_name = "Ghost Library"
+short_description = "Maintain behavioral contracts and portable fixtures"
+long_description = "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence."
+developer_name = "Hasan Sezer Tasan"
+category = "Development"
+capabilities = ["Read", "Write"]
+default_prompt = ["Audit this ghost library."]
