@@ -12,7 +12,7 @@ This is the initial pilot record. The later [padlib maintenance evaluation](padl
 | `stdlib/numbers` | `a05efdd20f99fcc2fe51dc444d16fef8b553b08f` | 32 |
 | `wheredirs` | `7c83fe3e04be50144099eba87d01c36617f404c5` | 155 |
 
-Inputs came from the temporary research clones recorded in [the proposal](../PROPOSAL.md). YAML was parsed with PyYAML via `uv run --with pyyaml python`. Case records were counted at their declared list containers, without descending into arguments or expected arrays. `padlib` includes nested Unicode/error groups; `wheredirs` uses top-level environment/strategy groups. Named case IDs were unique within each list container. The `numbers` fixtures are unnamed and identified by group/index.
+Inputs came from temporary research clones at the commits listed above; [the initial design record](../docs/decisions/0001-initial-design.md) describes that research. YAML was parsed with PyYAML via `uv run --with pyyaml python`. Case records were counted at their declared list containers, without descending into arguments or expected arrays. `padlib` includes nested Unicode/error groups; `wheredirs` uses top-level environment/strategy groups. Named case IDs were unique within each list container. The `numbers` fixtures are unnamed and identified by group/index.
 
 `padlib` group counts: left 26, right 13, center 16, general pad 12, zero pad 22, Unicode 11, errors 11. `wheredirs` group counts: strategy picker 13, XDG 45, Apple 26, Windows 26, single-folder 14, errors 23, consumer project cases 8.
 

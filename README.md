@@ -64,7 +64,7 @@ The output directory must be absent or empty. Each built folder includes its ski
 - `evals/`: realistic workflow cases and pilot evidence.
 - `docs/`: usage and host-support boundaries.
 
-Read [the maintainer guide](docs/maintainers.md) for the lifecycle, [host support](docs/host-support.md) for current packaging scope, and [PROPOSAL.md](PROPOSAL.md) for the research and longer-term design.
+Read [the maintainer guide](docs/maintainers.md) for the lifecycle, [host support](docs/host-support.md) for current packaging scope, [the roadmap](docs/roadmap.md) for planned work, and [the initial design record](docs/decisions/0001-initial-design.md) for the original research.
 
 For plugin development, CI, and release-please setup, see [CONTRIBUTING.md](CONTRIBUTING.md).
 

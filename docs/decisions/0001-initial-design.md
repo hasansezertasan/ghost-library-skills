@@ -1,6 +1,8 @@
-# Ghost library plugin proposal
+# 0001: Initial design
 
-Research snapshot: 2026-10-05. This document preserves the original design research. The seven core skills and the five later additions are implemented; the later [packaging migration](docs/packaging-proposal.md) replaces the original `adapters/` layout.
+Status: accepted, implemented, frozen. Research snapshot: 2026-10-05.
+
+This record preserves the original design research and reasoning. It is not updated as the project evolves. The [packaging migration](../packaging-proposal.md) and [ai-rulez integration](../ai-rulez.md) replace the layout described here, and [the roadmap](../roadmap.md) tracks work not yet done. The [outcome](#outcome) section records what became of each proposal.
 
 ## Recommendation
 
@@ -12,11 +14,7 @@ The plugin itself may contain code for validation, packaging, and test orchestra
 
 ## What I inspected
 
-The [GitHub topic](https://github.com/topics/ghost-library) and repository search returned six repositories, all under `hasansezertasan`. I shallow-cloned all six, plus the awesome list and `dbreunig/whenwords`, into:
-
-`/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-library-research-9wgtu5nh`
-
-The temporary `inventory.json` records each source URL, local path, and exact commit. I inspected repository layouts, READMEs, specifications, installation instructions, fixtures, and authoring conventions. I parsed all 20 `tests.yaml` files successfully with Ruby's YAML parser. Counts below count case records, not individual assertions. I did not generate or certify downstream implementations.
+The [GitHub topic](https://github.com/topics/ghost-library) and repository search returned six repositories, all under `hasansezertasan`. I shallow-cloned all six, plus the awesome list and `dbreunig/whenwords`, into a temporary directory that was not retained; the table below records each exact commit. I inspected repository layouts, READMEs, specifications, installation instructions, fixtures, and authoring conventions. I parsed all 20 `tests.yaml` files successfully with Ruby's YAML parser. Counts below count case records, not individual assertions. I did not generate or certify downstream implementations.
 
 | Project | Snapshot | Approach | Lesson for the plugin |
 | --- | --- | --- | --- |
@@ -67,9 +65,9 @@ Use `ghost-` prefixes for portable names; adapters may expose commands such as `
 
 Start with these seven. Keep spec review and fixture review as separate passes with distinct evidence, even when one agent performs both.
 
-Later additions, now implemented as skills:
+Later additions:
 
-- `ghost-summon`: generate into a consumer-selected location with an explicit language/API mapping and invoke verification. Records a downstream receipt.
+- `ghost-summon`: generate into a consumer-selected location with an explicit language/API mapping and invoke verification. Useful early as a shared recipe; split into a dedicated skill when consumer usage warrants it.
 - `ghost-evaluate`: generate clean implementations across a small agent/language matrix and summarize results, costs, retries, and unsupported cases.
 - `ghost-extract`: derive a contract from an existing utility or dependency, preserving attribution and explicitly choosing compatibility scope.
 - `ghost-upgrade`: compare a pinned upstream revision with downstream code and local extensions; propose a targeted migration.
@@ -77,49 +75,7 @@ Later additions, now implemented as skills:
 
 ## Repository structure
 
-Keep one canonical skill source and thin host adapters. This is a logical layout; host-specific manifest formats and installation paths must be checked against each host's current documentation during implementation.
-
-```text
-README.md
-PROPOSAL.md
-skills/
-  ghost-init/SKILL.md
-  ghost-spec/SKILL.md
-  ghost-tests/SKILL.md
-  ghost-audit/SKILL.md
-  ghost-verify/SKILL.md
-  ghost-fix/SKILL.md
-  ghost-release/SKILL.md
-references/
-  philosophy.md
-  contract-rules.md
-  fixture-profiles.md
-  harness-contract.md
-  compatibility.md
-  recipes/
-    summon.md
-    evaluate.md
-templates/
-  single-library/           # SPEC.md, tests.yaml, INSTALL.md, README.md
-  multi-domain/             # CONVENTIONS.md, domain SPEC.md and fixtures
-  scenario-library/        # setup/actions/observations and isolation rules
-  reports/                 # audit, conformance, release
-schemas/                   # versioned metadata/report schemas, when needed
-adapters/
-  claude/
-  codex/
-  opencode/
-  pi/
-  hermes/
-  antigravity/
-tools/                     # deterministic checks and adapter packaging
-evals/                     # plugin workflow fixtures and failure injections
-docs/
-  getting-started.md
-  maintainers.md
-  consumers.md
-  host-support.md
-```
+Keep one canonical skill source and thin host adapters. The original logical layout placed canonical skills in `skills/`, shared guidance in `references/` and `templates/`, and per-host registration in `adapters/<host>/`. That layout is superseded; see the README's structure section for the current one.
 
 Each skill should define its trigger, required inputs, concise procedure, output, and completion criteria. Load shared references only when relevant. Keep domain-specific knowledge in the target library instead of copying it into the plugin.
 
@@ -156,3 +112,12 @@ Defer MCP until deterministic tools are useful on their own. A later server coul
 5. Package and smoke-test host adapters, then consider dedicated consumer, extraction, upgrade, catalog, and MCP features.
 
 Success for the first release: a maintainer can audit an existing contract, make a justified behavioral change with portable regression coverage, and verify a freshly generated downstream implementation with a harness that demonstrably detects failure.
+
+## Outcome
+
+Recorded 2026-10-11.
+
+- All seven core skills and all five later additions (`ghost-summon`, `ghost-evaluate`, `ghost-extract`, `ghost-upgrade`, `ghost-catalog`) are implemented. The downstream receipt is a report template used by `ghost-summon`, `ghost-upgrade`, and `ghost-fix`.
+- The `adapters/` layout was replaced by native catalogs that install the repository root, generated from `.ai-rulez/` sources.
+- Optional `ghost.yaml` metadata and the MCP server remain unbuilt; see [the roadmap](../roadmap.md).
+- The awesome list's zero-project README was fixed upstream (`f47d22c` lists all ten projects). The whenwords count drift, reporun contradictions, and wheredirs precedence ambiguity remained present at their current heads on 2026-10-11 and were reported as [whenwords#11](https://github.com/dbreunig/whenwords/issues/11), [reporun#2](https://github.com/hasansezertasan/reporun/issues/2), and [wheredirs#3](https://github.com/hasansezertasan/wheredirs/issues/3).
