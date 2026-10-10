@@ -3,6 +3,6 @@
   "private": true,
   "devDependencies": {
     "ai-rulez": "4.24.2",
-    "release-please": "17.6.0"
+    "release-please": "17.11.2"
   }
 }
