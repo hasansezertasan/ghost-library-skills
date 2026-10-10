@@ -1,0 +1,15 @@
+{
+  "name": "ghost-library-skills-marketplace",
+  "description": "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence.",
+  "owner": {
+    "name": "Hasan Sezer Tasan",
+    "url": "https://github.com/hasansezertasan"
+  },
+  "plugins": [
+    {
+      "name": "ghost-library-skills",
+      "description": "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence.",
+      "source": "./plugins/ghost-library-skills"
+    }
+  ]
+}

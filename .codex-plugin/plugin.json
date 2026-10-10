@@ -1,0 +1,32 @@
+{
+  "name": "ghost-library-skills",
+  "version": "0.1.0",
+  "description": "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence.",
+  "author": {
+    "name": "Hasan Sezer Tasan",
+    "url": "https://github.com/hasansezertasan"
+  },
+  "repository": "https://github.com/hasansezertasan/ghost-library-skills",
+  "keywords": [
+    "ghost-library",
+    "specifications",
+    "conformance",
+    "skills",
+    "pi-package"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Ghost Library Skills",
+    "shortDescription": "Maintain behavioral contracts and portable fixtures",
+    "longDescription": "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence.",
+    "developerName": "Hasan Sezer Tasan",
+    "category": "Development",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Audit this ghost library's contract and portable fixture coverage."
+    ]
+  }
+}

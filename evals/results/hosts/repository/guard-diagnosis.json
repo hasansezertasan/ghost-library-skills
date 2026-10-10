@@ -1,0 +1,17 @@
+{
+  "status": "configuration-guard-failed",
+  "changed_paths": [
+    "/Users/hasansezertasan/.claude.json"
+  ],
+  "installation_and_discovery_checks_completed": true,
+  "guard_used": "raw file hashes",
+  "idle_observation": {
+    "interval_seconds": 5,
+    "changed_top_level_keys": [
+      "cachedGrowthBookFeaturesAt",
+      "pluginUsage"
+    ],
+    "test_commands_running": false
+  },
+  "resolution": "Normalize claude.json and exclude only these independently observed cache/usage fields; continue guarding all other fields and registry/settings files."
+}

@@ -1,0 +1,2 @@
+# Unified diff artifacts need a context marker on otherwise empty lines.
+evals/results/**/*.patch -whitespace

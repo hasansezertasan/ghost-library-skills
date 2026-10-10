@@ -1,0 +1,350 @@
+{
+  "schema_version": 1,
+  "contract": "cronwords/draft-0",
+  "cases": [
+    {
+      "id": "input-missing",
+      "status": "required",
+      "rule": "I1",
+      "args": [],
+      "expected": {
+        "ok": false,
+        "error": "INVALID_INPUT"
+      }
+    },
+    {
+      "id": "input-null",
+      "status": "required",
+      "rule": "I1",
+      "args": [
+        null
+      ],
+      "expected": {
+        "ok": false,
+        "error": "INVALID_INPUT"
+      }
+    },
+    {
+      "id": "input-false",
+      "status": "required",
+      "rule": "I1",
+      "args": [
+        false
+      ],
+      "expected": {
+        "ok": false,
+        "error": "INVALID_INPUT"
+      }
+    },
+    {
+      "id": "input-true",
+      "status": "required",
+      "rule": "I1",
+      "args": [
+        true
+      ],
+      "expected": {
+        "ok": false,
+        "error": "INVALID_INPUT"
+      }
+    },
+    {
+      "id": "input-zero",
+      "status": "required",
+      "rule": "I1",
+      "args": [
+        0
+      ],
+      "expected": {
+        "ok": false,
+        "error": "INVALID_INPUT"
+      }
+    },
+    {
+      "id": "input-fraction",
+      "status": "required",
+      "rule": "I1",
+      "args": [
+        1.5
+      ],
+      "expected": {
+        "ok": false,
+        "error": "INVALID_INPUT"
+      }
+    },
+    {
+      "id": "input-array",
+      "status": "required",
+      "rule": "I1",
+      "args": [
+        []
+      ],
+      "expected": {
+        "ok": false,
+        "error": "INVALID_INPUT"
+      }
+    },
+    {
+      "id": "input-object",
+      "status": "required",
+      "rule": "I1",
+      "args": [
+        {}
+      ],
+      "expected": {
+        "ok": false,
+        "error": "INVALID_INPUT"
+      }
+    },
+    {
+      "id": "input-empty",
+      "status": "required",
+      "rule": "I2",
+      "args": [
+        ""
+      ],
+      "expected": {
+        "ok": false,
+        "error": "EMPTY_EXPRESSION"
+      }
+    },
+    {
+      "id": "input-spaces",
+      "status": "required",
+      "rule": "I2",
+      "args": [
+        "   "
+      ],
+      "expected": {
+        "ok": false,
+        "error": "EMPTY_EXPRESSION"
+      }
+    },
+    {
+      "id": "input-ascii-whitespace",
+      "status": "required",
+      "rule": "I2",
+      "args": [
+        " \t\r\n "
+      ],
+      "expected": {
+        "ok": false,
+        "error": "EMPTY_EXPRESSION"
+      }
+    },
+    {
+      "id": "schedule-wildcard",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "* * * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Proposed five-field example; requires the selected grammar and rendering rules.",
+      "expected": {
+        "ok": true,
+        "text": "Every minute."
+      }
+    },
+    {
+      "id": "schedule-midnight",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "0 0 * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Proposed five-field example; requires the selected grammar and rendering rules.",
+      "expected": {
+        "ok": true,
+        "text": "Every day at 00:00."
+      }
+    },
+    {
+      "id": "schedule-fixed-time",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "5 14 * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Proposed five-field example; requires the selected grammar and rendering rules.",
+      "expected": {
+        "ok": true,
+        "text": "Every day at 14:05."
+      }
+    },
+    {
+      "id": "schedule-step",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "*/15 * * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Proposed five-field example; requires the selected grammar and rendering rules.",
+      "expected": {
+        "ok": true,
+        "text": "Every 15 minutes, starting at minute 0 of each hour."
+      }
+    },
+    {
+      "id": "schedule-step-origin",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "5/15 * * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Decide whether scalar steps are accepted and whether they expand to minutes 5, 20, 35, 50 or something else; then specify exact text."
+    },
+    {
+      "id": "schedule-range",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "0 9-11 * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Proposed five-field example; requires the selected grammar and rendering rules.",
+      "expected": {
+        "ok": true,
+        "text": "Every day at 09:00, 10:00, and 11:00."
+      }
+    },
+    {
+      "id": "schedule-list",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "0 9,17 * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Proposed five-field example; requires the selected grammar and rendering rules.",
+      "expected": {
+        "ok": true,
+        "text": "Every day at 09:00 and 17:00."
+      }
+    },
+    {
+      "id": "schedule-weekday",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "0 9 * * 1"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Proposes 1 = Monday; numeric weekday mapping must be selected explicitly.",
+      "expected": {
+        "ok": true,
+        "text": "Every Monday at 09:00."
+      }
+    },
+    {
+      "id": "schedule-day-combination",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "0 9 1 * 1"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Both day fields are restricted. Resolve OR/AND or other dialect rules and require an exact description that preserves that relationship."
+    },
+    {
+      "id": "syntax-minute-boundary",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "60 * * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Five-field candidate for rejecting minute 60; field order and bounds remain unselected.",
+      "expected": {
+        "ok": false,
+        "error": "INVALID_EXPRESSION"
+      }
+    },
+    {
+      "id": "syntax-zero-step",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "*/0 * * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Proposed five-field example; requires the selected grammar and rendering rules.",
+      "expected": {
+        "ok": false,
+        "error": "INVALID_EXPRESSION"
+      }
+    },
+    {
+      "id": "syntax-reversed-range",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "0 11-9 * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Candidate rejection; resolve whether wraparound ranges exist in the selected dialect.",
+      "expected": {
+        "ok": false,
+        "error": "INVALID_EXPRESSION"
+      }
+    },
+    {
+      "id": "syntax-extra-field",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "0 0 * * * extra"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Five-field candidate for rejecting extra tokens; field count remains unselected.",
+      "expected": {
+        "ok": false,
+        "error": "INVALID_EXPRESSION"
+      }
+    },
+    {
+      "id": "syntax-seconds",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "0 * * * * *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Six-field expression: decide acceptance and field order; do not autodetect a dialect."
+    },
+    {
+      "id": "syntax-macro",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "@daily"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Decide macro support and equivalence to expanded expressions."
+    },
+    {
+      "id": "calendar-impossible",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        "0 0 31 2 *"
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Decide whether a syntactically valid February 31 rule is accepted or rejected, then specify exact output."
+    },
+    {
+      "id": "syntax-unicode-space",
+      "status": "pending",
+      "rule": "schedule-pending",
+      "args": [
+        " "
+      ],
+      "blocked_by": "dialect-profile",
+      "note": "Not covered by ASCII blank rule I2; decide grammar treatment of non-ASCII whitespace."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "skill": "ghost-init",
+    "request": "Start cronwords, a ghost library that describes cron expressions in English. This repository has a README and an existing license. I have not decided which cron dialect it should accept. Progress on independent work and surface material decisions as questions in your final response. Write appropriate draft artifacts here; do not generate an implementation.",
+    "read_only": false,
+    "files": {
+      "README.md": "# cronwords\nA cron expression parsing to human-readable text, with no code.\n",
+      "LICENSE": "Existing license fixture: retained verbatim for this evaluation.\n"
+    }
+  },
+  {
+    "skill": "ghost-spec",
+    "request": "Change fit to count Unicode code points and never normalize strings. Update examples and affected fixtures. This is an intentional change from the existing UTF-16 code-unit contract. Write the patch here and explain compatibility.",
+    "read_only": false,
+    "files": {
+      "SPEC.md": "# fit(s, limit)\nIf the UTF-16 code-unit length exceeds limit, return the first limit\ncode units. Otherwise return s. limit is a nonnegative integer.\n",
+      "tests.yaml": "fit:\n  - name: ascii\n    input: [abc, 2]\n    output: ab\n"
+    }
+  },
+  {
+    "skill": "ghost-tests",
+    "request": "Add meaningful portable coverage for this contract. Preserve its invariant-based format. Write the fixture changes and document new assertion or scenario semantics. No implementation is available.",
+    "read_only": false,
+    "files": {
+      "SPEC.md": "# shuffle(seq, rng)\nReturn a new sequence with the same multiset and length. Do not mutate seq.\nA fixed seed reproduces a stream within one implementation.\nDifferent languages may use different PRNG algorithms and streams.\n",
+      "tests.yaml": "shuffle_invariants:\n  - name: length\n    seed: 1\n    seq: [a, b, c]\n    preserves_length: true\n"
+    }
+  },
+  {
+    "skill": "ghost-verify",
+    "request": "Verify the supplied implementation and runner. Report its conformance; do not fix or edit them. Distinguish runner output from implementation conformance and record what you executed.",
+    "read_only": true,
+    "files": {
+      "SPEC.md": "# reciprocal(x)\nFor x != 0 return 1 / x. Zero raises a detectable error.\n",
+      "tests.yaml": "reciprocal:\n  - name: normal\n    input: 2\n    output: 0.5\n  - name: zero\n    input: 0\n    raises: true\n",
+      "impl.py": "def reciprocal(x):\n    return 1 / x if x else 0\n",
+      "runner.py": "from impl import reciprocal\nassert reciprocal(2) == 0.5\nprint(\"all tests passed\")\n"
+    }
+  },
+  {
+    "skill": "ghost-fix",
+    "request": "Diagnose and repair a downstream padding bug. The consumer expects left_pad(\"😊\", 3) to return \"  😊\" but receives \" 😊\". Keep the upstream SPEC.md unchanged. Add a downstream regression before repairing the implementation and execute relevant checks.",
+    "read_only": false,
+    "files": {
+      "SPEC.md": "# left_pad(s, length)\nCount Unicode code points without normalization. Prepend spaces until\nthe target code-point length is reached. Never truncate s.\n",
+      "impl.js": "export function left_pad(s, length) {\n  return \" \".repeat(Math.max(0, length - s.length)) + s;\n}\n",
+      "package.json": "{\"private\":true,\"type\":\"module\"}\n"
+    }
+  },
+  {
+    "skill": "ghost-release",
+    "request": "Prepare release notes and recommend a version under SemVer. Current contract version is 1.2.0. Compare old.md and new.md; the maintainer note describes the available evidence. Write reviewable release preparation here. Do not tag or publish.",
+    "read_only": false,
+    "files": {
+      "old.md": "map_keys returns keys in an implementation-defined order.\n",
+      "new.md": "map_keys returns keys in lexicographic order.\n",
+      "maintainer-note.txt": "I called this a clarification because the API name did not change.\nOne Python implementation passes the new fixtures. No other evaluation exists.\n",
+      "VERSION": "1.2.0\n"
+    }
+  }
+]

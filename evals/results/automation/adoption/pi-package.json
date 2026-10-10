@@ -1,0 +1,151 @@
+[
+  {
+    "id": "ghost-library@0.1.0",
+    "name": "ghost-library",
+    "version": "0.1.0",
+    "size": 17402,
+    "unpackedSize": 49725,
+    "shasum": "eab64aa3a78724567bd06b484fe70ce4f207af72",
+    "integrity": "sha512-K1oQDyOCw9BZieVRik+ZIp/GOYg9Jg3vnQp3qjRv2I21gdKsMk3mlDyj+ukgdlEY9eS1I4s+sFKgNh9/OOSouA==",
+    "filename": "ghost-library-0.1.0.tgz",
+    "files": [
+      {
+        "path": "README.md",
+        "size": 6000,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1088,
+        "mode": 420
+      },
+      {
+        "path": "references/compatibility.md",
+        "size": 2277,
+        "mode": 420
+      },
+      {
+        "path": "references/contract-rules.md",
+        "size": 3646,
+        "mode": 420
+      },
+      {
+        "path": "references/fixture-profiles.md",
+        "size": 4597,
+        "mode": 420
+      },
+      {
+        "path": "references/harness-contract.md",
+        "size": 4727,
+        "mode": 420
+      },
+      {
+        "path": "references/philosophy.md",
+        "size": 1649,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/agents/openai.yaml",
+        "size": 211,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/SKILL.md",
+        "size": 2856,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/agents/openai.yaml",
+        "size": 205,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/SKILL.md",
+        "size": 2526,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/agents/openai.yaml",
+        "size": 201,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/SKILL.md",
+        "size": 2344,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/agents/openai.yaml",
+        "size": 218,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/SKILL.md",
+        "size": 2387,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/agents/openai.yaml",
+        "size": 201,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/SKILL.md",
+        "size": 2731,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/agents/openai.yaml",
+        "size": 204,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/SKILL.md",
+        "size": 2906,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/agents/openai.yaml",
+        "size": 215,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/SKILL.md",
+        "size": 2687,
+        "mode": 420
+      },
+      {
+        "path": "templates/install.md",
+        "size": 1118,
+        "mode": 420
+      },
+      {
+        "path": "templates/reports/audit.md",
+        "size": 747,
+        "mode": 420
+      },
+      {
+        "path": "templates/reports/conformance.md",
+        "size": 1254,
+        "mode": 420
+      },
+      {
+        "path": "templates/reports/coverage.md",
+        "size": 630,
+        "mode": 420
+      },
+      {
+        "path": "templates/reports/release.md",
+        "size": 946,
+        "mode": 420
+      },
+      {
+        "path": "templates/spec.md",
+        "size": 1154,
+        "mode": 420
+      }
+    ],
+    "entryCount": 27,
+    "bundled": []
+  }
+]

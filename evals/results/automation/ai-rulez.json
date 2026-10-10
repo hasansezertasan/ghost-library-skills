@@ -1,0 +1,187 @@
+{
+  "version": {
+    "arguments": [
+      "version"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "\u001b[32mINFO \u001b[0m ai-rulez version \u001b[90mversion=4.24.2\u001b[0m\n"
+  },
+  "cases": {
+    "canonical": {
+      "generate": {
+        "arguments": [
+          "generate",
+          "--plugin"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[32mINFO \u001b[0m Plugin generation complete \u001b[90mfiles=18\u001b[0m\n"
+      },
+      "verify": {
+        "arguments": [
+          "verify",
+          "--plugin"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[32mINFO \u001b[0m Generated plugin artifacts are valid \u001b[90m\u001b[36mpath=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical\u001b[0m\u001b[0m\n"
+      },
+      "package_json_preserved": true,
+      "pi_declaration_preserved": true,
+      "codex_catalog_generated": false,
+      "missing_skill_metadata": [],
+      "skill_metadata_preserved": true,
+      "skill_frontmatter_and_body_preserved": true,
+      "root_resource_links_valid": true,
+      "standalone_skills_built": 7,
+      "claude_native_validation": {
+        "manifest": {
+          "valid": true,
+          "warnings": []
+        },
+        "marketplace": {
+          "valid": true,
+          "warnings": []
+        }
+      },
+      "codex_registered_skills_with_custom_catalog": [
+        "ghost-library:ghost-audit",
+        "ghost-library:ghost-fix",
+        "ghost-library:ghost-init",
+        "ghost-library:ghost-release",
+        "ghost-library:ghost-spec",
+        "ghost-library:ghost-tests",
+        "ghost-library:ghost-verify"
+      ],
+      "changed_output_verification": {
+        "arguments": [
+          "verify",
+          "--plugin"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\nError: generated plugin output is stale\n\nHint: Run ai-rulez generate --plugin and commit the regenerated output\n"
+      },
+      "verification_did_not_repair": true,
+      "extra_file_verification": {
+        "arguments": [
+          "verify",
+          "--plugin"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[32mINFO \u001b[0m Generated plugin artifacts are valid \u001b[90m\u001b[36mpath=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical\u001b[0m\u001b[0m\n"
+      },
+      "version_bump_verification": {
+        "arguments": [
+          "verify",
+          "--plugin"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\nError: generated plugin output is stale\n\nHint: Run ai-rulez generate --plugin and commit the regenerated output\n"
+      },
+      "version_bump_regeneration": {
+        "arguments": [
+          "generate",
+          "--plugin"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[32mINFO \u001b[0m Plugin generation complete \u001b[90mfiles=18\u001b[0m\n"
+      },
+      "version_bump_recheck": {
+        "arguments": [
+          "verify",
+          "--plugin"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[32mINFO \u001b[0m Generated plugin artifacts are valid \u001b[90m\u001b[36mpath=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical\u001b[0m\u001b[0m\n"
+      },
+      "generated_versions_after_bump": {
+        ".claude-plugin/plugin.json": "0.1.1",
+        ".codex-plugin/plugin.json": "0.1.1"
+      },
+      "removed_skill_regeneration": {
+        "arguments": [
+          "generate",
+          "--plugin"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/canonical/.ai-rulez/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[32mINFO \u001b[0m Plugin generation complete \u001b[90mfiles=16\u001b[0m\n"
+      },
+      "removed_skill_output_deleted": false
+    },
+    "content-root": {
+      "generate": {
+        "arguments": [
+          "generate",
+          "--plugin"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[32mINFO \u001b[0m Plugin generation complete \u001b[90mfiles=18\u001b[0m\n"
+      },
+      "verify": {
+        "arguments": [
+          "verify",
+          "--plugin"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root/payload/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[32mINFO \u001b[0m Generated plugin artifacts are valid \u001b[90m\u001b[36mpath=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/content-root\u001b[0m\u001b[0m\n"
+      },
+      "package_json_preserved": true,
+      "pi_declaration_preserved": true,
+      "codex_catalog_generated": false,
+      "missing_skill_metadata": [],
+      "skill_metadata_preserved": true,
+      "skill_frontmatter_and_body_preserved": true,
+      "root_resource_links_valid": true,
+      "standalone_skills_built": 7
+    },
+    "opencode": {
+      "generate": {
+        "arguments": [
+          "generate",
+          "--plugin"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[32mINFO \u001b[0m Plugin generation complete \u001b[90mfiles=36\u001b[0m\n"
+      },
+      "verify": {
+        "arguments": [
+          "verify",
+          "--plugin"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-audit subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-fix subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-init subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-release subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-spec subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-tests subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[33mWARN \u001b[0m Unrecognized skill subdirectory will not be included in generated output \u001b[90mskill=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode/.ai-rulez/skills/ghost-verify subdirectory=agents recognized_kinds=references, scripts, assets\u001b[0m\n\u001b[32mINFO \u001b[0m Generated plugin artifacts are valid \u001b[90m\u001b[36mpath=/private/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-automation-i2lx7r0l/evaluation-final/opencode\u001b[0m\u001b[0m\n"
+      },
+      "package_json_preserved": false,
+      "pi_declaration_preserved": false,
+      "codex_catalog_generated": false,
+      "missing_skill_metadata": [],
+      "skill_metadata_preserved": true,
+      "skill_frontmatter_and_body_preserved": true,
+      "root_resource_links_valid": true,
+      "standalone_skills_built": 7
+    }
+  },
+  "host_versions": {
+    "claude": "2.1.289 (Claude Code)",
+    "codex": "codex-cli 0.160.0"
+  },
+  "migration_contracts": {
+    "skill_metadata_preserved": true,
+    "codex_catalog_generated": false,
+    "unexpected_files_rejected": false,
+    "removed_skill_deleted": false,
+    "pi_manifest_preserved_with_opencode": false
+  },
+  "decision": "retain-existing-generator"
+}

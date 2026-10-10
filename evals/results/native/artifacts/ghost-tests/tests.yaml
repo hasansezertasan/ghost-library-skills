@@ -1,0 +1,65 @@
+shuffle_invariants:
+  - name: length
+    seed: 1
+    seq: [a, b, c]
+    preserves_length: true
+  - name: empty
+    seed: 1
+    seq: []
+    preserves_length: true
+    preserves_multiset: true
+    preserves_input: true
+    returns_new_sequence: true
+  - name: singleton
+    seed: 1
+    seq: [only]
+    preserves_length: true
+    preserves_multiset: true
+    preserves_input: true
+    returns_new_sequence: true
+  - name: all_equal
+    seed: 1
+    seq: [a, a, a, a]
+    preserves_length: true
+    preserves_multiset: true
+    preserves_input: true
+    returns_new_sequence: true
+  - name: unequal_duplicate_counts
+    seed: 1
+    seq: [a, b, a, c, b, a]
+    preserves_length: true
+    preserves_multiset: true
+    preserves_input: true
+    returns_new_sequence: true
+  - name: distinct_values
+    seed: 1
+    seq: [a, b, c, d, e, f, g, h]
+    preserves_length: true
+    preserves_multiset: true
+    preserves_input: true
+    returns_new_sequence: true
+  - name: exact_unicode_values
+    seed: 1
+    seq: ["\u00e9", "e\u0301", "\u00e9", "A", "a", ""]
+    preserves_length: true
+    preserves_multiset: true
+    preserves_input: true
+    returns_new_sequence: true
+  - name: seeded_stream_distinct
+    seed: 1
+    seq: [a, b, c, d, e, f, g, h]
+    draws: 16
+    preserves_length: true
+    preserves_multiset: true
+    preserves_input: true
+    returns_new_sequence: true
+    reproduces_stream: true
+  - name: seeded_stream_duplicates
+    seed: 1
+    seq: [a, b, a, c, b, a]
+    draws: 16
+    preserves_length: true
+    preserves_multiset: true
+    preserves_input: true
+    returns_new_sequence: true
+    reproduces_stream: true

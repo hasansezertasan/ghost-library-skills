@@ -1,0 +1,34 @@
+{
+  "version": "1.18.34",
+  "cases": {
+    "root": {
+      "skill_path": "./skills",
+      "discovered_skills": [
+        "ghost-audit",
+        "ghost-fix",
+        "ghost-init",
+        "ghost-release",
+        "ghost-spec",
+        "ghost-tests",
+        "ghost-verify"
+      ]
+    },
+    "consumer": {
+      "skill_path": "./skills",
+      "discovered_skills": []
+    },
+    "consumer_absolute": {
+      "skill_path": "/Users/hasansezertasan/orca/workspaces/ghost-library-skills/pinniped/skills",
+      "discovered_skills": [
+        "ghost-audit",
+        "ghost-fix",
+        "ghost-init",
+        "ghost-release",
+        "ghost-spec",
+        "ghost-tests",
+        "ghost-verify"
+      ]
+    }
+  },
+  "model_invocation_tested": false
+}

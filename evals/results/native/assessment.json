@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-05",
+  "method": "Implementing agent reviewed all recorded tool trajectories and resulting artifacts; independent parser, expectation, source-preservation, and runtime checks are separate from model claims.",
+  "results": [
+    {
+      "skill": "ghost-init",
+      "outcome": "pass",
+      "trial_count": 1,
+      "evidence": [
+        "Incomplete dialect-dependent draft retained; no implementation generated",
+        "11 required draft input cases and 17 pending schedule cases; JSON parsed independently",
+        "Original LICENSE bytes preserved; material dialect/profile decision raised"
+      ]
+    },
+    {
+      "skill": "ghost-spec",
+      "outcome": "pass",
+      "trial_count": 1,
+      "evidence": [
+        "All 18 fixture expectations independently agree with exact Python code-point prefixes",
+        "Non-BMP and decomposed combining boundaries covered; no normalization",
+        "Breaking compatibility explained; isolated-surrogate policy retained as a draft decision"
+      ]
+    },
+    {
+      "skill": "ghost-tests",
+      "outcome": "pass",
+      "trial_count": 1,
+      "evidence": [
+        "Nine named invariant records parsed independently; original length case preserved",
+        "Duplicate multiset, empty input, non-mutation, fresh containers, and two local stream replay cases",
+        "Assertion semantics and coverage documented; no exact cross-language permutation oracle or implementation conformance claim"
+      ]
+    },
+    {
+      "skill": "ghost-verify",
+      "outcome": "pass-with-reporting-limitation",
+      "trial_count": 2,
+      "evidence": [
+        "Correctly rejects misleading success text and distinguishes omitted error assertion from implementation failure",
+        "Source files unchanged in both trials",
+        "Recheck completed one aggregate command executing seven child control/baseline checks, using the actual impl.py source for the zero-return defect"
+      ],
+      "initial_limitation": "Three listed execution claims lacked corresponding completed command records in the captured trace. Diagnosis was correct, but the initial report is not scored as a clean execution-evidence pass.",
+      "recheck_limitation": "Concrete aggregate control evidence supports the diagnosis and error-case execution. The separately claimed standalone two-case command still has no individual completed record. Do not certify that particular command as observed; telemetry may omit a rejected call, so this is an evidence limitation rather than proof of fabrication.",
+      "change": "Explicit execution-evidence guidance added to ghost-verify and the shared harness reference."
+    },
+    {
+      "skill": "ghost-fix",
+      "outcome": "pass",
+      "trial_count": 1,
+      "evidence": [
+        "Native trajectory shows a regression test run with three failures before implementation repair",
+        "Nine native Node tests pass after repair; six independently executed Unicode/ASCII probes pass",
+        "SPEC.md unchanged; no fixture expectation weakened"
+      ]
+    },
+    {
+      "skill": "ghost-release",
+      "outcome": "pass",
+      "trial_count": 1,
+      "evidence": [
+        "Recommends 2.0.0 because previously allowed key orders are excluded",
+        "Migration notes and comparator policy decision included",
+        "Python evidence marked maintainer-reported and unverified; current VERSION unchanged; no publication commands"
+      ]
+    }
+  ],
+  "limits": [
+    "Small single-trial scenarios except the verification recheck; not a reliability estimate",
+    "Existing Codex configuration and hooks were used; rejected calls need not appear as completed-command items",
+    "The spec/init/release tasks intentionally retain material design decisions; they do not produce finalized contracts or public releases",
+    "Generated library implementations remain disposable artifacts"
+  ]
+}

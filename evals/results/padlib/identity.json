@@ -1,0 +1,35 @@
+{
+  "source_repository": "https://github.com/hasansezertasan/padlib",
+  "source_revision": "4c8ae4d90de98126c63ed69ff54f6ce360b6ce3f",
+  "original_source_unchanged": true,
+  "original_fixture_count": 111,
+  "final_fixture_count": 117,
+  "original_conformance": {
+    "full_conformance": true,
+    "runtime": "3.13.15",
+    "totals": {
+      "discovered": 111,
+      "executed": 111,
+      "passed": 111,
+      "failed": 0,
+      "skipped": 0,
+      "unsupported": 0
+    },
+    "suite_issues": [],
+    "identity": {
+      "fixture_sha256": "ed48dfb5564e665863f3624e75e70401f6bcb1e14b5fac935290cc571592c5d2",
+      "implementation_sha256": "a718b2c596f1a3cc3f816d1653a60dea1a51964f68b05f92d8ca57e2ba4724aa",
+      "harness_sha256": "89e8cc74f0676d7363ae5560a6dcf13a488f69cb0c09abf319de8a5ec193bfc0"
+    },
+    "decision": "conformant"
+  },
+  "changed_artifacts": [
+    "SPEC.md",
+    "tests.yaml",
+    "README.md",
+    "INSTALL.md"
+  ],
+  "contract_behavior_changed": false,
+  "generated_implementation_retained_in_repository": false,
+  "workflow_method": "Implementing agent used the workflow guidance; one independent native Codex read-only audit; other six skills were not individually model-invoked."
+}

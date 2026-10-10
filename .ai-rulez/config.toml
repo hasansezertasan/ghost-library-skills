@@ -1,0 +1,27 @@
+# Plugin version is a generated mirror of package.json; update it with make sync.
+# Shared resources are assembled before ai-rulez plugin generation.
+version = "5.0"
+name = "ghost-library-skills"
+gitignore = false
+
+[plugin]
+version = "0.1.0"
+name = "ghost-library-skills"
+description = "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence."
+repository = "https://github.com/hasansezertasan/ghost-library-skills"
+keywords = ["ghost-library", "specifications", "conformance", "skills", "pi-package"]
+runtimes = ["claude", "codex"]
+category = "Productivity"
+
+[plugin.author]
+name = "Hasan Sezer Tasan"
+url = "https://github.com/hasansezertasan"
+
+[plugin.interface]
+display_name = "Ghost Library Skills"
+short_description = "Maintain behavioral contracts and portable fixtures"
+category = "Development"
+capabilities = ["Read", "Write"]
+default_prompt = ["Audit this ghost library's contract and portable fixture coverage."]
+long_description = "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence."
+developer_name = "Hasan Sezer Tasan"

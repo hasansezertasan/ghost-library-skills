@@ -1,0 +1,9 @@
+{
+  "phase": "no host commands run during observation",
+  "changed_paths": [
+    "/Users/hasansezertasan/.claude.json"
+  ],
+  "changed_claude_keys": [
+    "promptQueueUseCount"
+  ]
+}

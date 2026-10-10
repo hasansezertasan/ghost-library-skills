@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ghost Release"
+  short_description: "Prepare contract releases and compatibility evidence"
+  default_prompt: "Use $ghost-release to prepare this ghost library's release notes and evidence."

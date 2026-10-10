@@ -1,0 +1,38 @@
+{
+  "source_kind": "repository",
+  "versions": {
+    "claude": "2.1.289 (Claude Code)",
+    "codex": "codex-cli 0.160.0"
+  },
+  "claude": {
+    "manifest": {
+      "valid": true,
+      "warnings": []
+    },
+    "marketplace": {
+      "valid": true,
+      "warnings": []
+    }
+  },
+  "codex": {
+    "registered_skills": [
+      "ghost-library:ghost-audit",
+      "ghost-library:ghost-fix",
+      "ghost-library:ghost-init",
+      "ghost-library:ghost-release",
+      "ghost-library:ghost-spec",
+      "ghost-library:ghost-tests",
+      "ghost-library:ghost-verify"
+    ],
+    "discovered_skills": [
+      "ghost-library:ghost-audit",
+      "ghost-library:ghost-fix",
+      "ghost-library:ghost-init",
+      "ghost-library:ghost-release",
+      "ghost-library:ghost-spec",
+      "ghost-library:ghost-tests",
+      "ghost-library:ghost-verify"
+    ]
+  },
+  "success": true
+}

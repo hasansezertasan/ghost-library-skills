@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-05",
+  "source_repository": "https://github.com/hasansezertasan/wheredirs",
+  "source_revision": "7c83fe3e04be50144099eba87d01c36617f404c5",
+  "original_source_unchanged": true,
+  "isolated_contract_unchanged": true,
+  "source_hashes": {
+    "tests.yaml": "ec5e107b50d33959683168b47c3f5ec1873b0d0a0fda94bedacffb57f8589402",
+    "LICENSE": "f0c31a246be4a7e915fc9b9d5a6ad90d3794fc772fd73309edbb5a19a164db7c",
+    "INSTALL.md": "d42210df8807146e71dc62c8802921d6cc1e2068bc1685053da426ab6d223f9f",
+    "README.md": "7cb1fafcfdc13bbcb79cf51b48b54457f8a9cc2ae4808dc276a5a6bf4d600bec",
+    "SPEC.md": "09f23fd6adec3fa0ddf2634b4a736197ddc601628925c1a3d0fbd4fa8bec7c34"
+  },
+  "original_case_count": 155,
+  "additional_case_count": 11,
+  "warning_assertions_independent": 15,
+  "codex_cli_version": "codex-cli 0.160.0",
+  "model": "gpt-6.1-sol",
+  "implementation_sha256": "7654f0907e892632ccd7991638b0899fd5d3b2c760163733d5132abf58fdfa9b",
+  "generated_runner_sha256": "5d6908f22fe21b297657b707e0733f8562da810344d9808d9d3d8b36e7feb4b9",
+  "independent_harness_sha256": "74c0aa473770ec8bede672442bd9119cd995a7cc7254f6111b1519501d377789",
+  "observations_sha256": "7d12d688473816b2404ca94d4e4f95b991038efad8e20de5bda65b6812a0406a",
+  "native_request_sha256": "bfa02efbb3cb5b0e32aaa7c2c23037794ed9c1699c9f3006311b372183077e73",
+  "consumer_session_path": "/var/folders/vj/26z0937x6zg3hvq02p8v6nfw0000gn/T/ghost-native-evals-odcxd_34/wheredirs/consumer",
+  "generated_implementation_retained_in_repository": false,
+  "native_environment": {
+    "python": "3.13.15 (main, Aug 14 2026, 15:24:40) [Clang 22.1.3 ]",
+    "executable": "/Users/hasansezertasan/.cache/uv/environments-v2/cli-8edf1d5fda4bd5b4/bin/python",
+    "sys_platform": "darwin",
+    "pyyaml": "6.0.3",
+    "input_isolation": "explicit case dict; no os.environ mutation or reads by runner"
+  }
+}

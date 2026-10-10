@@ -1,0 +1,481 @@
+[
+  {
+    "id": "ghost-library-skills@0.1.0",
+    "name": "ghost-library-skills",
+    "version": "0.1.0",
+    "size": 21400,
+    "unpackedSize": 186426,
+    "shasum": "577d6c499c98e24988925c67fd6cf6c7de147cdb",
+    "integrity": "sha512-/rrPjiBO+M0mycVNaYe07pO2ib0jV8twrZtP/Ng4//MvXCoPqgfnrw/8sesHZ1/Nx+oFjX7AI18XFq2KH+5Q2A==",
+    "filename": "ghost-library-skills-0.1.0.tgz",
+    "files": [
+      {
+        "path": "README.md",
+        "size": 6809,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 678,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/agents/openai.yaml",
+        "size": 211,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/references/compatibility.md",
+        "size": 2277,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/references/contract-rules.md",
+        "size": 3646,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/references/fixture-profiles.md",
+        "size": 4597,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/references/harness-contract.md",
+        "size": 4727,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/references/philosophy.md",
+        "size": 1649,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/SKILL.md",
+        "size": 2832,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/templates/install.md",
+        "size": 1118,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/templates/reports/audit.md",
+        "size": 747,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/templates/reports/conformance.md",
+        "size": 1254,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/templates/reports/coverage.md",
+        "size": 630,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/templates/reports/release.md",
+        "size": 946,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-audit/templates/spec.md",
+        "size": 1154,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/agents/openai.yaml",
+        "size": 205,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/references/compatibility.md",
+        "size": 2277,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/references/contract-rules.md",
+        "size": 3646,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/references/fixture-profiles.md",
+        "size": 4597,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/references/harness-contract.md",
+        "size": 4727,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/references/philosophy.md",
+        "size": 1649,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/SKILL.md",
+        "size": 2502,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/templates/install.md",
+        "size": 1118,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/templates/reports/audit.md",
+        "size": 747,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/templates/reports/conformance.md",
+        "size": 1254,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/templates/reports/coverage.md",
+        "size": 630,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/templates/reports/release.md",
+        "size": 946,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-fix/templates/spec.md",
+        "size": 1154,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/agents/openai.yaml",
+        "size": 201,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/references/compatibility.md",
+        "size": 2277,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/references/contract-rules.md",
+        "size": 3646,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/references/fixture-profiles.md",
+        "size": 4597,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/references/harness-contract.md",
+        "size": 4727,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/references/philosophy.md",
+        "size": 1649,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/SKILL.md",
+        "size": 2314,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/templates/install.md",
+        "size": 1118,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/templates/reports/audit.md",
+        "size": 747,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/templates/reports/conformance.md",
+        "size": 1254,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/templates/reports/coverage.md",
+        "size": 630,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/templates/reports/release.md",
+        "size": 946,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-init/templates/spec.md",
+        "size": 1154,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/agents/openai.yaml",
+        "size": 218,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/references/compatibility.md",
+        "size": 2277,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/references/contract-rules.md",
+        "size": 3646,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/references/fixture-profiles.md",
+        "size": 4597,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/references/harness-contract.md",
+        "size": 4727,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/references/philosophy.md",
+        "size": 1649,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/SKILL.md",
+        "size": 2363,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/templates/install.md",
+        "size": 1118,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/templates/reports/audit.md",
+        "size": 747,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/templates/reports/conformance.md",
+        "size": 1254,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/templates/reports/coverage.md",
+        "size": 630,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/templates/reports/release.md",
+        "size": 946,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-release/templates/spec.md",
+        "size": 1154,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/agents/openai.yaml",
+        "size": 201,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/references/compatibility.md",
+        "size": 2277,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/references/contract-rules.md",
+        "size": 3646,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/references/fixture-profiles.md",
+        "size": 4597,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/references/harness-contract.md",
+        "size": 4727,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/references/philosophy.md",
+        "size": 1649,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/SKILL.md",
+        "size": 2707,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/templates/install.md",
+        "size": 1118,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/templates/reports/audit.md",
+        "size": 747,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/templates/reports/conformance.md",
+        "size": 1254,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/templates/reports/coverage.md",
+        "size": 630,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/templates/reports/release.md",
+        "size": 946,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-spec/templates/spec.md",
+        "size": 1154,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/agents/openai.yaml",
+        "size": 204,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/references/compatibility.md",
+        "size": 2277,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/references/contract-rules.md",
+        "size": 3646,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/references/fixture-profiles.md",
+        "size": 4597,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/references/harness-contract.md",
+        "size": 4727,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/references/philosophy.md",
+        "size": 1649,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/SKILL.md",
+        "size": 2882,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/templates/install.md",
+        "size": 1118,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/templates/reports/audit.md",
+        "size": 747,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/templates/reports/conformance.md",
+        "size": 1254,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/templates/reports/coverage.md",
+        "size": 630,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/templates/reports/release.md",
+        "size": 946,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-tests/templates/spec.md",
+        "size": 1154,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/agents/openai.yaml",
+        "size": 215,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/references/compatibility.md",
+        "size": 2277,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/references/contract-rules.md",
+        "size": 3646,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/references/fixture-profiles.md",
+        "size": 4597,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/references/harness-contract.md",
+        "size": 4727,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/references/philosophy.md",
+        "size": 1649,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/SKILL.md",
+        "size": 2669,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/templates/install.md",
+        "size": 1118,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/templates/reports/audit.md",
+        "size": 747,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/templates/reports/conformance.md",
+        "size": 1254,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/templates/reports/coverage.md",
+        "size": 630,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/templates/reports/release.md",
+        "size": 946,
+        "mode": 420
+      },
+      {
+        "path": "skills/ghost-verify/templates/spec.md",
+        "size": 1154,
+        "mode": 420
+      }
+    ],
+    "entryCount": 93,
+    "bundled": []
+  }
+]

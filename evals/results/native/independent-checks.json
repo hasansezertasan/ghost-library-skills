@@ -1,0 +1,84 @@
+{
+  "ghost-init": {
+    "fixture_records": 28,
+    "required": 11,
+    "pending": 17,
+    "license_unchanged": true,
+    "draft_retained": true
+  },
+  "ghost-spec": {
+    "case_records": 18,
+    "independent_codepoint_expectations_match": true,
+    "has_non_bmp": true,
+    "has_decomposed_combining_boundary": true
+  },
+  "ghost-tests": {
+    "case_records": 9,
+    "exact_permutation_oracle_added": false,
+    "has_empty_case": true,
+    "has_duplicate_multiset_case": true,
+    "local_replay_cases": 2,
+    "schema_documented": true
+  },
+  "ghost-verify": {
+    "supplied_runner_exit": 0,
+    "supplied_runner_output": "all tests passed",
+    "normal_return": 0.5,
+    "zero_returns_normally": 0,
+    "original_files_unchanged": true
+  },
+  "ghost-fix": {
+    "independent_node_probes": 6,
+    "source_contract_unchanged": true,
+    "probes": [
+      {
+        "input": [
+          "😊",
+          3
+        ],
+        "expected": "  😊"
+      },
+      {
+        "input": [
+          "a",
+          3
+        ],
+        "expected": "  a"
+      },
+      {
+        "input": [
+          "café",
+          6
+        ],
+        "expected": " café"
+      },
+      {
+        "input": [
+          "👩‍💻",
+          5
+        ],
+        "expected": "  👩‍💻"
+      },
+      {
+        "input": [
+          "",
+          2
+        ],
+        "expected": "  "
+      },
+      {
+        "input": [
+          "abc",
+          1
+        ],
+        "expected": "abc"
+      }
+    ]
+  },
+  "ghost-release": {
+    "current_version_unchanged": true,
+    "recommends_major": true,
+    "identifies_reported_only_python_evidence": true,
+    "comparator_decision_retained": true
+  }
+}
