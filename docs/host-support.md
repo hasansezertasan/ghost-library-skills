@@ -1,6 +1,6 @@
 # Host support
 
-Seven generated skills are available directly from this checkout. Claude and Codex have native marketplace catalogs, Pi has a root skill-package declaration, and OpenCode has a native skill-path configuration. A separate builder produces self-contained bundles for evaluation and standalone installation.
+Twelve generated skills are available directly from this checkout. The host evidence below was recorded with the original seven; the five later skills (`ghost-summon`, `ghost-evaluate`, `ghost-extract`, `ghost-upgrade`, `ghost-catalog`) use the same packaging path but have not been rediscovered on each host. Claude and Codex have native marketplace catalogs, Pi has a root skill-package declaration, and OpenCode has a native skill-path configuration. A separate builder produces self-contained bundles for evaluation and standalone installation.
 
 | Host | Evidence and limits |
 | --- | --- |
@@ -32,7 +32,7 @@ claude plugin update ghost-library-skills@ghost-library-skills-marketplace
 
 Restart or reload plugins afterward.
 The root catalog installs the repository root (`./`) as the plugin;
-Claude loads the seven skills from root `skills/`, the same payload used by Codex, Pi, and OpenCode.
+Claude loads the skills from root `skills/`, the same payload used by Codex, Pi, and OpenCode.
 For a session-local trial, use `claude --plugin-dir /absolute/path/to/ghost-library-skills`.
 See [Claude plugins](https://code.claude.com/docs/en/plugins).
 

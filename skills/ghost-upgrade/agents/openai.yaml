@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ghost Upgrade"
+  short_description: "Migrate a downstream implementation to a newer contract"
+  default_prompt: "Use $ghost-upgrade to move this implementation to the latest contract revision."

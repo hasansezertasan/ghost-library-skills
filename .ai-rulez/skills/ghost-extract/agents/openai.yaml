@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ghost Extract"
+  short_description: "Turn existing code into a ghost-library contract"
+  default_prompt: "Use $ghost-extract to derive a contract from this existing utility."

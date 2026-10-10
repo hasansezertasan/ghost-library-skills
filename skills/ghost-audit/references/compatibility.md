@@ -16,6 +16,6 @@ With SemVer, breaking contract changes usually warrant a major release; compatib
 
 A bug fix can still break callers relying on old behavior. A clarification can narrow an ambiguous contract. A corrected fixture can invalidate generated implementations. Report these effects and provide input/output examples and targeted migration steps.
 
-Keep four identities distinct: plugin/toolkit version, library contract version, fixture schema version, and source commit/content identity. A downstream receipt can record source identity, selected domain, hashes, generated paths, language mapping, and verification command/report without requiring a central package registry.
+Keep four identities distinct: plugin/toolkit version, library contract version, fixture schema version, and source commit/content identity. A downstream [receipt](../templates/reports/receipt.md) can record source identity, selected domain, hashes, generated paths, language mapping, and verification command/report without requiring a central package registry.
 
 Release evidence names the evaluated contract, domains, languages, environments, harness identity, and skips/unsupported cases. Do not extrapolate a passing Python implementation to all languages or confuse fixture coverage with behavior coverage. Preparing release notes does not itself publish a release.

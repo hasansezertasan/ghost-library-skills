@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ghost Summon"
+  short_description: "Generate a verified implementation in a consumer project"
+  default_prompt: "Use $ghost-summon to generate and verify this ghost library in my project."

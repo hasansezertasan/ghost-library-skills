@@ -1,6 +1,6 @@
 # Ghost library plugin proposal
 
-Research snapshot: 2026-10-05. This document preserves the original design research. The seven core skills are implemented; the later [packaging migration](docs/packaging-proposal.md) replaces the original `adapters/` layout.
+Research snapshot: 2026-10-05. This document preserves the original design research. The seven core skills and the five later additions are implemented; the later [packaging migration](docs/packaging-proposal.md) replaces the original `adapters/` layout.
 
 ## Recommendation
 
@@ -67,9 +67,9 @@ Use `ghost-` prefixes for portable names; adapters may expose commands such as `
 
 Start with these seven. Keep spec review and fixture review as separate passes with distinct evidence, even when one agent performs both.
 
-Later additions:
+Later additions, now implemented as skills:
 
-- `ghost-summon`: generate into a consumer-selected location with an explicit language/API mapping and invoke verification. Useful early as a shared recipe; split into a dedicated skill when consumer usage warrants it.
+- `ghost-summon`: generate into a consumer-selected location with an explicit language/API mapping and invoke verification. Records a downstream receipt.
 - `ghost-evaluate`: generate clean implementations across a small agent/language matrix and summarize results, costs, retries, and unsupported cases.
 - `ghost-extract`: derive a contract from an existing utility or dependency, preserving attribution and explicitly choosing compatibility scope.
 - `ghost-upgrade`: compare a pinned upstream revision with downstream code and local extensions; propose a targeted migration.

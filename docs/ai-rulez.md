@@ -52,7 +52,7 @@ CI interpreter versions are selected by `.python-version` and `.node-version`.
 ai-rulez generates both catalogs in single-plugin mode:
 `[marketplace]` sets only the catalog name, `[plugin.codex] marketplace = true` enables the Codex catalog,
 and both entries install the repository root (`"./"`).
-Claude and Codex load the seven skills from root `skills/`,
+Claude and Codex load the generated skills from root `skills/`,
 the same tree Pi and OpenCode discover, so each skill is generated once.
 
 Installing the root means each host's plugin cache also holds maintainer content

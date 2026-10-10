@@ -13,14 +13,14 @@ class BuildPluginsTests(unittest.TestCase):
     def test_catalog_sources_and_plugin_resources_resolve(self):
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary) / "plugins"
-            self.assertEqual(build_plugins(ROOT, output), dict.fromkeys(SKILL_PATHS, 7))
+            self.assertEqual(build_plugins(ROOT, output), dict.fromkeys(SKILL_PATHS, 12))
             for host, directory in HOSTS.items():
                 plugin = output / host
                 manifest = json.loads((plugin / directory / "plugin.json").read_text())
                 self.assertEqual(manifest["name"], "ghost-library-skills")
                 self.assertEqual(manifest["version"], "0.1.0")
                 validate_links(plugin, list(plugin.rglob("*.md")))
-                self.assertEqual(len(list((plugin / "skills").glob("*/SKILL.md"))), 7)
+                self.assertEqual(len(list((plugin / "skills").glob("*/SKILL.md"))), 12)
             claude = output / "claude/skills"
             for source in claude.rglob("*"):
                 if source.is_file():

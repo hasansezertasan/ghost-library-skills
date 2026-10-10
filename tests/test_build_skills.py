@@ -12,7 +12,7 @@ class BuildSkillsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary) / "bundle"
             count = build(ROOT, output)
-            self.assertEqual(count, 7)
+            self.assertEqual(count, 12)
             for skill in output.iterdir():
                 moved = Path(temporary) / f"moved-{skill.name}"
                 skill.rename(moved)
@@ -34,7 +34,7 @@ class BuildSkillsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary) / "empty"
             output.mkdir()
-            self.assertEqual(build(ROOT, output), 7)
+            self.assertEqual(build(ROOT, output), 12)
 
     def test_source_directory_is_not_an_output(self):
         with self.assertRaisesRegex(ValueError, "Use dist/"):
@@ -51,7 +51,7 @@ class BuildSkillsTests(unittest.TestCase):
                         validate_links(root, [file])
 
     def test_source_links_are_complete(self):
-        self.assertEqual(len(validate_tree(ROOT)), 7)
+        self.assertEqual(len(validate_tree(ROOT)), 12)
 
 
 if __name__ == "__main__":

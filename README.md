@@ -15,6 +15,11 @@ Maintain one behavioral contract, generate idiomatic implementations, and retain
 | [ghost-verify](skills/ghost-verify/SKILL.md) | Build or run a harness with complete case accounting |
 | [ghost-fix](skills/ghost-fix/SKILL.md) | Diagnose downstream failures and add the right regression |
 | [ghost-release](skills/ghost-release/SKILL.md) | Prepare contract versions, migration notes, and release evidence |
+| [ghost-summon](skills/ghost-summon/SKILL.md) | Generate a verified implementation into a consumer project with a receipt |
+| [ghost-evaluate](skills/ghost-evaluate/SKILL.md) | Measure how reliably a contract generates across agents and languages |
+| [ghost-extract](skills/ghost-extract/SKILL.md) | Derive a contract from existing code with attribution and a chosen compatibility scope |
+| [ghost-upgrade](skills/ghost-upgrade/SKILL.md) | Migrate a downstream implementation to a newer contract revision |
+| [ghost-catalog](skills/ghost-catalog/SKILL.md) | Check listing readiness and draft a catalog entry |
 
 These workflows preserve each library's layout and fixture conventions. They do not require a new manifest, a registry, a particular agent, or multiple agents. The toolkit can contain executable maintenance tools; generated library implementations belong in consumer projects or disposable evaluation workspaces.
 

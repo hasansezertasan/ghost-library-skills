@@ -8,6 +8,10 @@ Use `ghost-verify` with a downstream implementation and a pinned source. The har
 
 For a reported bug, `ghost-fix` identifies whether the implementation, harness, fixture, spec, or environment is responsible. Keep downstream repairs in the downstream project and portable contract regressions upstream. `ghost-release` then prepares compatibility notes and release evidence.
 
+Use `ghost-extract` instead of `ghost-init` when the behavior already exists in a utility or dependency. Use `ghost-evaluate` to learn how reliably a contract generates across agents and languages, and `ghost-catalog` before listing a library.
+
+Consumers use `ghost-summon` to generate and verify an implementation in their own project and `ghost-upgrade` to move it to a newer contract revision. Both keep a receipt beside the implementation recording the source revision, mapping, local extensions, and verification command, so `ghost-fix` and later upgrades can reproduce it.
+
 Shared resources are loaded as needed. There is no mandatory state store, manifest, MCP server, or agent delegation. Reports can be concise responses or saved Markdown; the report templates are evidence guides, not a requirement to create files on every invocation.
 
 These skills do not change host permissions or authorize unrelated external actions. Read-only audits remain read-only. Requests to repair artifacts authorize those repairs within the requested scope; publishing and contacting others are separate actions.
