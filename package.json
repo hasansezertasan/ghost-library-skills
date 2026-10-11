@@ -27,6 +27,6 @@
     "README.md"
   ],
   "devDependencies": {
-    "ai-rulez": "5.0.0"
+    "ai-rulez": "5.0.2"
   }
 }
