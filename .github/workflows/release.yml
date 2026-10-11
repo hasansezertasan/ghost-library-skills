@@ -28,7 +28,7 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       # release-please can otherwise release an older pending, failed merge on a
       # later green push. Require a single pending release at the validated SHA.
       - name: Select the validated release merge
@@ -50,7 +50,7 @@ jobs:
       # regenerated tree here, and support a manual check run for PR status.
       - name: Check out the release PR branch
         if: steps.release-please.outputs.prs_created == 'true'
-        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           ref: ${{ fromJSON(steps.release-please.outputs.pr || '{}').headBranchName }}
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
