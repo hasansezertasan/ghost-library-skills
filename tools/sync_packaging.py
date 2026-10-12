@@ -94,11 +94,21 @@ def findings(result: subprocess.CompletedProcess) -> str:
     return '; '.join(line for line in lines if line and not any(n in line for n in NOISE))
 
 
+def symlinked(root: Path) -> list[str]:
+    """Name generated targets reached through a symlink, which ai-rulez follows inside the checkout."""
+    problems = set()
+    for target in (*MANIFEST_PATHS, SIDECAR, Path('package.json'), OWNED_TREE):
+        for parent in (target, *target.parents[:-1]):
+            if (root / parent).is_symlink():
+                problems.add(f'symlink: {parent.as_posix()}')
+    return sorted(problems)
+
+
 def unrecorded(root: Path) -> list[str]:
     """Name owned paths ai-rulez did not record, which its own checks accept."""
     tree = root / OWNED_TREE
     if tree.is_symlink():
-        return [f'symlink: {OWNED_TREE}']
+        return []
     if not tree.is_dir():
         return [f'missing: {OWNED_TREE}']
     sidecar = root / SIDECAR
@@ -116,13 +126,13 @@ def unrecorded(root: Path) -> list[str]:
 def sync(root: Path, check: bool = False) -> list[str]:
     configuration(root)
     if check:
-        problems = unrecorded(root)
+        problems = symlinked(root) + unrecorded(root)
         for arguments in (('verify', '--plugin'), ('validate', '--strict')):
             result = ai_rulez(root, *arguments)
             if result.returncode:
                 problems.append(f'ai-rulez {" ".join(arguments)}: {findings(result)}')
         return problems
-    problems = [p for p in unrecorded(root) if p.startswith('symlink:')]
+    problems = symlinked(root) + [p for p in unrecorded(root) if p.startswith('symlink:')]
     if problems:
         raise ValueError('Refusing to write through symlinks: ' + '; '.join(problems))
     result = ai_rulez(root, 'generate', '--plugin')

@@ -92,6 +92,16 @@ class SyncPackagingTests(unittest.TestCase):
         self.assertTrue(file.is_symlink())
         self.assertEqual(fingerprint(self.root / '.ai-rulez'), self.canonical)
 
+    def test_symlinked_manifest_directory_is_rejected_without_writing(self):
+        inside = self.root / 'elsewhere'
+        shutil.move(self.root / '.claude-plugin', inside)
+        (self.root / '.claude-plugin').symlink_to(inside)
+        before = fingerprint(inside)
+        self.assertIn('symlink: .claude-plugin', sync(self.root, check=True))
+        with self.assertRaisesRegex(ValueError, 'symlinks'):
+            sync(self.root)
+        self.assertEqual(fingerprint(inside), before)
+
     def test_deleted_source_skill_is_removed_from_generated_payload(self):
         shutil.rmtree(self.root / '.ai-rulez/skills/ghost-init')
         before = fingerprint(self.root)
