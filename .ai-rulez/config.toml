@@ -1,17 +1,20 @@
-# Plugin version is a generated mirror of package.json; update it with make sync.
-# Shared resources are assembled before ai-rulez plugin generation.
+# The plugin version comes from package.json; shared resources are copied into every skill.
+# content_root keeps each skill's agents/ metadata in the bundle.
 version = "5.0"
 name = "ghost-library-skills"
 gitignore = false
 
 [plugin]
-version = "0.1.0"
+version_from = "package.json"
 name = "ghost-library-skills"
 description = "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence."
 repository = "https://github.com/hasansezertasan/ghost-library-skills"
 keywords = ["ghost-library", "specifications", "conformance", "skills", "pi-package"]
-runtimes = ["claude", "codex"]
+runtimes = ["claude", "codex", "pi"]
 category = "Productivity"
+content_root = ".ai-rulez"
+shared_resources = ["references", "templates"]
+provenance_headers = false
 
 [plugin.author]
 name = "Hasan Sezer Tasan"
@@ -30,6 +33,11 @@ developer_name = "Hasan Sezer Tasan"
 # ai-rulez fills the description and owner from [plugin].
 [plugin.codex]
 marketplace = true
+
+# Pi reads the root skills/ tree; merge keeps the authored npm tooling in package.json.
+[plugin.pi]
+skills_dir = "skills"
+package_json = "merge"
 
 [marketplace]
 name = "ghost-library-skills-marketplace"

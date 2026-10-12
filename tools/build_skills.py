@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate local resource links and build self-contained Markdown skills."""
+"""Validate local resource links and copy self-contained generated skills."""
 
 from __future__ import annotations
 
@@ -83,16 +83,13 @@ def build(root: Path, output: Path) -> int:
     output.parent.mkdir(parents=True, exist_ok=True)
     staging = Path(tempfile.mkdtemp(prefix=".ghost-skills-", dir=output.parent))
     try:
+        # ai-rulez copies the shared resources into each generated root skill.
         for skill in skills:
+            generated = root / "skills" / skill.parent.name
+            if generated.is_symlink() or not (generated / "SKILL.md").is_file():
+                raise ValueError(f"Missing generated skill; run make sync: {generated}")
             destination = staging / skill.parent.name
-            shutil.copytree(skill.parent, destination)
-            for shared in ("references", "templates"):
-                shutil.copytree(root / SOURCE / shared, destination / shared)
-            entrypoint = destination / "SKILL.md"
-            content = entrypoint.read_text(encoding="utf-8")
-            for shared in ("references", "templates"):
-                content = content.replace(f"](../../{shared}/", f"]({shared}/")
-            entrypoint.write_text(content, encoding="utf-8")
+            shutil.copytree(generated, destination)
             validate_links(destination, sorted(destination.rglob("*.md")))
         staging.replace(output)
     finally:

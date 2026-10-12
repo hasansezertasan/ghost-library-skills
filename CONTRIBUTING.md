@@ -19,7 +19,7 @@ make check-all
 
 With uv, use `make check-all PYTHON="uv run --no-project python"`.
 `make sync` reads `.ai-rulez/` sources and regenerates root skills, host manifests,
-plugin identity fields in `package.json`, and the tracked Claude/Codex payload using [the ai-rulez integration](docs/ai-rulez.md).
+the identity and Pi fields in `package.json`, and the tracked payload using [the ai-rulez integration](docs/ai-rulez.md).
 `make check-all` reports drift without repairing packaging,
 validates local resource links, runs tests, and builds all four host bundles into a temporary directory.
 It may install locked development tooling into `node_modules/`;

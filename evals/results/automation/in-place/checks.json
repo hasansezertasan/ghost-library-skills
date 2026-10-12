@@ -1,0 +1,39 @@
+{
+  "ai_rulez_version": "5.0.4",
+  "configuration_valid": true,
+  "strict_validation_findings": 0,
+  "python": "3.12",
+  "tests_passed": 45,
+  "host_bundles": {
+    "claude": 12,
+    "codex": 12,
+    "opencode": 12,
+    "pi": 12
+  },
+  "catalog_source": "./",
+  "catalog_name": "ghost-library-skills-marketplace",
+  "workflow_lint": {
+    "tool": "actionlint",
+    "version": "1.7.12",
+    "success": true
+  },
+  "pi_package": {
+    "name": "@hasansezertasan/pi-ghost-library-skills",
+    "entry_count": 218,
+    "top_level": [
+      "README.md",
+      "package.json",
+      "skills"
+    ]
+  },
+  "drift_probes": {
+    "edited_output": "verify --plugin fails (stale, file not named)",
+    "missing_output": "verify --plugin fails",
+    "manifest_or_version_drift": "verify --plugin fails",
+    "source_edit_or_removed_skill": "verify --plugin fails; generate prunes",
+    "unrecorded_file_in_skills": "accepted by ai-rulez; reported by the wrapper",
+    "symlink_with_recorded_content": "accepted by verify; refused by generate; reported by the wrapper",
+    "root_mcp_json_or_hooks": "validate --strict AR9T0, exit 2"
+  },
+  "git_diff_check": true
+}

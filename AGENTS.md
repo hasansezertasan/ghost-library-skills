@@ -7,11 +7,11 @@ This repository distributes skills for maintaining ghost libraries. It contains 
 - Edit procedures in `.ai-rulez/skills/ghost-*/SKILL.md` and their `agents/openai.yaml` metadata.
 - Edit shared guidance in `.ai-rulez/references/` and artifact templates in `.ai-rulez/templates/`.
 - Edit plugin identity, runtimes, and Codex display options in `.ai-rulez/config.toml`.
-  Its required plugin version is generated from `package.json`; do not edit that mirror.
-- Edit the release version, npm tooling, and Pi declarations in `package.json`.
-  It is the sole authored plugin version source;
-  its identity fields are generated from TOML.
-- Generate root `skills/`, `.claude-plugin/`, `.codex-plugin/`, and `.agents/plugins/marketplace.json` with `make sync`.
+  It reads the plugin version from `package.json` (`version_from`); do not add a literal `version`.
+- Edit the release version and npm tooling in `package.json`.
+  It is the sole plugin version source;
+  ai-rulez generates its identity fields, `pi`, and `files` from TOML.
+- Generate root `skills/`, `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/marketplace.json`, and `.ai-rulez-generated.json` with `make sync`.
   Both catalogs install the repository root, so keep host-loaded paths such as `.mcp.json`, `hooks/`, `agents/`, and `commands/` out of it.
   Do not independently edit these outputs.
 - Keep maintainer governance here and in contributor documentation; do not inject it into distributed skills.
@@ -24,8 +24,8 @@ Use the existing standard-library Python tooling and unittest conventions.
 CI's Python version is in `.python-version` and its Node version is in `.node-version`;
 locally, `make check-all PYTHON="uv run --no-project python"` uses the selected Python interpreter.
 The Makefile installs the locked ai-rulez development dependency when needed.
-ai-rulez reads the committed TOML configuration through our staging wrapper and owns native JSON rendering;
-our wrapper owns portable resource packaging and strict checkout drift checks.
+ai-rulez generates and verifies the packaging in place from the committed TOML configuration;
+our wrapper adds the strict check that root `skills/` holds only files ai-rulez recorded.
 Read [the integration guide](docs/ai-rulez.md) before changing that boundary.
 
 Native host tests use isolated profiles and disposable repositories. Preserve the real user's settings, authentication, and installed packages. Keep authenticated model evaluations separate from ordinary CI, and scope support claims to saved evidence in `evals/results/`.

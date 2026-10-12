@@ -1,6 +1,6 @@
 ---
 name: ghost-catalog
-description: Check a ghost library's discoverability and listing readiness: required artifacts, accurate README claims, license, metadata, and a catalog's eligibility rules, then prepare a listing entry. Use before publishing or listing a ghost library, not for behavioral review.
+description: "Check a ghost library's discoverability and listing readiness: required artifacts, accurate README claims, license, metadata, and a catalog's eligibility rules, then prepare a listing entry. Use before publishing or listing a ghost library, not for behavioral review."
 ---
 
 # Prepare a library for discovery
