@@ -8,3 +8,18 @@ skills/** linguist-generated
 .codex-plugin/** linguist-generated
 .agents/plugins/marketplace.json linguist-generated
 .ai-rulez-generated.json linguist-generated
+
+# Reports copied verbatim from evaluation tools; READMEs beside them summarize the evidence.
+evals/results/**/installation.json linguist-generated
+evals/results/**/preliminary-installation.json linguist-generated
+evals/results/hosts/installation/report.json linguist-generated
+evals/results/**/validation.json linguist-generated
+evals/results/hosts/evaluated-validation.json linguist-generated
+evals/results/native/ghost-*.json linguist-generated
+evals/results/**/release-please.json linguist-generated
+evals/results/automation/ai-rulez.json linguist-generated
+evals/results/**/pi-package.json linguist-generated
+evals/results/padlib/baseline.json linguist-generated
+evals/results/*/conformance.json linguist-generated
+evals/results/*/negative-controls.json linguist-generated
+evals/results/wheredirs/native-results.json linguist-generated

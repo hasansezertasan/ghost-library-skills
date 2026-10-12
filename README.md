@@ -60,7 +60,7 @@ The output directory must be absent or empty. Each built folder includes its ski
   identity, Pi, and npm `files` fields are generated from TOML.
 - `.ai-rulez-generated.json`: generated record of every packaged file and its content hash.
 - `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/`: generated native manifests and single-plugin catalogs that install the repository root.
-- `opencode.json`: generated skill discovery when running from this checkout.
+- `opencode.json`: OpenCode skill discovery when running from this checkout.
 - `tools/`: local packaging, resource-link validation, and native smoke checks.
 - `evals/`: realistic workflow cases and pilot evidence.
 - `docs/`: usage and host-support boundaries.
