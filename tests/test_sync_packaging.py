@@ -58,14 +58,22 @@ class SyncPackagingTests(unittest.TestCase):
         skills = self.root / 'skills'
         (skills / 'ghost-audit/SKILL.md').write_text('stale payload')
         (skills / 'ghost-audit/references/contract-rules.md').unlink()
+        (skills / 'ghost-audit/old/deep').mkdir(parents=True)
+        (skills / 'ghost-audit/old/deep/notes.md').write_text('old release only')
         (skills / 'obsolete.txt').write_text('old release only')
+        (skills / 'ghost-renamed').mkdir()
+        (skills / 'ghost-renamed/SKILL.md').write_text('old release only')
         before = fingerprint(self.root)
         errors = sync(self.root, check=True)
-        self.assertTrue(reported(errors, 'ai-rulez verify --plugin'))
+        self.assertTrue(reported(errors, 'changed', 'skills/ghost-audit/SKILL.md'))
+        self.assertTrue(reported(errors, 'missing', 'skills/ghost-audit/references/contract-rules.md'))
+        self.assertTrue(reported(errors, 'extra', 'skills/ghost-audit/old/deep/notes.md'))
         self.assertIn('extra: skills/obsolete.txt', errors)
+        self.assertIn('extra: skills/ghost-renamed', errors)
         self.assertEqual(fingerprint(self.root), before)
         sync(self.root)
-        self.assertFalse((skills / 'obsolete.txt').exists())
+        for path in ('obsolete.txt', 'ghost-renamed', 'ghost-audit/old'):
+            self.assertFalse((skills / path).exists())
         self.assertEqual(sync(self.root, check=True), [])
         self.assertEqual(fingerprint(self.root / '.ai-rulez'), self.canonical)
 
@@ -75,7 +83,7 @@ class SyncPackagingTests(unittest.TestCase):
         package['version'] = '0.2.0'
         path.write_text(json.dumps(package))
         before = fingerprint(self.root)
-        self.assertTrue(reported(sync(self.root, check=True), 'ai-rulez verify --plugin'))
+        self.assertTrue(reported(sync(self.root, check=True), 'changed', '.claude-plugin/plugin.json'))
         self.assertEqual(fingerprint(self.root), before)
         sync(self.root)
         for path in self.root.rglob('plugin.json'):
@@ -92,6 +100,16 @@ class SyncPackagingTests(unittest.TestCase):
         self.assertTrue(file.is_symlink())
         self.assertEqual(fingerprint(self.root / '.ai-rulez'), self.canonical)
 
+    def test_symlinked_payload_is_not_written_through(self):
+        victim = self.root / 'README.md'
+        original = victim.read_bytes()
+        file = self.root / 'skills/ghost-audit/SKILL.md'
+        file.unlink()
+        file.symlink_to(victim)
+        with self.assertRaisesRegex(ValueError, 'symlinks'):
+            sync(self.root)
+        self.assertEqual(victim.read_bytes(), original)
+
     def test_symlinked_manifest_directory_is_rejected_without_writing(self):
         inside = self.root / 'elsewhere'
         shutil.move(self.root / '.claude-plugin', inside)
@@ -105,17 +123,17 @@ class SyncPackagingTests(unittest.TestCase):
     def test_deleted_source_skill_is_removed_from_generated_payload(self):
         shutil.rmtree(self.root / '.ai-rulez/skills/ghost-init')
         before = fingerprint(self.root)
-        self.assertTrue(reported(sync(self.root, check=True), 'ai-rulez verify --plugin'))
+        self.assertTrue(reported(sync(self.root, check=True), 'obsolete', 'skills/ghost-init/SKILL.md'))
         self.assertEqual(fingerprint(self.root), before)
         sync(self.root)
         self.assertFalse((self.root / 'skills/ghost-init').exists())
-        self.assertNotIn('./skills/ghost-init', json.loads((self.root / 'package.json').read_text())['pi']['skills'])
+        self.assertEqual((self.root / 'package.json').read_bytes(), self.metadata)
         self.assertEqual(sync(self.root, check=True), [])
 
     def test_interface_change_invalidates_codex_manifests(self):
         path = self.root / '.ai-rulez/config.toml'
         path.write_text(path.read_text().replace('display_name = "Ghost Library Skills"', 'display_name = "Changed display name"'))
-        self.assertTrue(reported(sync(self.root, check=True), 'ai-rulez verify --plugin'))
+        self.assertTrue(reported(sync(self.root, check=True), 'changed', '.codex-plugin/plugin.json'))
         sync(self.root)
         manifest = json.loads((self.root / '.codex-plugin/plugin.json').read_text())
         self.assertEqual(manifest['interface']['displayName'], 'Changed display name')
@@ -124,13 +142,13 @@ class SyncPackagingTests(unittest.TestCase):
         path = self.root / '.ai-rulez/config.toml'
         path.write_text(path.read_text().replace('Hasan Sezer Tasan', 'Changed author'))
         before = fingerprint(self.root)
-        self.assertTrue(reported(sync(self.root, check=True), 'ai-rulez verify --plugin'))
+        self.assertTrue(reported(sync(self.root, check=True), 'changed', 'package.json'))
         self.assertEqual(fingerprint(self.root), before)
         sync(self.root)
         package = json.loads((self.root / 'package.json').read_text())
         self.assertEqual(package['author']['name'], 'Changed author')
-        self.assertEqual(package['version'], '0.1.0')
-        self.assertIn('./skills/ghost-audit', package['pi']['skills'])
+        self.assertEqual((package['name'], package['version']), ('ghost-library-skills', '0.1.0'))
+        self.assertEqual((package['pi']['skills'], package['files']), (['./skills'], ['skills/', 'README.md']))
         self.assertEqual(package['devDependencies'], json.loads(self.metadata)['devDependencies'])
         manifest = json.loads((self.root / '.claude-plugin/plugin.json').read_text())
         self.assertEqual(manifest['author']['name'], 'Changed author')

@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "source_hash": "blake3:5f0bdd69fa4b3ee6481c78402ee93056fcda213283ca52152e1119d42a3c4efe",
+  "source_hash": "blake3:d5f3d3e465fa17bc1114ddc5be04cb320b0f3cbae671c64332e89a9fc00b984f",
   "outputs": {
     ".agents/plugins/marketplace.json": {
       "content_hash": "blake3:1761e93812464ae14e038516ee0d1819392261f8fae301b32d5c8ce75f7613cb"
@@ -15,7 +15,7 @@
       "content_hash": "blake3:ad98a712d1b80c81c57e9bcf97ad5aa8cb4279f5523c4b0a724d5d815547dcfe"
     },
     "package.json": {
-      "content_hash": "blake3:f75b6001ffd73f847be63a5d1be241428ef12c81acd2716843d763e5df2f8ac7"
+      "content_hash": "blake3:0e683cff9cfae3e9d53e902b54cb0a88d7fbef63bf3dab00ae1dd0321b270224"
     },
     "skills/ghost-audit/SKILL.md": {
       "content_hash": "blake3:619e3b43b0446a56e347d646a8923d22e7dee8fcf2f921efe1f280691a0f8a46"

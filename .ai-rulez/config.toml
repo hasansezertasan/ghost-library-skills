@@ -35,9 +35,12 @@ developer_name = "Hasan Sezer Tasan"
 marketplace = true
 
 # Pi reads the root skills/ tree; merge keeps the authored npm tooling in package.json.
+# package_name keeps the plugin's npm name; skills_entry lists skills/ once instead of every skill.
 [plugin.pi]
 skills_dir = "skills"
 package_json = "merge"
+package_name = "ghost-library-skills"
+skills_entry = "directory"
 
 [marketplace]
 name = "ghost-library-skills-marketplace"

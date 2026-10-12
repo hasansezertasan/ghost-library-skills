@@ -22,14 +22,13 @@ The TOML `version = "5.0"` is the configuration schema version, not the plugin r
 ai-rulez merges the identity fields (`name`, `description`, `author`, `repository`, `keywords`),
 `version`, `pi`, and `files` into `package.json` (`[plugin.pi] package_json = "merge"`)
 and keeps every other key, so `devDependencies` stay authored there.
-The generated npm name is `@hasansezertasan/pi-ghost-library-skills`.
+`[plugin.pi] package_name` keeps the npm name `ghost-library-skills`, matching the plugin and both catalogs.
 
 `[plugin] shared_resources` copies `.ai-rulez/references/` and `.ai-rulez/templates/` into every skill
 and rewrites their `../../` links to the copies,
 so each generated skill can be moved independently, including its `agents/openai.yaml` metadata.
 `content_root = ".ai-rulez"` is what bundles that metadata:
 each skill directory is copied whole.
-ai-rulez still warns that it will not include the `agents` subdirectory; the warning is wrong for this layout.
 
 Root `skills/`, `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/marketplace.json`,
 and `.ai-rulez-generated.json` are generated distribution surfaces.
@@ -69,21 +68,24 @@ so no tool provenance header enters procedures or artifact templates.
 `.ai-rulez-generated.json` records every generated file and its content hash instead.
 
 `make check-all` compares the checkout against that record without repairing it.
-`verify --plugin` reports changed and missing files and drift in the manifests and the owned `package.json` keys;
-it reports that output is stale but does not name the file.
-It accepts files it did not record and symlinks with recorded content,
-so our wrapper reports any unrecorded file or symlink under `skills/` as well.
-Explicit synchronization regenerates the tree and deletes unrecorded files,
+`verify --plugin` names each drifted path with its kind:
+changed, missing, and obsolete outputs, drift in the manifests and the owned `package.json` keys,
+unrecorded files inside a generated skill directory, and symlinked files.
+It does not look at other entries of `skills/`, such as a stray file or a skill directory it did not generate,
+which every host would still load, nor at symlinked directories,
+and `generate --plugin` writes through a symlinked output.
+Our wrapper therefore reports those entries and every symlink on a generated path, and refuses to generate through one.
+Explicit synchronization regenerates the tree and deletes unrecorded files and directories,
 so deleting a canonical skill removes its generated copy.
 Source files and maintainer governance stay outside this replacement boundary.
 
 ## Host and release boundaries
 
-Pi's root manifest lists each generated skill directory, and OpenCode's native skill path discovers generated root `skills/`.
+Pi's root manifest lists the generated `skills/` directory (`skills_entry = "directory"`), and OpenCode's native skill path discovers it.
 Every root skill contains its own references and templates;
 no root-level shared resource directory is needed for installation.
-The npm file allowlist lists each generated skill file and `README.md`;
-npm also includes the package manifest.
+The npm file allowlist is `skills/` and `README.md`;
+npm also includes the package manifest. Adding a skill therefore leaves `package.json` unchanged.
 
 Only the Claude, Codex, and Pi plugin runtimes are enabled.
 OpenCode JavaScript plugin generation remains outside the package tree;
