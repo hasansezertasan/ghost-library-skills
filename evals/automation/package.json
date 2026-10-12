@@ -2,7 +2,7 @@
   "name": "ghost-automation-prototype",
   "private": true,
   "devDependencies": {
-    "ai-rulez": "5.0.2",
+    "ai-rulez": "5.0.4",
     "release-please": "17.11.2"
   }
 }
