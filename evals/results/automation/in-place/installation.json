@@ -1,0 +1,518 @@
+{
+  "success": true,
+  "source_kind": "repository",
+  "versions": {
+    "claude": "2.1.296 (Claude Code)",
+    "opencode": "1.19.0",
+    "pi": "1.0.3",
+    "codex": "codex-cli 0.160.0"
+  },
+  "before": {
+    "claude": {
+      "skills": [
+        "ghost-library-skills:ghost-audit",
+        "ghost-library-skills:ghost-catalog",
+        "ghost-library-skills:ghost-evaluate",
+        "ghost-library-skills:ghost-extract",
+        "ghost-library-skills:ghost-fix",
+        "ghost-library-skills:ghost-init",
+        "ghost-library-skills:ghost-release",
+        "ghost-library-skills:ghost-spec",
+        "ghost-library-skills:ghost-summon",
+        "ghost-library-skills:ghost-tests",
+        "ghost-library-skills:ghost-upgrade",
+        "ghost-library-skills:ghost-verify"
+      ],
+      "payload": {
+        "files": 217,
+        "sha256": "215d24a07fc1180adb43f9c337b228a4e7846ba479b152419a25c26847bf8763"
+      },
+      "old_marker": true,
+      "resource_links_valid": true,
+      "active_root": "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/live/skills",
+      "version": "0.0.0",
+      "model_invocation": "not_authenticated_in_private_profile"
+    },
+    "codex": {
+      "skills": [
+        "ghost-library-skills:ghost-audit",
+        "ghost-library-skills:ghost-catalog",
+        "ghost-library-skills:ghost-evaluate",
+        "ghost-library-skills:ghost-extract",
+        "ghost-library-skills:ghost-fix",
+        "ghost-library-skills:ghost-init",
+        "ghost-library-skills:ghost-release",
+        "ghost-library-skills:ghost-spec",
+        "ghost-library-skills:ghost-summon",
+        "ghost-library-skills:ghost-tests",
+        "ghost-library-skills:ghost-upgrade",
+        "ghost-library-skills:ghost-verify"
+      ],
+      "payload": {
+        "files": 217,
+        "sha256": "215d24a07fc1180adb43f9c337b228a4e7846ba479b152419a25c26847bf8763"
+      },
+      "old_marker": true,
+      "resource_links_valid": true,
+      "active_root": "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/codex-cache-before/skills",
+      "version": "0.0.0"
+    },
+    "pi": {
+      "skills": [
+        "ghost-audit",
+        "ghost-catalog",
+        "ghost-evaluate",
+        "ghost-extract",
+        "ghost-fix",
+        "ghost-init",
+        "ghost-release",
+        "ghost-spec",
+        "ghost-summon",
+        "ghost-tests",
+        "ghost-upgrade",
+        "ghost-verify"
+      ],
+      "payload": {
+        "files": 217,
+        "sha256": "215d24a07fc1180adb43f9c337b228a4e7846ba479b152419a25c26847bf8763"
+      },
+      "old_marker": true,
+      "resource_links_valid": true,
+      "active_root": "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/live/skills"
+    },
+    "opencode": {
+      "skills": [
+        "ghost-audit",
+        "ghost-catalog",
+        "ghost-evaluate",
+        "ghost-extract",
+        "ghost-fix",
+        "ghost-init",
+        "ghost-release",
+        "ghost-spec",
+        "ghost-summon",
+        "ghost-tests",
+        "ghost-upgrade",
+        "ghost-verify"
+      ],
+      "payload": {
+        "files": 217,
+        "sha256": "215d24a07fc1180adb43f9c337b228a4e7846ba479b152419a25c26847bf8763"
+      },
+      "old_marker": true,
+      "resource_links_valid": true,
+      "active_root": "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/live/skills"
+    }
+  },
+  "after": {
+    "claude": {
+      "skills": [
+        "ghost-library-skills:ghost-audit",
+        "ghost-library-skills:ghost-catalog",
+        "ghost-library-skills:ghost-evaluate",
+        "ghost-library-skills:ghost-extract",
+        "ghost-library-skills:ghost-fix",
+        "ghost-library-skills:ghost-init",
+        "ghost-library-skills:ghost-release",
+        "ghost-library-skills:ghost-spec",
+        "ghost-library-skills:ghost-summon",
+        "ghost-library-skills:ghost-tests",
+        "ghost-library-skills:ghost-upgrade",
+        "ghost-library-skills:ghost-verify"
+      ],
+      "payload": {
+        "files": 216,
+        "sha256": "780deff5ee16e4a7847fb7acaf407cbce5f37524012ff1c2c32ad763f8a80434"
+      },
+      "old_marker": false,
+      "resource_links_valid": true,
+      "active_root": "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/live/skills",
+      "version": "0.1.0",
+      "model_invocation": "not_authenticated_in_private_profile"
+    },
+    "codex": {
+      "skills": [
+        "ghost-library-skills:ghost-audit",
+        "ghost-library-skills:ghost-catalog",
+        "ghost-library-skills:ghost-evaluate",
+        "ghost-library-skills:ghost-extract",
+        "ghost-library-skills:ghost-fix",
+        "ghost-library-skills:ghost-init",
+        "ghost-library-skills:ghost-release",
+        "ghost-library-skills:ghost-spec",
+        "ghost-library-skills:ghost-summon",
+        "ghost-library-skills:ghost-tests",
+        "ghost-library-skills:ghost-upgrade",
+        "ghost-library-skills:ghost-verify"
+      ],
+      "payload": {
+        "files": 216,
+        "sha256": "780deff5ee16e4a7847fb7acaf407cbce5f37524012ff1c2c32ad763f8a80434"
+      },
+      "old_marker": false,
+      "resource_links_valid": true,
+      "active_root": "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/codex-cache-after/skills",
+      "version": "0.1.0"
+    },
+    "pi": {
+      "skills": [
+        "ghost-audit",
+        "ghost-catalog",
+        "ghost-evaluate",
+        "ghost-extract",
+        "ghost-fix",
+        "ghost-init",
+        "ghost-release",
+        "ghost-spec",
+        "ghost-summon",
+        "ghost-tests",
+        "ghost-upgrade",
+        "ghost-verify"
+      ],
+      "payload": {
+        "files": 216,
+        "sha256": "780deff5ee16e4a7847fb7acaf407cbce5f37524012ff1c2c32ad763f8a80434"
+      },
+      "old_marker": false,
+      "resource_links_valid": true,
+      "active_root": "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/live/skills"
+    },
+    "opencode": {
+      "skills": [
+        "ghost-audit",
+        "ghost-catalog",
+        "ghost-evaluate",
+        "ghost-extract",
+        "ghost-fix",
+        "ghost-init",
+        "ghost-release",
+        "ghost-spec",
+        "ghost-summon",
+        "ghost-tests",
+        "ghost-upgrade",
+        "ghost-verify"
+      ],
+      "payload": {
+        "files": 216,
+        "sha256": "780deff5ee16e4a7847fb7acaf407cbce5f37524012ff1c2c32ad763f8a80434"
+      },
+      "old_marker": false,
+      "resource_links_valid": true,
+      "active_root": "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/live/skills"
+    }
+  },
+  "container_image": "sha256:28bd5fe8b56d1bd048e5babf5b10710ebe0bae67db86916198a6eec434943f8b",
+  "codex_binary_sha256": "50b06603bdcdac39b714f5c3e68583c002b8ad8779ebfdaaf4932ff016b379c0",
+  "real_configuration_unchanged": true,
+  "model_inference_tested": false,
+  "configuration_guard": {
+    "claude_json": "normalized JSON",
+    "ignored_volatile_keys": [
+      "cachedGrowthBookFeaturesAt",
+      "pluginUsage"
+    ],
+    "other_files": "byte SHA-256"
+  },
+  "changed_configuration_paths": [],
+  "changed_claude_configuration_keys": [],
+  "replacement_methods": {
+    "claude": "marketplace update; plugin update; fresh process",
+    "codex": "plugin add again; fresh app-server",
+    "pi": "local path replaced; pi update; fresh resource loader",
+    "opencode": "checkout replaced; root config discovery"
+  },
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "run",
+        "-d",
+        "--name",
+        "ghost-install-60d1f20ee6",
+        "--network",
+        "none",
+        "-v",
+        "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check:/evaluation",
+        "alpine:latest",
+        "sleep",
+        "1800"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "ghost-install-60d1f20ee6",
+        "--format",
+        "{{.Image}}"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "claude",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "opencode",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "pi",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "ghost-install-60d1f20ee6",
+        "/evaluation/codex-aarch64-unknown-linux-musl",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "claude",
+        "plugin",
+        "marketplace",
+        "add",
+        "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/live"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "claude",
+        "plugin",
+        "install",
+        "ghost-library-skills@ghost-library-skills-marketplace",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "ghost-install-60d1f20ee6",
+        "/evaluation/codex-aarch64-unknown-linux-musl",
+        "plugin",
+        "marketplace",
+        "add",
+        "/evaluation/live"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "ghost-install-60d1f20ee6",
+        "/evaluation/codex-aarch64-unknown-linux-musl",
+        "plugin",
+        "add",
+        "ghost-library-skills@ghost-library-skills-marketplace"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "pi",
+        "install",
+        "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/live"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "claude",
+        "--print",
+        "--verbose",
+        "--output-format",
+        "stream-json",
+        "--no-session-persistence",
+        "--settings",
+        "{\"disableAllHooks\":true}",
+        "--strict-mcp-config",
+        "--mcp-config",
+        "{\"mcpServers\":{}}",
+        "--no-chrome",
+        "--permission-mode",
+        "dontAsk",
+        "--tools",
+        "",
+        "--",
+        "/ghost-library-skills:ghost-audit Audit this empty workspace."
+      ],
+      "exit_code": 1,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "node",
+        "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/pi-discover.mjs"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "opencode",
+        "debug",
+        "skill",
+        "--pure"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "docker",
+        "cp",
+        "ghost-install-60d1f20ee6:/root/.codex/plugins/cache/ghost-library-skills-marketplace/ghost-library-skills/0.0.0",
+        "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/codex-cache-before"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "claude",
+        "plugin",
+        "marketplace",
+        "update",
+        "ghost-library-skills-marketplace"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "claude",
+        "plugin",
+        "update",
+        "ghost-library-skills@ghost-library-skills-marketplace"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "ghost-install-60d1f20ee6",
+        "/evaluation/codex-aarch64-unknown-linux-musl",
+        "plugin",
+        "add",
+        "ghost-library-skills@ghost-library-skills-marketplace"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "pi",
+        "update",
+        "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/live"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "claude",
+        "--print",
+        "--verbose",
+        "--output-format",
+        "stream-json",
+        "--no-session-persistence",
+        "--settings",
+        "{\"disableAllHooks\":true}",
+        "--strict-mcp-config",
+        "--mcp-config",
+        "{\"mcpServers\":{}}",
+        "--no-chrome",
+        "--permission-mode",
+        "dontAsk",
+        "--tools",
+        "",
+        "--",
+        "/ghost-library-skills:ghost-audit Audit this empty workspace."
+      ],
+      "exit_code": 1,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "node",
+        "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/pi-discover.mjs"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "opencode",
+        "debug",
+        "skill",
+        "--pure"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    },
+    {
+      "argv": [
+        "docker",
+        "cp",
+        "ghost-install-60d1f20ee6:/root/.codex/plugins/cache/ghost-library-skills-marketplace/ghost-library-skills/0.1.0",
+        "/private/tmp/claude-501/-Users-hasansezertasan-orca-hasansezertasan-ghost-library-skills/fa934004-f738-4ef1-ac61-d4e7bcf20820/scratchpad/install-check/codex-cache-after"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "configuration_changes": []
+    }
+  ]
+}

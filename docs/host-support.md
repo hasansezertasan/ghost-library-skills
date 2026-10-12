@@ -80,11 +80,11 @@ The project is now named `ghost-library-skills`, with catalog `ghost-library-ski
 ## Maintain generated packaging
 
 `.ai-rulez/config.toml` owns plugin identity, runtime selection, and Codex display options.
-`package.json` owns the release version, npm tooling, Pi declaration, and npm file allowlist;
-its plugin identity fields are generated from TOML.
-`tools/sync_packaging.py` delegates native JSON rendering to the pinned ai-rulez development dependency,
-then materializes the shared Claude/Codex payload with the existing resource builder.
-See [the integration guide](ai-rulez.md) for ownership and staging boundaries.
+`package.json` owns the release version and npm tooling;
+ai-rulez generates its identity fields, Pi declaration, and npm file allowlist from TOML.
+`tools/sync_packaging.py` runs the pinned ai-rulez development dependency in the checkout
+and rejects files under `skills/` that ai-rulez did not record.
+See [the integration guide](ai-rulez.md) for ownership boundaries.
 Edit `.ai-rulez/` skill sources, shared resources, and metadata, then run:
 
 ```sh
@@ -92,7 +92,7 @@ make sync
 make check
 ```
 
-`make check` reports stale generated files without repairing them, validates resource links, and runs unit tests. Keep generated root `skills/`, manifests, and catalogs in version control. It also fails when the root gains a path Claude or Codex would load from the installed plugin, such as `.mcp.json` or `hooks/`.
+`make check` reports stale generated files without repairing them, validates resource links, and runs unit tests. Keep generated root `skills/`, manifests, and catalogs in version control. It also fails when the root gains a path Claude or Codex would load from the installed plugin, such as `.mcp.json` or `hooks/` (ai-rulez `AR9T0`).
 Author skill procedures under `.ai-rulez/skills/`, shared resources under `.ai-rulez/references/` and `.ai-rulez/templates/`,
 and plugin metadata in `.ai-rulez/config.toml`.
 `package.json` remains the release version authority.

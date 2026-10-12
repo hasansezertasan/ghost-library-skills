@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate local resource links and build self-contained Markdown skills."""
+"""Validate local resource links and copy self-contained generated skills."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import argparse
 from pathlib import Path
 import re
 import shutil
+import subprocess
 import tempfile
 from urllib.parse import unquote
 
@@ -83,22 +84,31 @@ def build(root: Path, output: Path) -> int:
     output.parent.mkdir(parents=True, exist_ok=True)
     staging = Path(tempfile.mkdtemp(prefix=".ghost-skills-", dir=output.parent))
     try:
+        # ai-rulez copies the shared resources into each generated root skill.
         for skill in skills:
+            generated = root / "skills" / skill.parent.name
+            if generated.is_symlink() or not (generated / "SKILL.md").is_file():
+                raise ValueError(f"Missing generated skill; run make sync: {generated}")
             destination = staging / skill.parent.name
-            shutil.copytree(skill.parent, destination)
-            for shared in ("references", "templates"):
-                shutil.copytree(root / SOURCE / shared, destination / shared)
-            entrypoint = destination / "SKILL.md"
-            content = entrypoint.read_text(encoding="utf-8")
-            for shared in ("references", "templates"):
-                content = content.replace(f"](../../{shared}/", f"]({shared}/")
-            entrypoint.write_text(content, encoding="utf-8")
+            shutil.copytree(generated, destination)
             validate_links(destination, sorted(destination.rglob("*.md")))
         staging.replace(output)
     finally:
         if staging.exists():
             shutil.rmtree(staging)
     return len(skills)
+
+
+def build_current(root: Path, output: Path) -> int:
+    """Copy generated skills only when they match their canonical sources."""
+    try:
+        from .sync_packaging import sync
+    except ImportError:
+        from sync_packaging import sync
+    problems = sync(root, check=True)
+    if problems:
+        raise ValueError("Stale generated skills; run make sync: " + "; ".join(problems))
+    return build(root, output)
 
 
 def main() -> None:
@@ -112,9 +122,9 @@ def main() -> None:
             count = len(validate_tree(ROOT))
             print(f"Validated resource links for {count} skills")
         else:
-            count = build(ROOT, args.output)
+            count = build_current(ROOT, args.output)
             print(f"Built {count} self-contained skills in {args.output.resolve()}")
-    except (ValueError, OSError) as error:
+    except (ValueError, OSError, KeyError, subprocess.SubprocessError) as error:
         parser.exit(1, f"{error}\n")
 
 

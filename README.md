@@ -56,10 +56,11 @@ The output directory must be absent or empty. Each built folder includes its ski
 - `.ai-rulez/skills/`: canonical workflows and optional Codex display metadata.
 - `.ai-rulez/references/`, `.ai-rulez/templates/`: shared guidance and artifact templates.
 - `skills/`: generated self-contained workflows for Pi, OpenCode, and direct use.
-- `package.json`: authored release version, Pi declaration, and pinned development tooling;
-  plugin identity fields are generated from TOML.
+- `package.json`: authored release version and pinned development tooling;
+  identity, Pi, and npm `files` fields are generated from TOML.
+- `.ai-rulez-generated.json`: generated record of every packaged file and its content hash.
 - `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/`: generated native manifests and single-plugin catalogs that install the repository root.
-- `opencode.json`: generated skill discovery when running from this checkout.
+- `opencode.json`: OpenCode skill discovery when running from this checkout.
 - `tools/`: local packaging, resource-link validation, and native smoke checks.
 - `evals/`: realistic workflow cases and pilot evidence.
 - `docs/`: usage and host-support boundaries.
@@ -93,8 +94,8 @@ make check
 
 These targets require Python, Node, and npm.
 They install locked development tooling when needed.
-[ai-rulez generates the native manifests and catalogs](docs/ai-rulez.md) in temporary staging trees;
-our builder preserves the Pi package and self-contained skill resources.
+[ai-rulez generates the skills, native manifests, catalogs, and Pi package fields](docs/ai-rulez.md)
+in place, copying shared references and templates into every skill.
 
 Generated-file checks report drift without repairing it. Native metadata and discovery checks use:
 

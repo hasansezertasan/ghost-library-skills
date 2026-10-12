@@ -10,10 +10,10 @@ import tempfile
 
 try:
     from .build_skills import ROOT, build
-    from .sync_packaging import load_object, metadata, sync, write_json
+    from .sync_packaging import load_object, sync, write_json
 except ImportError:
     from build_skills import ROOT, build
-    from sync_packaging import load_object, metadata, sync, write_json
+    from sync_packaging import load_object, sync, write_json
 
 
 HOSTS = {"claude": ".claude-plugin", "codex": ".codex-plugin"}
@@ -27,7 +27,6 @@ SKILL_PATHS = {
 
 
 def build_plugins(root: Path, output: Path) -> dict[str, int]:
-    metadata(root)
     problems = sync(root, check=True)
     if problems:
         raise ValueError('Stale native packaging; run make sync: ' + '; '.join(problems))
@@ -55,7 +54,6 @@ def build_plugins(root: Path, output: Path) -> dict[str, int]:
             write_json(host_root / CATALOGS[host] / "marketplace.json", marketplace)
         counts["opencode"] = build(root, staging / "opencode" / SKILL_PATHS["opencode"])
         package = load_object(root / 'package.json')
-        package['files'] = ['skills/']
         counts["pi"] = build(root, staging / "pi" / SKILL_PATHS["pi"])
         write_json(staging / "pi/package.json", package)
         staging.replace(output)

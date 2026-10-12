@@ -1,0 +1,48 @@
+{
+  "source_kind": "repository",
+  "versions": {
+    "claude": "2.1.296 (Claude Code)",
+    "codex": "codex-cli 0.162.1"
+  },
+  "claude": {
+    "manifest": {
+      "valid": true,
+      "warnings": []
+    },
+    "marketplace": {
+      "valid": true,
+      "warnings": []
+    }
+  },
+  "codex": {
+    "registered_skills": [
+      "ghost-library-skills:ghost-audit",
+      "ghost-library-skills:ghost-catalog",
+      "ghost-library-skills:ghost-evaluate",
+      "ghost-library-skills:ghost-extract",
+      "ghost-library-skills:ghost-fix",
+      "ghost-library-skills:ghost-init",
+      "ghost-library-skills:ghost-release",
+      "ghost-library-skills:ghost-spec",
+      "ghost-library-skills:ghost-summon",
+      "ghost-library-skills:ghost-tests",
+      "ghost-library-skills:ghost-upgrade",
+      "ghost-library-skills:ghost-verify"
+    ],
+    "discovered_skills": [
+      "ghost-library-skills:ghost-audit",
+      "ghost-library-skills:ghost-catalog",
+      "ghost-library-skills:ghost-evaluate",
+      "ghost-library-skills:ghost-extract",
+      "ghost-library-skills:ghost-fix",
+      "ghost-library-skills:ghost-init",
+      "ghost-library-skills:ghost-release",
+      "ghost-library-skills:ghost-spec",
+      "ghost-library-skills:ghost-summon",
+      "ghost-library-skills:ghost-tests",
+      "ghost-library-skills:ghost-upgrade",
+      "ghost-library-skills:ghost-verify"
+    ]
+  },
+  "success": true
+}
