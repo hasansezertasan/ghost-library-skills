@@ -7,6 +7,7 @@ import argparse
 from pathlib import Path
 import re
 import shutil
+import subprocess
 import tempfile
 from urllib.parse import unquote
 
@@ -98,6 +99,18 @@ def build(root: Path, output: Path) -> int:
     return len(skills)
 
 
+def build_current(root: Path, output: Path) -> int:
+    """Copy generated skills only when they match their canonical sources."""
+    try:
+        from .sync_packaging import sync
+    except ImportError:
+        from sync_packaging import sync
+    problems = sync(root, check=True)
+    if problems:
+        raise ValueError("Stale generated skills; run make sync: " + "; ".join(problems))
+    return build(root, output)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
@@ -109,9 +122,9 @@ def main() -> None:
             count = len(validate_tree(ROOT))
             print(f"Validated resource links for {count} skills")
         else:
-            count = build(ROOT, args.output)
+            count = build_current(ROOT, args.output)
             print(f"Built {count} self-contained skills in {args.output.resolve()}")
-    except (ValueError, OSError) as error:
+    except (ValueError, OSError, KeyError, subprocess.SubprocessError) as error:
         parser.exit(1, f"{error}\n")
 
 

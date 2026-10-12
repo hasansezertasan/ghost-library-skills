@@ -6,7 +6,7 @@ import shutil
 import tempfile
 import unittest
 
-from tools.build_skills import ROOT, validate_links
+from tools.build_skills import ROOT, build_current, validate_links
 from tools.smoke_installation import fingerprint
 from tools.sync_packaging import MARKETPLACE, SIDECAR, sync
 
@@ -124,6 +124,17 @@ class SyncPackagingTests(unittest.TestCase):
         self.assertEqual(package['devDependencies'], json.loads(self.metadata)['devDependencies'])
         manifest = json.loads((self.root / '.claude-plugin/plugin.json').read_text())
         self.assertEqual(manifest['author']['name'], 'Changed author')
+
+    def test_standalone_build_refuses_stale_generated_skills(self):
+        (self.root / '.ai-rulez/skills/ghost-fix/SKILL.md').write_text(
+            (self.root / '.ai-rulez/skills/ghost-fix/SKILL.md').read_text() + '\nUnsynchronized edit.\n')
+        output = self.root / 'dist/standalone'
+        with self.assertRaisesRegex(ValueError, 'Stale generated skills'):
+            build_current(self.root, output)
+        self.assertFalse(output.exists())
+        sync(self.root)
+        self.assertEqual(build_current(self.root, output), 12)
+        self.assertIn('Unsynchronized edit.', (output / 'ghost-fix/SKILL.md').read_text())
 
     def test_literal_plugin_version_is_rejected(self):
         path = self.root / '.ai-rulez/config.toml'
