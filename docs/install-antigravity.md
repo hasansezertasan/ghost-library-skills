@@ -16,9 +16,9 @@ plugin into Antigravity's user plugin registry, so it is available across reposi
 agy plugin install https://github.com/hasansezertasan/ghost-library-skills
 ```
 
-GitHub-source installation becomes available after the manifests are committed and
-published; it has not been tested against the current remote. Prefer a local checkout
-on the other hosts until then.
+Git-URL installation has not been evaluated against any remote; local `agy plugin
+validate` discovers all twelve skills ([evidence](../evals/results/hosts/antigravity/README.md)).
+Prefer a supported host for production use until an install is exercised.
 
 ## Update
 
@@ -28,9 +28,10 @@ Reinstall the plugin with the same command, then **restart**. There is no in-pla
 ## Invoke
 
 Ask Antigravity to run `ghost-audit` with the target and requested outcome, for example
-"run ghost-audit on /path/to/padlib without editing it". All twelve skills are
-available by name. This plugin ships skills only — no slash commands, agents, or hooks
-(`agy plugin validate` reports those as skipped).
+"run ghost-audit on /path/to/padlib without editing it". Local validation discovers all
+twelve skills by name; model invocation has not been evaluated. This plugin ships skills
+only — no slash commands, agents, or hooks (`agy plugin validate` reports those as
+skipped).
 
 ## Verify
 

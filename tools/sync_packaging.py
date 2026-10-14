@@ -16,6 +16,10 @@ except ImportError:
 
 
 MARKETPLACE = 'ghost-library-skills-marketplace'
+# Hand-authored Antigravity install surface: ai-rulez generates no Antigravity
+# manifest, so the wrapper owns this adapter and derives it from the canonical TOML.
+ANTIGRAVITY_ADAPTER = Path('plugin.json')
+ANTIGRAVITY_SCHEMA = 'https://antigravity.google/schemas/v1/plugin.json'
 MANIFEST_PATHS = (
     Path('.claude-plugin/plugin.json'), Path('.claude-plugin/marketplace.json'),
     Path('.codex-plugin/plugin.json'), Path('.agents/plugins/marketplace.json'),
@@ -97,7 +101,7 @@ def findings(result: subprocess.CompletedProcess) -> str:
 def symlinked(root: Path) -> list[str]:
     """Name generated targets reached through a symlink, which ai-rulez follows inside the checkout."""
     problems = set()
-    for target in (*MANIFEST_PATHS, SIDECAR, Path('package.json'), OWNED_TREE):
+    for target in (*MANIFEST_PATHS, SIDECAR, ANTIGRAVITY_ADAPTER, Path('package.json'), OWNED_TREE):
         for parent in (target, *target.parents[:-1]):
             if (root / parent).is_symlink():
                 problems.add(f'symlink: {parent.as_posix()}')
@@ -123,10 +127,34 @@ def unrecorded(root: Path) -> list[str]:
     return problems
 
 
-def sync(root: Path, check: bool = False) -> list[str]:
-    configuration(root)
+def antigravity_adapter(configuration_value: dict) -> dict:
+    """Derive the Antigravity install adapter from the canonical plugin metadata."""
+    plugin = configuration_value.get('plugin', {})
+    return {
+        '$schema': ANTIGRAVITY_SCHEMA,
+        'name': plugin.get('name'),
+        'description': plugin.get('description'),
+    }
+
+
+def sync_antigravity(root: Path, configuration_value: dict, check: bool) -> list[str]:
+    """Write or verify the Antigravity adapter against the canonical TOML."""
+    path = root / ANTIGRAVITY_ADAPTER
+    if path.is_symlink():
+        return [f'symlink: {ANTIGRAVITY_ADAPTER.as_posix()}']
+    expected = json.dumps(antigravity_adapter(configuration_value), indent=2) + '\n'
     if check:
-        problems = symlinked(root) + unrecorded(root)
+        if not path.is_file() or path.read_text(encoding='utf-8') != expected:
+            return [f'{ANTIGRAVITY_ADAPTER.as_posix()} drifts from .ai-rulez/config.toml']
+        return []
+    path.write_text(expected, encoding='utf-8')
+    return []
+
+
+def sync(root: Path, check: bool = False) -> list[str]:
+    config = configuration(root)
+    if check:
+        problems = symlinked(root) + unrecorded(root) + sync_antigravity(root, config, check=True)
         for arguments in (('verify', '--plugin'), ('validate', '--strict')):
             result = ai_rulez(root, *arguments)
             if result.returncode:
@@ -138,6 +166,7 @@ def sync(root: Path, check: bool = False) -> list[str]:
     result = ai_rulez(root, 'generate', '--plugin')
     if result.returncode:
         raise ValueError(f'ai-rulez generate --plugin failed: {findings(result)}')
+    sync_antigravity(root, configuration(root), check=False)
     # Explicit synchronization replaces the owned tree, so stray files go too.
     for problem in unrecorded(root):
         (root / problem.removeprefix('extra: ')).unlink()

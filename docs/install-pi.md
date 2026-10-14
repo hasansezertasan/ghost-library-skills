@@ -33,8 +33,9 @@ Then restart or reload resources.
 /skill:ghost-audit
 ```
 
-Name the target and the requested outcome. All twelve skills are reachable through
-`/skill:`.
+Name the target and the requested outcome. All twelve skills ship through `/skill:`;
+seven have been rediscovered on this host so far — the five newer skills use the same
+packaging path but have not been rediscovered here. See [host-support](host-support.md).
 
 ## Verify
 

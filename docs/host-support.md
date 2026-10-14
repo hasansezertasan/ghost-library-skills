@@ -8,7 +8,7 @@ Twelve generated skills are available directly from this checkout. The host evid
 | Codex CLI 0.162.1 | Root catalog parsing/discovery; network-disabled container installation and version replacement; installation from a GitHub branch; seven discovered skills. Earlier model trials are recorded separately | [install-codex.md](install-codex.md) |
 | Pi 1.0.3 | Private-profile root-package installation and local-path update; native resource loader discovers seven skills and resolves shared resources. Model workflows untested | [install-pi.md](install-pi.md) |
 | OpenCode 1.18.35 | Root configuration discovers seven generated skills when run from the checkout; replacement and resource checks pass. Relative skill paths resolve from the working directory. Model workflows untested | [install-opencode.md](install-opencode.md) |
-| Antigravity | Hand-authored root `plugin.json` adapter; `agy plugin validate` discovers twelve skills, no commands/agents/hooks. Git-URL installation not tested against the current remote | [install-antigravity.md](install-antigravity.md) |
+| Antigravity | Hand-authored root `plugin.json` adapter, verified against canonical metadata by `make check`. Local `agy plugin validate` discovers twelve skills, no commands/agents/hooks ([evidence](../evals/results/hosts/antigravity/README.md)). Git-URL installation and model workflows not evaluated | [install-antigravity.md](install-antigravity.md) |
 | Hermes | Standalone skill folders; native integrations not implemented | — |
 
 The root catalog installs the repository root (`./`) as the plugin; Claude and Codex load the skills from root `skills/`, the same payload Pi and OpenCode use.

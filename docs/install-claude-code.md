@@ -42,7 +42,9 @@ running session keeps the versions it started with.
 ```
 
 Name the target and the requested outcome, for example "audit /path/to/padlib without
-editing it". All twelve skills share the `ghost-library-skills:` prefix.
+editing it". All twelve skills ship under the `ghost-library-skills:` prefix; seven have
+been rediscovered on this host so far — the five newer skills use the same packaging
+path but have not been rediscovered here. See [host-support](host-support.md).
 
 ## Verify
 

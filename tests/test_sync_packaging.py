@@ -79,6 +79,8 @@ class SyncPackagingTests(unittest.TestCase):
         self.assertEqual(fingerprint(self.root), before)
         sync(self.root)
         for path in self.root.rglob('plugin.json'):
+            if path.relative_to(self.root).as_posix() == 'plugin.json':
+                continue  # Antigravity adapter carries no version by schema design
             self.assertEqual(json.loads(path.read_text())['version'], '0.2.0')
         self.assertEqual(sync(self.root, check=True), [])
 
@@ -151,6 +153,23 @@ class SyncPackagingTests(unittest.TestCase):
         path.write_text(path.read_text().replace('[plugin]\n', '[plugin]\nversion = "9.9.9"\n'))
         with self.assertRaisesRegex(ValueError, 'package.json owns the plugin version'):
             sync(self.root, check=True)
+
+    def test_antigravity_adapter_tracks_canonical_metadata(self):
+        adapter = json.loads((self.root / 'plugin.json').read_text())
+        self.assertEqual(adapter['name'], 'ghost-library-skills')
+        self.assertIn('ghost-library', adapter['description'])
+        path = self.root / '.ai-rulez/config.toml'
+        path.write_text(path.read_text().replace(
+            'description = "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence."',
+            'description = "Changed description."'))
+        before = fingerprint(self.root)
+        errors = sync(self.root, check=True)
+        self.assertTrue(reported(errors, 'plugin.json', 'config.toml'))
+        self.assertEqual(fingerprint(self.root), before)
+        sync(self.root)
+        self.assertEqual(json.loads((self.root / 'plugin.json').read_text())['description'],
+                         'Changed description.')
+        self.assertEqual(sync(self.root, check=True), [])
 
 
 if __name__ == '__main__':

@@ -31,10 +31,25 @@ codex plugin add ghost-library-skills@ghost-library-skills-marketplace
 The tested CLI has no `plugin update`; `plugin marketplace upgrade` refreshes Git
 marketplace snapshots only.
 
+Releases bump the manifest version (release-please owns `package.json`), which
+invalidates Codex's installed cache. Re-adding an unreleased checkout at an unchanged
+version may keep serving the cached copy — if the refreshed skills do not appear, clear
+the cache and re-add:
+
+```sh
+codex plugin remove ghost-library-skills@ghost-library-skills-marketplace
+codex plugin add ghost-library-skills@ghost-library-skills-marketplace
+```
+
+Do not hand-edit the generated `.codex-plugin/plugin.json` version to force this; the
+manifest is ai-rulez output and `make check` reports drift.
+
 ## Invoke
 
 Select `ghost-library-skills:ghost-audit` and provide the target and requested outcome.
-All twelve skills share the `ghost-library-skills:` prefix.
+All twelve skills ship under the `ghost-library-skills:` prefix; seven have been
+rediscovered on this host so far — the five newer skills use the same packaging path
+but have not been rediscovered here. See [host-support](host-support.md).
 
 ## Verify
 

@@ -26,7 +26,10 @@ existing OpenCode configuration:
 ```
 
 Merge this field into existing configuration. Unlike the `npx skills add` copy model,
-this points at the checkout, so every generated skill stays available. On the tested
+this points at the checkout, so the whole generated `skills/` tree stays addressable;
+seven skills have been rediscovered on this host so far — the five newer ones use the
+same packaging path but have not been rediscovered here. See
+[host-support](host-support.md). On the tested
 CLI, pointing `OPENCODE_CONFIG` at our root config while running elsewhere does not
 resolve `./skills` relative to the config file — use an absolute skill path for that
 case. See the [configuration schema](https://opencode.ai/config.json) and
