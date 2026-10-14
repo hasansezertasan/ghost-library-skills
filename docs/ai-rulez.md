@@ -88,6 +88,9 @@ npm also includes the package manifest.
 Only the Claude, Codex, and Pi plugin runtimes are enabled.
 OpenCode JavaScript plugin generation remains outside the package tree;
 new host runtimes require native validation before support is advertised.
+The Antigravity root `plugin.json` is a small hand-authored adapter because ai-rulez
+does not generate that install surface; Antigravity installs the repository root
+straight from the Git URL and discovers the same generated `skills/` tree.
 
 Release-please bumps `package.json` and its lockfile.
 The release workflow runs synchronization and checks on the release PR,
