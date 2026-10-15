@@ -80,10 +80,14 @@ You were pointed here to install the skills. Do this:
 | Pi | `pi install /absolute/path/to/ghost-library-skills` | refresh the checkout, `pi update /absolute/path/to/ghost-library-skills`; restart | [install-pi.md](install-pi.md) |
 | OpenCode | add `/absolute/path/to/ghost-library-skills/skills` to `skills.paths` in the OpenCode config; restart | `git pull` in the checkout; restart | [install-opencode.md](install-opencode.md) |
 | Antigravity | `agy plugin install https://github.com/hasansezertasan/ghost-library-skills` | reinstall; restart | [install-antigravity.md](install-antigravity.md) |
-| Manual | clone this repository and read `skills/<name>/SKILL.md`, or copy `skills/*` into your agent's skills directory | `git pull` in the clone, then copy again if you copied | |
+| Manual | clone this repository, then copy `skills/*` into a skills directory your agent's host is confirmed to discover | `git pull` in the clone, then copy `skills/*` again | |
 
-Confirm every route the same way: ask for a read-only `ghost-audit` of a target.
-A finding report or a no-drift report is a working install.
+Confirm every route the same way: ask for a read-only `ghost-audit` of a target
+in a new session. A finding report or a no-drift report is a working install.
+
+Reading `skills/<name>/SKILL.md` from a clone is a fallback, not an install
+route: it lets you finish the current task but does not register the skills, so
+it never counts as a working install.
 
 None of these routes is verified end to end. [Host support](host-support.md)
 records the evidence per host, including which are only validated locally.
