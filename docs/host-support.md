@@ -1,76 +1,25 @@
 # Host support
 
-Twelve generated skills are available directly from this checkout. The host evidence below was recorded with the original seven; the five later skills (`ghost-summon`, `ghost-evaluate`, `ghost-extract`, `ghost-upgrade`, `ghost-catalog`) use the same packaging path but have not been rediscovered on each host. Claude and Codex have native marketplace catalogs, Pi has a root skill-package declaration, and OpenCode has a native skill-path configuration. A separate builder produces self-contained bundles for evaluation and standalone installation.
+Twelve generated skills are available directly from this checkout. The host evidence below was recorded with the original seven; the five later skills (`ghost-summon`, `ghost-evaluate`, `ghost-extract`, `ghost-upgrade`, `ghost-catalog`) use the same packaging path but have not been rediscovered on each host. This file is the single capability record; the install guides cite it rather than restating it.
 
-| Host | Evidence and limits |
-| --- | --- |
-| Claude Code 2.1.296 | Strict root manifest/catalog validation; private-profile root installation and version replacement; installation from a GitHub branch; seven discovered commands. Authenticated workflows remain weekly-quota blocked |
-| Codex CLI 0.162.1 | Root catalog parsing/discovery; network-disabled container installation and version replacement; installation from a GitHub branch; seven discovered skills. Earlier model trials are recorded separately |
-| OpenCode 1.18.35 | Root configuration discovers seven generated skills when run from the checkout; replacement and resource checks pass. Relative skill paths resolve from the working directory. Model workflows untested |
-| Pi 1.0.3 | Private-profile root-package installation and local-path update; native resource loader discovers seven skills and resolves shared resources. Model workflows untested |
-| Hermes, Antigravity | Standalone skill folders; native integrations not implemented |
+| Host | Evidence and limits | Install guide |
+| --- | --- | --- |
+| Claude Code 2.1.296 | Strict root manifest/catalog validation; private-profile root installation and version replacement; installation from a GitHub branch; seven discovered commands. Authenticated workflows remain weekly-quota blocked | [install-claude-code.md](install-claude-code.md) |
+| Codex CLI 0.162.1 | Root catalog parsing/discovery; network-disabled container installation and version replacement; installation from a GitHub branch; seven discovered skills. Earlier model trials are recorded separately | [install-codex.md](install-codex.md) |
+| Pi 1.0.3 | Private-profile root-package installation and local-path update; native resource loader discovers seven skills and resolves shared resources. Model workflows untested | [install-pi.md](install-pi.md) |
+| OpenCode 1.18.35 | Root configuration discovers seven generated skills when run from the checkout; replacement and resource checks pass. Relative skill paths resolve from the working directory. Model workflows untested | [install-opencode.md](install-opencode.md) |
+| Antigravity | Hand-authored root `plugin.json` adapter, verified against canonical metadata by `make check`. Local `agy plugin validate` discovers twelve skills, no commands/agents/hooks ([evidence](../evals/results/hosts/antigravity/README.md)). Git-URL installation and model workflows not evaluated | [install-antigravity.md](install-antigravity.md) |
+| Hermes | Standalone skill folders; native integrations not implemented | — |
+
+The root catalog installs the repository root (`./`) as the plugin; Claude and Codex load the skills from root `skills/`, the same payload Pi and OpenCode use.
 
 The [single-plugin report](../evals/results/automation/single-plugin/README.md) records the current layout, in which both catalogs install the repository root. The earlier [repository installation report](../evals/results/hosts/repository/README.md) records the member layout. The earlier [bundle installation report](../evals/results/hosts/installation/README.md), [six-workflow assessment](../evals/results/native/README.md), and [wheredirs evaluation](../evals/wheredirs/README.md) retain their original scope. Packaging checks and completed model turns do not establish task success by themselves. Desktop applications and npm/Git package upgrades have not been evaluated.
 
-## Install from a checkout
+## Install
 
-Use the absolute path to this repository. Consumers do not need to run the Python builder first.
+Install and update commands live in the per-host guides linked in the table above; this file records capabilities and evidence only. Use the absolute path to this repository. Consumers do not need to run the Python builder first.
 
-### Claude Code
-
-```sh
-claude plugin marketplace add /absolute/path/to/ghost-library-skills
-claude plugin install ghost-library-skills@ghost-library-skills-marketplace
-```
-
-Invoke `/ghost-library-skills:ghost-audit` with the target and requested outcome. After updating the checkout:
-
-```sh
-claude plugin marketplace update ghost-library-skills-marketplace
-claude plugin update ghost-library-skills@ghost-library-skills-marketplace
-```
-
-Restart or reload plugins afterward.
-The root catalog installs the repository root (`./`) as the plugin;
-Claude loads the skills from root `skills/`, the same payload used by Codex, Pi, and OpenCode.
-For a session-local trial, use `claude --plugin-dir /absolute/path/to/ghost-library-skills`.
-See [Claude plugins](https://code.claude.com/docs/en/plugins).
-
-### Codex
-
-```sh
-codex plugin marketplace add /absolute/path/to/ghost-library-skills
-codex plugin add ghost-library-skills@ghost-library-skills-marketplace
-```
-
-Select `ghost-library-skills:ghost-audit` and provide a task. The root catalog installs the repository root (`./`); Codex loads the self-contained skill folders in root `skills/`. For a local version update, refresh the checkout, repeat `codex plugin add ghost-library-skills@ghost-library-skills-marketplace`, and start a fresh session. The tested CLI has no `plugin update`; `plugin marketplace upgrade` refreshes Git marketplace snapshots. See the [OpenAI plugin build guide](https://developers.openai.com/plugins/build/plugins).
-
-### Pi
-
-```sh
-pi install /absolute/path/to/ghost-library-skills
-```
-
-Invoke `/skill:ghost-audit` with a task. After updating the checkout, run `pi update /absolute/path/to/ghost-library-skills` and restart or reload resources. Local packages load from the source path without copying. The root manifest exposes only skills; each generated skill contains its references and templates with skill-local relative links. See [Pi packages](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/packages.md).
-
-### OpenCode
-
-From this checkout, run `opencode`. Its root `opencode.json` declares `skills.paths: ["./skills"]`.
-
-To discover the skills from another project, add an absolute path to that project's existing OpenCode configuration:
-
-```json
-{
-  "$schema": "https://opencode.ai/config.json",
-  "skills": {
-    "paths": ["/absolute/path/to/ghost-library-skills/skills"]
-  }
-}
-```
-
-Merge this field into existing configuration. Ask OpenCode to use `ghost-audit`; it loads the instructions through its native `skill` tool. On the tested CLI, pointing `OPENCODE_CONFIG` at our root config while running elsewhere does not resolve `./skills` relative to the config file. Use an absolute skill path for that case. See the [configuration schema](https://opencode.ai/config.json) and [Agent Skills documentation](https://opencode.ai/docs/skills/).
-
-### Repository publication and previous installations
+## Repository publication and previous installations
 
 This migration is tested from a local checkout. GitHub-source installation becomes available after these manifests and the generated Codex package are committed and published; it has not been tested against the current remote repository. Claude and Codex support repository marketplace sources, while Pi supports Git packages. Keep this distinction when writing release instructions.
 

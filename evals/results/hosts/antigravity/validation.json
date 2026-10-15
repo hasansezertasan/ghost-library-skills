@@ -1,0 +1,9 @@
+{
+  "tool": "agy 1.3.5",
+  "command": "agy plugin validate .",
+  "commit": "cd9c11c54da6dece7ef36b40b50ffa00052e94db",
+  "success": true,
+  "skills_processed": 12,
+  "skipped": ["agents", "commands", "mcpServers", "hooks"],
+  "output": "[ok]    .\n        skills      : 12 processed\n        - agents      : skipped (not found)\n        - commands    : skipped (not found)\n        - mcpServers  : skipped (not found)\n        - hooks       : skipped (not found)"
+}

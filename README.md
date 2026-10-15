@@ -23,6 +23,20 @@ Maintain one behavioral contract, generate idiomatic implementations, and retain
 
 These workflows preserve each library's layout and fixture conventions. They do not require a new manifest, a registry, a particular agent, or multiple agents. The toolkit can contain executable maintenance tools; generated library implementations belong in consumer projects or disposable evaluation workspaces.
 
+## Install
+
+| Host | Install | Update | Invoke |
+| --- | --- | --- | --- |
+| [Claude Code](docs/install-claude-code.md) | `claude plugin marketplace add /absolute/path/to/ghost-library-skills`, then `claude plugin install ghost-library-skills@ghost-library-skills-marketplace` | `claude plugin marketplace update ghost-library-skills-marketplace`, then `claude plugin update ghost-library-skills@ghost-library-skills-marketplace`, then restart | `/ghost-library-skills:ghost-audit` |
+| [Codex CLI](docs/install-codex.md) | `codex plugin marketplace add /absolute/path/to/ghost-library-skills`, then `codex plugin add ghost-library-skills@ghost-library-skills-marketplace`, then start a fresh session | Refresh the checkout, repeat the `add` command, then start a fresh session | Select `ghost-library-skills:ghost-audit` and provide a task |
+| [Pi](docs/install-pi.md) | `pi install /absolute/path/to/ghost-library-skills` | `pi update /absolute/path/to/ghost-library-skills`, then restart | `/skill:ghost-audit` |
+| [OpenCode](docs/install-opencode.md) | Point `skills.paths` at `/absolute/path/to/ghost-library-skills/skills`, then restart | Refresh the checkout (`git pull`), then restart | Ask OpenCode to use `ghost-audit`; skills load on demand through the native `skill` tool |
+| [Antigravity](docs/install-antigravity.md) | `agy plugin install https://github.com/hasansezertasan/ghost-library-skills` | Reinstall the plugin, then restart | Ask Antigravity to run `ghost-audit` with a target |
+
+The table is the index; each host name links to a page with that host's caveats — what "update" actually updates, whether a restart is required, how to verify the install, and why a local checkout is still the supported source. Per-host capabilities are recorded once in [host support](docs/host-support.md); the install pages cite it rather than restating it.
+
+On all five hosts, restart the session after an install or update so changed skills are rediscovered. Earlier evaluations used `ghost-library-local` and then `ghost-library-marketplace`. The project is now named `ghost-library-skills`, with catalog `ghost-library-skills-marketplace`. Install one distribution at a time to avoid duplicate registrations.
+
 ## Use from this checkout
 
 Give your agent a concrete task and the corresponding skill path:
@@ -69,21 +83,7 @@ Read [the maintainer guide](docs/maintainers.md) for the lifecycle, [host suppor
 
 For plugin development, CI, and release-please setup, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Install and validate
-
-Install directly from this checkout, without a build step:
-
-```sh
-claude plugin marketplace add /absolute/path/to/ghost-library-skills
-claude plugin install ghost-library-skills@ghost-library-skills-marketplace
-
-codex plugin marketplace add /absolute/path/to/ghost-library-skills
-codex plugin add ghost-library-skills@ghost-library-skills-marketplace
-
-pi install /absolute/path/to/ghost-library-skills
-```
-
-OpenCode discovers generated skills when launched from this checkout. In another project, configure an absolute skill path. See [host support](docs/host-support.md) for invocation, update commands, and tested limits. The new repository layout has not yet been published to GitHub.
+## Validate
 
 For maintainers, edit canonical files and shared metadata, regenerate, and check:
 
