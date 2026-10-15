@@ -25,6 +25,8 @@ These workflows preserve each library's layout and fixture conventions. They do 
 
 ## Install
 
+The quickest way is to give your agent the prompt in [docs/installation.md](docs/installation.md), which tells it to pick the best install route for itself. To install yourself, use the table below.
+
 | Host | Install | Update | Invoke |
 | --- | --- | --- | --- |
 | [Claude Code](docs/install-claude-code.md) | `claude plugin marketplace add /absolute/path/to/ghost-library-skills`, then `claude plugin install ghost-library-skills@ghost-library-skills-marketplace` | `claude plugin marketplace update ghost-library-skills-marketplace`, then `claude plugin update ghost-library-skills@ghost-library-skills-marketplace`, then restart | `/ghost-library-skills:ghost-audit` |
