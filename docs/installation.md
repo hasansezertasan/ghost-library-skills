@@ -61,9 +61,11 @@ You were pointed here to install the skills. Do this:
    installed them. If the skills are not available to you now, read
    `skills/ghost-audit/SKILL.md` from the clone and follow it, and tell the user
    to start a new session so the installed skills load next time.
-6. If a route fails, fall back to reading `skills/<name>/SKILL.md` from the
-   clone. Do not report the install as done until you have confirmed the skills
-   or read a `SKILL.md`.
+6. If a route fails, read `skills/<name>/SKILL.md` from the clone so you can
+   finish the current task, but report the install as failed. Reading a
+   `SKILL.md` does not register the skills for later sessions. Only report the
+   install as done once you have confirmed the skills through the host guide's
+   Verify step.
 7. Install one distribution at a time; a second registration of the same
    plugin under an older name duplicates the skills.
 8. Then continue with what the user asked. Do not install other agent skills or
@@ -86,5 +88,5 @@ A finding report or a no-drift report is a working install.
 None of these routes is verified end to end. [Host support](host-support.md)
 records the evidence per host, including which are only validated locally.
 Treat them as unverified packaging guidance, and tell the user which route you
-used, whether you confirmed the skills afterwards, and whether a new session is
-needed.
+used, whether you confirmed the skills afterwards, whether the install failed
+and you only read `SKILL.md` as a fallback, and whether a new session is needed.
