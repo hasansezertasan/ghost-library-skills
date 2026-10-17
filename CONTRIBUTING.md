@@ -5,7 +5,7 @@ This file is owned by the [copier-skill-repo](https://github.com/hasansezertasan
 ## How the repo works
 
 - Skills live under `.ai-rulez/skills/<name>/`. That directory is the source of truth.
-- `skills/`, `AGENTS.md` and the plugin and marketplace manifests are generated output. Never edit them by hand.
+- `skills/` and the plugin and marketplace manifests are generated output. Never edit them by hand. `AGENTS.md` is authored maintainer governance here, so edit it directly.
 - After changing anything under `.ai-rulez/`, run `npm run generate` and commit the result.
 - `npm run check` is what CI runs. It fails when generated output has drifted.
 - Node comes from `.node-version`.

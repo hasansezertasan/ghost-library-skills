@@ -62,7 +62,8 @@ still differs from a plain render and why; it is not updated as the project evol
   guides and uses that marketplace name. It is template-owned, so `copier update`
   will propose changes to it; resolve them by hand.
 - **`CONTRIBUTING.md`.** The template's version plus a "Ghost Library Skills
-  development" section.
+  development" section, and one changed line: `AGENTS.md` is authored here, not
+  generated, so it is not in the never-edit list.
 - **`.gitignore`.** The template's `node_modules/` plus `dist/`, `__pycache__/`,
   `*.pyc` and `.ai-rulez/.generated-manifest.local.json`.
 - **`publish_to_npm: false`.** The package is `"private": true`, as the repo never

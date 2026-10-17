@@ -2,7 +2,7 @@
 evals/results/**/*.patch -whitespace
 
 # Outputs fully owned by `npm run generate`; collapse them in reviews and language stats.
-# package.json mixes generated identity and Pi fields with authored tooling, so stays visible.
+# package.json is authored, so it stays visible.
 skills/** linguist-generated
 .claude-plugin/** linguist-generated
 .codex-plugin/** linguist-generated

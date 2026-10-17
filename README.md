@@ -72,8 +72,8 @@ The output directory must be absent or empty. Each built folder includes its ski
 - `.ai-rulez/skills/`: canonical workflows and optional Codex display metadata.
 - `.ai-rulez/references/`, `.ai-rulez/templates/`: shared guidance and artifact templates.
 - `skills/`: generated self-contained workflows for Pi, OpenCode, and direct use.
-- `package.json`: authored release version and pinned development tooling;
-  identity, Pi, and npm `files` fields are generated from TOML.
+- `package.json`: authored release version, Pi declaration and pinned development tooling;
+  ai-rulez does not generate it.
 - `.ai-rulez-generated.json`: generated record of every packaged file and its content hash.
 - `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/`: generated native manifests and single-plugin catalogs that install the repository root.
 - `opencode.json`: OpenCode skill discovery when running from this checkout.

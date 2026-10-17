@@ -1,9 +1,8 @@
 # ai-rulez authoring and generation
 
 Author plugin configuration and content in the committed `.ai-rulez/` tree.
-The pinned npm development dependency generates the skills, Claude/Codex manifests, both catalogs,
-and the Pi fields of `package.json` in place;
-our wrapper runs it and checks that the generated skill tree holds nothing it did not record.
+The pinned npm development dependency generates the skills, Claude/Codex manifests and both catalogs in place;
+`npm run generate` runs it, and `npm run check` also verifies that the generated skill tree holds nothing it did not record.
 
 ## Sources and ownership
 
@@ -19,10 +18,10 @@ our wrapper runs it and checks that the generated skill tree holds nothing it di
 `package.json` is the sole plugin version source:
 `[plugin] version_from = "package.json"` reads it, so the TOML carries no version.
 The TOML `version = "5.0"` is the configuration schema version, not the plugin release version.
-ai-rulez merges the identity fields (`name`, `description`, `author`, `repository`, `keywords`),
-`version`, `pi`, and `files` into `package.json` (`[plugin.pi] package_json = "merge"`)
-and keeps every other key, so `devDependencies` stay authored there.
-The generated npm name is `@hasansezertasan/pi-ghost-library-skills`.
+`package.json` is authored (the template's scaffold plus this repo's version); ai-rulez does not write it.
+Its identity fields, `pi.skills` (`["./skills"]`) and `devDependencies` are edited there by hand,
+and the plugin identity in `.ai-rulez/config.toml` must stay consistent with them.
+The npm name is `ghost-library-skills`; the repo is private and not published.
 
 `[plugin] shared_resources` copies `.ai-rulez/references/` and `.ai-rulez/templates/` into every skill
 and rewrites their `../../` links to the copies,
@@ -79,13 +78,12 @@ Source files and maintainer governance stay outside this replacement boundary.
 
 ## Host and release boundaries
 
-Pi's root manifest lists each generated skill directory, and OpenCode's native skill path discovers generated root `skills/`.
+Pi's `package.json` points at the generated root `skills/` directory, and OpenCode's native skill path discovers the same tree.
 Every root skill contains its own references and templates;
 no root-level shared resource directory is needed for installation.
-The npm file allowlist lists each generated skill file and `README.md`;
-npm also includes the package manifest.
+The package is private, so it carries no npm file allowlist.
 
-Only the Claude, Codex, and Pi plugin runtimes are enabled.
+Only the Claude and Codex plugin runtimes are generated; Pi reads `package.json` and `skills/` directly.
 OpenCode JavaScript plugin generation remains outside the package tree;
 new host runtimes require native validation before support is advertised.
 The Antigravity root `plugin.json` is a small hand-authored adapter because ai-rulez
