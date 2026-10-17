@@ -29,7 +29,7 @@ The project is now named `ghost-library-skills`, with catalog `ghost-library-ski
 ## Maintain generated packaging
 
 `.ai-rulez/config.toml` owns plugin identity, runtime selection, and Codex display options.
-`package.json` owns the release version, the Pi declaration and npm tooling; it is authored, not generated.
+`package.json` is merged by ai-rulez: the release version, scripts and tooling are authored, and the identity fields, Pi declaration and file allowlist are generated.
 `npm run generate` runs the pinned ai-rulez development dependency in the checkout,
 and `tools/check_owned_tree.py` rejects files under `skills/` that ai-rulez did not record.
 See [the integration guide](ai-rulez.md) for ownership boundaries.

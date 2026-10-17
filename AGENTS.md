@@ -9,8 +9,8 @@ This repository distributes skills for maintaining ghost libraries. It contains 
 - Edit plugin identity, runtimes, and Codex display options in `.ai-rulez/config.toml`.
   It reads the plugin version from `package.json` (`version_from`); do not add a literal `version`.
 - Edit the release version and npm tooling in `package.json`.
-  It is the sole plugin version source and is authored (template-owned scaffold plus the repo's version);
-  ai-rulez does not generate it.
+  It is the sole plugin version source. ai-rulez merges into it on `npm run generate` and derives its
+  identity fields, `pi` and `files` from TOML and the skills; do not edit those by hand.
 - Generate root `skills/`, `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/marketplace.json`, and `.ai-rulez-generated.json` with `npm run generate`.
   Both catalogs install the repository root, so keep host-loaded paths such as `.mcp.json`, `hooks/`, `agents/`, and `commands/` out of it.
   Do not independently edit these outputs.

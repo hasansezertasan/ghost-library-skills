@@ -1,11 +1,12 @@
 """The generated tree must reject symlinks and files ai-rulez did not record."""
 
 from pathlib import Path
+import re
 import shutil
 import tempfile
 import unittest
 
-from tools.check_owned_tree import ROOT, problems_in
+from tools.check_owned_tree import ROOT, ROOT_COMPONENTS, problems_in
 
 
 class CheckOwnedTreeTests(unittest.TestCase):
@@ -21,6 +22,11 @@ class CheckOwnedTreeTests(unittest.TestCase):
     def test_the_committed_tree_is_clean(self):
         self.assertEqual(problems_in(ROOT), [])
         self.assertEqual(problems_in(self.root), [])
+
+    def test_the_root_component_list_matches_the_repository_check(self):
+        script = (ROOT / 'scripts/check-repo.mjs').read_text()
+        listed = re.search(r'const ROOT_COMPONENTS = \[(.*?)\];', script, re.S).group(1)
+        self.assertEqual(sorted(re.findall(r'"([^"]+)"', listed)), sorted(ROOT_COMPONENTS))
 
     def test_unrecorded_file_is_reported(self):
         (self.root / 'skills/obsolete.txt').write_text('old release only')

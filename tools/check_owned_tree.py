@@ -26,7 +26,9 @@ SIDECAR = Path('.ai-rulez-generated.json')
 ANTIGRAVITY_ADAPTER = Path('plugin.json')
 OWNED_TREE = Path('skills')
 # Paths Claude or Codex load from an installed plugin by default; plugin.json is the Antigravity adapter.
-ROOT_COMPONENTS = ('.mcp.json', '.lsp.json', 'hooks', 'agents', 'commands', 'bin', 'settings.json', 'output-styles', 'monitors')
+# Kept equal to ROOT_COMPONENTS in scripts/check-repo.mjs; tests/test_check_owned_tree.py compares the two.
+ROOT_COMPONENTS = ('.mcp.json', '.app.json', '.lsp.json', 'settings.json', 'hooks', 'agents', 'commands', 'bin',
+                   'output-styles', 'workflows', 'themes', 'monitors')
 
 
 def symlinked(root: Path) -> list[str]:
