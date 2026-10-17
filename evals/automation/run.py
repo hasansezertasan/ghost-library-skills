@@ -14,7 +14,6 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 from tools.build_skills import build, validate_links
 from tools.smoke_plugins import app_server, claude_validation
-from tools.sync_packaging import manifests
 
 
 def snapshot(root: Path) -> dict[str, str]:
@@ -104,7 +103,7 @@ def evaluate(executable: Path, output: Path, native: bool) -> dict:
         if native:
             entry['claude_native_validation'] = claude_validation(case, repository=True)
             # Supply the catalog ai-rulez does not emit for a single-plugin repo.
-            catalog = manifests(ROOT)[Path('.agents/plugins/marketplace.json')]
+            catalog = json.loads((ROOT / '.agents/plugins/marketplace.json').read_text())
             catalog['plugins'][0]['source']['path'] = './'
             path = case / '.agents/plugins/marketplace.json'
             path.parent.mkdir(parents=True, exist_ok=True)

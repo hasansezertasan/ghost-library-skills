@@ -81,9 +81,10 @@ still differs from a plain render and why; it is not updated as the project evol
 - **`package.json` fields.** `license` is now `MIT` (the template requires one) and
   the explicit `files` allowlist is gone (the package is private). The repo has no
   `LICENSE` file; decide whether to add one or change the answer.
-- **Evaluation scripts.** `evals/automation/run.py` and `release-check.cjs` import
-  `tools/sync_packaging` and read `.config/release-please-config.json`, both now
-  removed. They are one-off evidence for `docs/automation-proposal.md`, not gates,
-  and were left unchanged.
+- **Evaluation scripts.** `evals/automation/run.py` read the manifests through
+  `tools/sync_packaging`, and `release-check.cjs` read
+  `.config/release-please-config.json`. Both now read the committed catalog and the
+  root `release-please-config.json` (with package-level settings falling back to
+  the top level), and both documented commands still run.
 - **Version-bump test.** `tests/test_build_plugins.py` hard-codes version `0.1.0`
   and will need updating at the next release.
