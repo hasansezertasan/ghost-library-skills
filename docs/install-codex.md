@@ -42,7 +42,7 @@ codex plugin add ghost-library-skills@ghost-library-skills-marketplace
 ```
 
 Do not hand-edit the generated `.codex-plugin/plugin.json` version to force this; the
-manifest is ai-rulez output and `make check` reports drift.
+manifest is ai-rulez output and `npm run check` reports drift.
 
 ## Invoke
 

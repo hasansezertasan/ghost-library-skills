@@ -88,7 +88,7 @@ def build(root: Path, output: Path) -> int:
         for skill in skills:
             generated = root / "skills" / skill.parent.name
             if generated.is_symlink() or not (generated / "SKILL.md").is_file():
-                raise ValueError(f"Missing generated skill; run make sync: {generated}")
+                raise ValueError(f"Missing generated skill; run npm run generate: {generated}")
             destination = staging / skill.parent.name
             shutil.copytree(generated, destination)
             validate_links(destination, sorted(destination.rglob("*.md")))
@@ -100,14 +100,17 @@ def build(root: Path, output: Path) -> int:
 
 
 def build_current(root: Path, output: Path) -> int:
-    """Copy generated skills only when they match their canonical sources."""
+    """Copy generated skills unless the generated tree has symlinks or unrecorded files.
+
+    Staleness against `.ai-rulez/` is `npm run check`'s job, not this builder's.
+    """
     try:
-        from .sync_packaging import sync
+        from .check_owned_tree import problems_in
     except ImportError:
-        from sync_packaging import sync
-    problems = sync(root, check=True)
+        from check_owned_tree import problems_in
+    problems = problems_in(root)
     if problems:
-        raise ValueError("Stale generated skills; run make sync: " + "; ".join(problems))
+        raise ValueError("Unsafe generated skills; run npm run generate: " + "; ".join(problems))
     return build(root, output)
 
 

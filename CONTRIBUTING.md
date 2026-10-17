@@ -1,64 +1,67 @@
-# Contributing
+# Contributing to Ghost Library Skills
+
+This file is owned by the [copier-skill-repo](https://github.com/hasansezertasan/copier-skill-repo) template and is merged on `copier update`. Put repo-specific guidance in `README.md`, which the template never overwrites.
+
+## How the repo works
+
+- Skills live under `.ai-rulez/skills/<name>/`. That directory is the source of truth.
+- `skills/`, `AGENTS.md` and the plugin and marketplace manifests are generated output. Never edit them by hand.
+- After changing anything under `.ai-rulez/`, run `npm run generate` and commit the result.
+- `npm run check` is what CI runs. It fails when generated output has drifted.
+- Node comes from `.node-version`.
+
+## Ghost Library Skills development
 
 Read [AGENTS.md](AGENTS.md) for source ownership. The [maintainer guide](docs/maintainers.md) explains how to use the ghost-library lifecycle skills; this file explains how to change and release the plugin itself.
 
-## Development
+- Packaging is the template's: `npm run generate` rebuilds `skills/`, the host manifests and `.ai-rulez-generated.json` from `.ai-rulez/`, and `npm run check` reports drift. See [the ai-rulez integration](docs/ai-rulez.md).
+- The Python tooling under `tools/` uses only the standard library (Python 3.12 or newer; `uv python install` installs the version in `.python-version`).
+- `npm test` runs the unit tests. `python3 tools/check_owned_tree.py` rejects symlinks and files ai-rulez did not record under `skills/`, which its own checks accept, and `python3 tools/build_skills.py --check` validates the resource links in the sources.
+- `OUTPUT=dist/my-bundle npm run build` writes inspectable host bundles; choose an absent or empty destination. CI builds them into a temporary directory.
+- Keep canonical edits and their generated output together. Consult [host support](docs/host-support.md) for native installation and model evaluation evidence before changing host integration.
 
-Python tooling uses only the standard library.
-Use Python 3.12 or newer,
-or install the interpreter selected by `.python-version` with `uv python install`.
-Packaging also requires Node and npm;
-CI selects Node from `.node-version`.
-The Makefile installs ai-rulez from the root npm lockfile with development dependencies and install scripts disabled.
-Its pinned platform binary downloads on first invocation.
+## Skill layout
 
-```sh
-make sync
-make check-all
+The template owns the scaffold, not a skill's content. A skill is a directory:
+
+```text
+.ai-rulez/skills/<name>/
+├── SKILL.md       required
+├── references/    optional: files the skill loads on demand
+├── evals/         optional: test prompts and expected outcomes
+└── scripts/       optional: helpers the skill runs
 ```
 
-With uv, use `make check-all PYTHON="uv run --no-project python"`.
-`make sync` reads `.ai-rulez/` sources and regenerates root skills, host manifests,
-the identity and Pi fields in `package.json`, and the tracked payload using [the ai-rulez integration](docs/ai-rulez.md).
-`make check-all` reports drift without repairing packaging,
-validates local resource links, runs tests, and builds all four host bundles into a temporary directory.
-It may install locked development tooling into `node_modules/`;
-it does not install packages into your agents or run a model.
+Only `SKILL.md` is required. The other directories are a convention the template describes and never creates, checks or overwrites.
 
-Keep canonical edits and their generated output together. Use `make build OUTPUT=dist/my-bundle` for an inspectable bundle; choose an absent or empty destination. Consult [host support](docs/host-support.md) for native installation and model evaluation evidence before changing host integration.
+## Commits and pull requests
 
-## Commit and PR titles
-
-Use `<type>(optional-scope): <description>` for PR titles, because squash-merged titles determine releases. `feat:` adds functionality, `fix:` repairs behavior, and `perf:` improves performance. `docs:`, `test:`, `chore:`, `ci:`, and `build:` alone do not normally trigger a release. Mark a breaking change with `!` or a `BREAKING CHANGE:` footer.
-
-Before 1.0, breaking changes bump the minor version; ordinary features also bump minor, and fixes bump patch. The first release is explicitly configured as `0.1.0`. The empty release manifest means no release has been recorded yet; release-please fills it when preparing the first release PR. The initial-version setting applies only before a first release, so it need not be removed after release.
+- Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/): `<type>[(scope)][!]: <description>`.
+- Pull request titles use the same format, because release-please builds the changelog and picks the next version from them.
+- `feat` bumps the minor version, `fix` the patch. A `!` or a `BREAKING CHANGE:` footer marks a breaking change.
+- Branch names are `<type>/<description>`, lowercase and hyphenated (`feature`, `bugfix`, `hotfix`, `release`, `chore`).
 
 ## Release flow
 
-1. On `main`, the release workflow runs the same checks and disposable build as CI.
-2. Release-please creates or updates a PR containing the version bump and changelog. Automation regenerates and validates host packaging on that PR branch, then commits generated changes. Regeneration repeats whenever release-please rewrites its branch.
-3. Review the complete PR, including generated changes. Merge it only after checks pass. The next release workflow validates that exact merge commit before creating its `vX.Y.Z` tag and GitHub Release.
+`package.json` is the sole version source. release-please bumps it, and bumps the generated plugin manifests alongside it, so no copy of the version is kept in sync by hand. The first release is 0.1.0. Before 1.0, a breaking change or a `feat` bumps the minor version and a `fix` bumps the patch.
 
-The artifact is the tagged repository tree. These workflows do not publish to npm or create release attachments. `package.json` remains an installable Pi package; release-please's Node strategy updates its version without requiring JavaScript runtime code or npm publication.
+1. On `main`, the `release` workflow runs the same `check` workflow as CI, then `scripts/release-guard.mjs`, which stops the release when the versions disagree.
+2. release-please opens or updates a release PR with the version bump and the changelog. The workflow then regenerates the plugin output on that branch, because release-please cannot update the hash ledger `.ai-rulez-generated.json`: a read-only job runs `npm run generate` and `npm run check` and hands over a patch, and a separate job holding the write token applies it after checking that it touches only generated paths.
+3. Review the whole PR, generated files included, and merge it once its checks pass.
+4. The next `release` run creates the `vX.Y.Z` tag and GitHub Release for that merge, but only if it is the sole pending release (`scripts/release-merge.mjs`).
 
-## Repository setup
+The artifact is the tagged repository tree; nothing is published to a registry.
 
-Enable GitHub Actions and allow Actions to create pull requests in repository settings. The release job needs contents, issues, and pull-request write permissions; validation jobs need only contents read. Action revisions are pinned in the workflows. No additional credential is required for the default flow.
+## One-time repository setup
 
-GitHub's built-in `GITHUB_TOKEN` does not trigger ordinary PR workflows for the release PR it creates. The release workflow validates that branch explicitly before committing packaging. To obtain a check on the final PR head, manually run the `check` workflow **on the release PR branch**, keeping its optional `ref` input empty. For example:
+None of these settings can be read from the repository, so CI cannot catch a missing one. Do them once after creating the repo on GitHub.
 
-```sh
-gh workflow run check.yml --ref release-please--branches--main
-```
+- [ ] **Allow Actions to open pull requests.** Settings → Actions → General → Workflow permissions → tick "Allow GitHub Actions to create and approve pull requests". Without it release-please cannot open its release PR.
+- [ ] **Protect `main`.** Settings → Rules (or Branches) → require a pull request and require the `check` status check to pass before merging.
+- [ ] **Close and reopen the release PR before merging it.** release-please runs on the implicit `GITHUB_TOKEN`, and events created with that token start no workflow runs. The release PR therefore reports no required checks until you close and reopen it (`check.yml` runs on `reopened`). Every later update release-please pushes to that PR has the same problem, so reopen it again after each update, or at least once more on the final head right before merging. Instead of reopening, you can run the check on the release branch, which reports on the head commit: `gh workflow run check.yml --ref release-please--branches--main` (use the branch shown on the PR if its name differs).
 
-Use the actual branch shown on the release PR if its name differs. Running on `main` with an input ref validates the requested tree but attaches the workflow run to `main`; it is useful for investigation, not a substitute for a required PR-head check. If release branches are rewritten, rerun the check on the new head. A scoped GitHub App token can instead enable automatic PR workflows; configure one deliberately if desired, rather than assuming approval starts a suppressed workflow.
-
-For branch protection, require `validate` from the `check` workflow and permit the release PR to be merged only with that final-head check. These settings must be configured on GitHub; adding workflow files does not change repository settings.
+`publish_to_npm` is off, so `package.json` is `"private": true` and no npm setup is needed. Pi users install from git.
 
 ## Recovery
 
-If validation of a release merge fails transiently, rerun that merge commit's failed workflow. If a queued release run was superseded, rerun the original merge's workflow. A new green push or a manual release run on a later commit does not authorize releasing the older pending merge.
-
-If the release tree has a real defect, repair it and validate the corrected tree. Close the old pending release out of the automatic queue and prepare a replacement release PR for the corrected commit; review version/changelog changes together. Do not simply relabel the failed merge to trigger release creation. More than one merged PR labelled `autorelease: pending` blocks automated release creation until the queue is reconciled.
-
-If tagging succeeds but GitHub Release creation fails, rerun the original release merge's workflow and inspect the existing tag/release state. Do not move an existing release tag to a different tree. Record any manual reconciliation in the release PR so the manifest, changelog, tag, and release agree.
+If validation of a release merge fails transiently, rerun that merge's failed workflow. A new green push, or a manual run on a later commit, does not authorize releasing the older pending merge: `scripts/release-merge.mjs` allows a release only for the one pending release PR that merged as the commit being released.

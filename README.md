@@ -90,13 +90,13 @@ For plugin development, CI, and release-please setup, see [CONTRIBUTING.md](CONT
 For maintainers, edit canonical files and shared metadata, regenerate, and check:
 
 ```sh
-make sync
-make check
+npm run generate
+npm run check
+npm test
 ```
 
-These targets require Python, Node, and npm.
-They install locked development tooling when needed.
-[ai-rulez generates the skills, native manifests, catalogs, and Pi package fields](docs/ai-rulez.md)
+`npm ci` installs the locked development tooling; the unit tests need Python.
+[ai-rulez generates the skills, native manifests, and catalogs](docs/ai-rulez.md)
 in place, copying shared references and templates into every skill.
 
 Generated-file checks report drift without repairing it. Native metadata and discovery checks use:
@@ -105,7 +105,7 @@ Generated-file checks report drift without repairing it. Native metadata and dis
 python3 tools/smoke_plugins.py --repository . --report dist/repository-validation.json
 ```
 
-For disposable self-contained bundles, use `make build OUTPUT=dist/plugins` with an absent or empty output directory. The standalone builder remains available.
+For disposable self-contained bundles, use `OUTPUT=dist/plugins npm run build` with an absent or empty output directory. The standalone builder remains available.
 
 The [padlib evaluation](evals/padlib/README.md) records an isolated maintenance cycle: 117 passing Python cases, seven detected faults, and an independent native Codex audit. Claude discovered all seven commands; its model invocation was blocked by the account's weekly usage limit.
 
@@ -119,4 +119,4 @@ The workflow evaluations in [evals/README.md](evals/README.md) check decisions t
 [The original integration evaluation](evals/results/automation/adoption/README.md) records native schema adoption.
 [The authoring migration](evals/results/automation/authoring/README.md) records the committed `.ai-rulez/` sources,
 renamed plugin, and generated root skills.
-Root metadata and the generated Claude/Codex payload are checked with `make check`.
+Root metadata and the generated Claude/Codex payload are checked with `npm run check`.

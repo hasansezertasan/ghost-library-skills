@@ -8,7 +8,7 @@ Twelve generated skills are available directly from this checkout. The host evid
 | Codex CLI 0.162.1 | Root catalog parsing/discovery; network-disabled container installation and version replacement; installation from a GitHub branch; seven discovered skills. Earlier model trials are recorded separately | [install-codex.md](install-codex.md) |
 | Pi 1.0.3 | Private-profile root-package installation and local-path update; native resource loader discovers seven skills and resolves shared resources. Model workflows untested | [install-pi.md](install-pi.md) |
 | OpenCode 1.18.35 | Root configuration discovers seven generated skills when run from the checkout; replacement and resource checks pass. Relative skill paths resolve from the working directory. Model workflows untested | [install-opencode.md](install-opencode.md) |
-| Antigravity | Hand-authored root `plugin.json` adapter, verified against canonical metadata by `make check`. Local `agy plugin validate` discovers twelve skills, no commands/agents/hooks ([evidence](../evals/results/hosts/antigravity/README.md)). Git-URL installation and model workflows not evaluated | [install-antigravity.md](install-antigravity.md) |
+| Antigravity | Hand-authored root `plugin.json` adapter, verified against canonical metadata by `scripts/check-repo.mjs`. Local `agy plugin validate` discovers twelve skills, no commands/agents/hooks ([evidence](../evals/results/hosts/antigravity/README.md)). Git-URL installation and model workflows not evaluated | [install-antigravity.md](install-antigravity.md) |
 | Hermes | Standalone skill folders; native integrations not implemented | — |
 
 The root catalog installs the repository root (`./`) as the plugin; Claude and Codex load the skills from root `skills/`, the same payload Pi and OpenCode use.
@@ -29,19 +29,19 @@ The project is now named `ghost-library-skills`, with catalog `ghost-library-ski
 ## Maintain generated packaging
 
 `.ai-rulez/config.toml` owns plugin identity, runtime selection, and Codex display options.
-`package.json` owns the release version and npm tooling;
-ai-rulez generates its identity fields, Pi declaration, and npm file allowlist from TOML.
-`tools/sync_packaging.py` runs the pinned ai-rulez development dependency in the checkout
-and rejects files under `skills/` that ai-rulez did not record.
+`package.json` owns the release version, the Pi declaration and npm tooling; it is authored, not generated.
+`npm run generate` runs the pinned ai-rulez development dependency in the checkout,
+and `tools/check_owned_tree.py` rejects files under `skills/` that ai-rulez did not record.
 See [the integration guide](ai-rulez.md) for ownership boundaries.
 Edit `.ai-rulez/` skill sources, shared resources, and metadata, then run:
 
 ```sh
-make sync
-make check
+npm run generate
+npm run check
+npm test
 ```
 
-`make check` reports stale generated files without repairing them, validates resource links, and runs unit tests. Keep generated root `skills/`, manifests, and catalogs in version control. It also fails when the root gains a path Claude or Codex would load from the installed plugin, such as `.mcp.json` or `hooks/` (ai-rulez `AR9T0`).
+`npm run check` reports stale generated files without repairing them; `npm test` validates resource links and runs unit tests. Keep generated root `skills/`, manifests, and catalogs in version control. It also fails when the root gains a path Claude or Codex would load from the installed plugin, such as `.mcp.json` or `hooks/` (ai-rulez `AR9T0`).
 Author skill procedures under `.ai-rulez/skills/`, shared resources under `.ai-rulez/references/` and `.ai-rulez/templates/`,
 and plugin metadata in `.ai-rulez/config.toml`.
 `package.json` remains the release version authority.
@@ -49,7 +49,7 @@ and plugin metadata in `.ai-rulez/config.toml`.
 ## Build disposable bundles
 
 ```sh
-make build OUTPUT=dist/plugins
+OUTPUT=dist/plugins npm run build
 ```
 
 The output must be absent or empty. The builder consumes root metadata/manifests and produces the existing `claude/`, `codex/`, `opencode/`, and `pi/` bundle layouts. Standalone folders remain available through `python3 tools/build_skills.py --output PATH`.

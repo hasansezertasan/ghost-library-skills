@@ -1,681 +1,886 @@
 {
   "schema_version": "v1",
-  "source_hash": "blake3:5f0bdd69fa4b3ee6481c78402ee93056fcda213283ca52152e1119d42a3c4efe",
+  "source_hash": "blake3:d520287f06e496e1757fc040ecd0b21592dbae89976ffe4beaff959f71b78547",
   "outputs": {
     ".agents/plugins/marketplace.json": {
-      "content_hash": "blake3:1761e93812464ae14e038516ee0d1819392261f8fae301b32d5c8ce75f7613cb"
+      "content_hash": "blake3:1761e93812464ae14e038516ee0d1819392261f8fae301b32d5c8ce75f7613cb",
+      "mode": "0644"
     },
     ".claude-plugin/marketplace.json": {
-      "content_hash": "blake3:8ddc8e17fbb84a6149613cfe9b820f0921cb19f4e4a678592ff230bca071e038"
+      "content_hash": "blake3:8ddc8e17fbb84a6149613cfe9b820f0921cb19f4e4a678592ff230bca071e038",
+      "mode": "0644"
     },
     ".claude-plugin/plugin.json": {
-      "content_hash": "blake3:3c44bfacfb24fd79b8de524a339877c3bba394ad962c697f2819fa8afee2183d"
+      "content_hash": "blake3:3c44bfacfb24fd79b8de524a339877c3bba394ad962c697f2819fa8afee2183d",
+      "mode": "0644"
     },
     ".codex-plugin/plugin.json": {
-      "content_hash": "blake3:ad98a712d1b80c81c57e9bcf97ad5aa8cb4279f5523c4b0a724d5d815547dcfe"
-    },
-    "package.json": {
-      "content_hash": "blake3:f75b6001ffd73f847be63a5d1be241428ef12c81acd2716843d763e5df2f8ac7"
+      "content_hash": "blake3:ad98a712d1b80c81c57e9bcf97ad5aa8cb4279f5523c4b0a724d5d815547dcfe",
+      "mode": "0644"
     },
     "skills/ghost-audit/SKILL.md": {
-      "content_hash": "blake3:619e3b43b0446a56e347d646a8923d22e7dee8fcf2f921efe1f280691a0f8a46"
+      "content_hash": "blake3:619e3b43b0446a56e347d646a8923d22e7dee8fcf2f921efe1f280691a0f8a46",
+      "mode": "0644"
     },
     "skills/ghost-audit/agents/openai.yaml": {
-      "content_hash": "blake3:b1805faaf93ada86f1d90906aedae1b55c416d83a0049cd7114bdd2b3c80a3ad"
+      "content_hash": "blake3:b1805faaf93ada86f1d90906aedae1b55c416d83a0049cd7114bdd2b3c80a3ad",
+      "mode": "0644"
     },
     "skills/ghost-audit/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-audit/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-audit/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-audit/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-audit/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-audit/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-catalog/SKILL.md": {
-      "content_hash": "blake3:001e083e9e55b82c17e0aa4e6981ef07fd874ea951c8292c7164bf496f744d17"
+      "content_hash": "blake3:001e083e9e55b82c17e0aa4e6981ef07fd874ea951c8292c7164bf496f744d17",
+      "mode": "0644"
     },
     "skills/ghost-catalog/agents/openai.yaml": {
-      "content_hash": "blake3:7eedeb91fa7f8d400534ca725379ac4f1910753555819be89ad63d189f085565"
+      "content_hash": "blake3:7eedeb91fa7f8d400534ca725379ac4f1910753555819be89ad63d189f085565",
+      "mode": "0644"
     },
     "skills/ghost-catalog/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-catalog/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-catalog/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-catalog/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-catalog/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-catalog/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/SKILL.md": {
-      "content_hash": "blake3:85f7937d599087755badd1174345108230a85775f700db1e8e10cf7bc3a014cd"
+      "content_hash": "blake3:85f7937d599087755badd1174345108230a85775f700db1e8e10cf7bc3a014cd",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/agents/openai.yaml": {
-      "content_hash": "blake3:f0834d4c6607c1fcff823235b7dd67963af7bec5777c39cd01e6878c84ef3316"
+      "content_hash": "blake3:f0834d4c6607c1fcff823235b7dd67963af7bec5777c39cd01e6878c84ef3316",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-evaluate/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-extract/SKILL.md": {
-      "content_hash": "blake3:7196481affec215a0323a1130d81e4734ffa8c2864bec8ae2000008f017707fa"
+      "content_hash": "blake3:7196481affec215a0323a1130d81e4734ffa8c2864bec8ae2000008f017707fa",
+      "mode": "0644"
     },
     "skills/ghost-extract/agents/openai.yaml": {
-      "content_hash": "blake3:0d8d3ee830131f6f487bc111a70d86e519ac4fcdad63711697d455c854ecb46f"
+      "content_hash": "blake3:0d8d3ee830131f6f487bc111a70d86e519ac4fcdad63711697d455c854ecb46f",
+      "mode": "0644"
     },
     "skills/ghost-extract/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-extract/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-extract/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-extract/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-extract/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-extract/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-fix/SKILL.md": {
-      "content_hash": "blake3:228a4cdd210683c388243bfb642214359ad3b6049f5bff7ef9fd719499aa717e"
+      "content_hash": "blake3:228a4cdd210683c388243bfb642214359ad3b6049f5bff7ef9fd719499aa717e",
+      "mode": "0644"
     },
     "skills/ghost-fix/agents/openai.yaml": {
-      "content_hash": "blake3:5305d1c5caf3c0cea70ad062834ca77c66fb1c0a47d1b30809e2c07a00ec0fc4"
+      "content_hash": "blake3:5305d1c5caf3c0cea70ad062834ca77c66fb1c0a47d1b30809e2c07a00ec0fc4",
+      "mode": "0644"
     },
     "skills/ghost-fix/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-fix/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-fix/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-fix/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-fix/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-fix/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-init/SKILL.md": {
-      "content_hash": "blake3:03d7251f91dd6e3fcbdf4e374fc985fcd089f7e9ca5406a22f39f0b6241cfb3e"
+      "content_hash": "blake3:03d7251f91dd6e3fcbdf4e374fc985fcd089f7e9ca5406a22f39f0b6241cfb3e",
+      "mode": "0644"
     },
     "skills/ghost-init/agents/openai.yaml": {
-      "content_hash": "blake3:b1e5b0e7478b523d44102a8e6d379fbe4e09bcc30d61ad5a5e61ff17503c8f66"
+      "content_hash": "blake3:b1e5b0e7478b523d44102a8e6d379fbe4e09bcc30d61ad5a5e61ff17503c8f66",
+      "mode": "0644"
     },
     "skills/ghost-init/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-init/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-init/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-init/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-init/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-init/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-release/SKILL.md": {
-      "content_hash": "blake3:80ebdd188b799f16ec0a1a88b6f042096427ed91af6e546aebc83e3f956b58eb"
+      "content_hash": "blake3:80ebdd188b799f16ec0a1a88b6f042096427ed91af6e546aebc83e3f956b58eb",
+      "mode": "0644"
     },
     "skills/ghost-release/agents/openai.yaml": {
-      "content_hash": "blake3:bcf4dc06a04a9cdc3636275fa88f23a29e845c42335265830f6e694d68401fe5"
+      "content_hash": "blake3:bcf4dc06a04a9cdc3636275fa88f23a29e845c42335265830f6e694d68401fe5",
+      "mode": "0644"
     },
     "skills/ghost-release/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-release/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-release/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-release/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-release/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-release/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-spec/SKILL.md": {
-      "content_hash": "blake3:4899c9da2be2630e66a1c248d4d7f4d968a43a49ebaf57f72e36e1920a276c16"
+      "content_hash": "blake3:4899c9da2be2630e66a1c248d4d7f4d968a43a49ebaf57f72e36e1920a276c16",
+      "mode": "0644"
     },
     "skills/ghost-spec/agents/openai.yaml": {
-      "content_hash": "blake3:3c3d9b52efd316b602c9d6b86e0a041853fb195ae94e8137cffbd85ac02b7b85"
+      "content_hash": "blake3:3c3d9b52efd316b602c9d6b86e0a041853fb195ae94e8137cffbd85ac02b7b85",
+      "mode": "0644"
     },
     "skills/ghost-spec/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-spec/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-spec/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-spec/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-spec/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-spec/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-summon/SKILL.md": {
-      "content_hash": "blake3:78da62e47c7d0f34d15bcaac4c09aea2e3b102cca9f2671a1185f25a16f931aa"
+      "content_hash": "blake3:78da62e47c7d0f34d15bcaac4c09aea2e3b102cca9f2671a1185f25a16f931aa",
+      "mode": "0644"
     },
     "skills/ghost-summon/agents/openai.yaml": {
-      "content_hash": "blake3:bf434c00afcb4f08e7c8fedeaabd30c72f6a82e4f06c706e2b1ca3d8dfd47884"
+      "content_hash": "blake3:bf434c00afcb4f08e7c8fedeaabd30c72f6a82e4f06c706e2b1ca3d8dfd47884",
+      "mode": "0644"
     },
     "skills/ghost-summon/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-summon/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-summon/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-summon/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-summon/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-summon/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-tests/SKILL.md": {
-      "content_hash": "blake3:629c74e8f327a5257165c3c2a0570068a92f6cdec26808c56ae384b961c20e1f"
+      "content_hash": "blake3:629c74e8f327a5257165c3c2a0570068a92f6cdec26808c56ae384b961c20e1f",
+      "mode": "0644"
     },
     "skills/ghost-tests/agents/openai.yaml": {
-      "content_hash": "blake3:c015a483a2c4dd3a27b1e843d3891109d265ff40fde79d266d05551e54b92476"
+      "content_hash": "blake3:c015a483a2c4dd3a27b1e843d3891109d265ff40fde79d266d05551e54b92476",
+      "mode": "0644"
     },
     "skills/ghost-tests/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-tests/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-tests/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-tests/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-tests/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-tests/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/SKILL.md": {
-      "content_hash": "blake3:102defa34fa15f7c81ec1690a4ac97bdca743fe057f455ab94c5faefa4c542ea"
+      "content_hash": "blake3:102defa34fa15f7c81ec1690a4ac97bdca743fe057f455ab94c5faefa4c542ea",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/agents/openai.yaml": {
-      "content_hash": "blake3:90e6ac97ac86c0fd2828596d5f0204a5df7206baa9e9efa99aeef6da4ad64a98"
+      "content_hash": "blake3:90e6ac97ac86c0fd2828596d5f0204a5df7206baa9e9efa99aeef6da4ad64a98",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-upgrade/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     },
     "skills/ghost-verify/SKILL.md": {
-      "content_hash": "blake3:577acc5a09f59a9d0754bb20ab1d6d37664c792a0fc18245673187ecb87d934d"
+      "content_hash": "blake3:577acc5a09f59a9d0754bb20ab1d6d37664c792a0fc18245673187ecb87d934d",
+      "mode": "0644"
     },
     "skills/ghost-verify/agents/openai.yaml": {
-      "content_hash": "blake3:3e5ce5467d8977d89ec819efe961cb12ed6fc1592ea79918a1607d34b8a05e32"
+      "content_hash": "blake3:3e5ce5467d8977d89ec819efe961cb12ed6fc1592ea79918a1607d34b8a05e32",
+      "mode": "0644"
     },
     "skills/ghost-verify/references/compatibility.md": {
-      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b"
+      "content_hash": "blake3:e478401421669d1dda72b54a42b60df238af8fc9a6b991fd68e83de5b6ea5d0b",
+      "mode": "0644"
     },
     "skills/ghost-verify/references/contract-rules.md": {
-      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22"
+      "content_hash": "blake3:c09d47bed81f6903bfaa8efd5994e9098a63afefdad6ea39b60479fd5b683a22",
+      "mode": "0644"
     },
     "skills/ghost-verify/references/fixture-profiles.md": {
-      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851"
+      "content_hash": "blake3:4b7c5e6194afa98dacc65329fdd915ff11a62ef05ebd2a3e8fbaff5c71662851",
+      "mode": "0644"
     },
     "skills/ghost-verify/references/harness-contract.md": {
-      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6"
+      "content_hash": "blake3:43dcf75480a0bcaa9c83136535711b0e055e59642cc71f1720ce773a50c1d1c6",
+      "mode": "0644"
     },
     "skills/ghost-verify/references/philosophy.md": {
-      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77"
+      "content_hash": "blake3:cbb34bbc6d9f9b3da7b0896bc84671d4392cd7e8e201628d9ab8a19962c28a77",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/install.md": {
-      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e"
+      "content_hash": "blake3:67357a02076cbbf452c8244194a07dc4d26a9601ca99ac5d64eaa0e644818b5e",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/reports/audit.md": {
-      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101"
+      "content_hash": "blake3:78d4fb9fa655081ec8577bc686e1bad967e5ce3f0d5412569bfb7600602b1101",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/reports/catalog.md": {
-      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e"
+      "content_hash": "blake3:52a90c235e3df15e9a874789dc83519edabea905ad3aeb9de60993d8c8954f3e",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/reports/conformance.md": {
-      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4"
+      "content_hash": "blake3:6f5c9d6c81f033bc8cec9460a719d39001a4eb6ceb75e56bf9e10bd1786136c4",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/reports/coverage.md": {
-      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04"
+      "content_hash": "blake3:4ea9c77567a33ff61cc8658ccc04a484ba7f8597c66986032ebc57c6e8e58c04",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/reports/evaluation.md": {
-      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2"
+      "content_hash": "blake3:b459d3978dd274710500dd0ee5078432f0aaa67e275d3ad2ac4a4c321f2c79b2",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/reports/extraction.md": {
-      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3"
+      "content_hash": "blake3:9be36e92dfa5a96071631f12788beafeabc8b5b4ec011182db497af619a45fe3",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/reports/receipt.md": {
-      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9"
+      "content_hash": "blake3:abaf200d83b86abe1a3bbada2a54fbb93c67ff295f941a71feca2584d31388b9",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/reports/release.md": {
-      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185"
+      "content_hash": "blake3:64dd2f81c9617021022df928cc10f7dd0ab48309eae7c96e19ce314047143185",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/reports/upgrade.md": {
-      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086"
+      "content_hash": "blake3:e126d89bee3db60350b5dfd2dc678e555dec0e2cf49d3c22cc9f89cb9c336086",
+      "mode": "0644"
     },
     "skills/ghost-verify/templates/spec.md": {
-      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3"
+      "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
+      "mode": "0644"
     }
-  },
-  "managed": {
-    "package.json": [
-      "name",
-      "version",
-      "description",
-      "author",
-      "repository",
-      "keywords",
-      "pi",
-      "files"
-    ]
   }
 }

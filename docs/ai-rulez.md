@@ -39,25 +39,25 @@ Edit their sources and regenerate instead of editing generated content directly.
 ## Generation and verification
 
 ```sh
-make sync
-make check-all
+npm run generate
+npm run check
 ```
 
-Use these wrapper commands rather than running ai-rulez directly.
-They install the locked development tool when needed and run it in the checkout:
-`make sync` runs `generate --plugin`, and `make check` runs `verify --plugin` and `validate --strict`.
+Use these npm scripts rather than running ai-rulez directly.
+They run the locked development tool in the checkout:
+`npm run generate` runs `generate` and `generate --plugin`, and `npm run check` runs the drift gate, `verify --plugin` and `validate --strict`.
 Python tooling uses the standard library;
 CI interpreter versions are selected by `.python-version` and `.node-version`.
 
 ai-rulez generates both catalogs in single-plugin mode:
 `[marketplace]` sets only the catalog name, `[plugin.codex] marketplace = true` enables the Codex catalog,
 and both entries install the repository root (`"./"`).
-Claude, Codex, and Pi (`[plugin.pi] skills_dir = "skills"`) load the generated skills from root `skills/`,
+Claude, Codex, and Pi (`pi.skills` in the authored `package.json`) load the generated skills from root `skills/`,
 the same tree OpenCode discovers, so each skill is generated once.
 
 Installing the root means each host's plugin cache also holds maintainer content
 such as `evals/`, `docs/`, and `tools/`; the hosts load none of it.
-They do load default component paths, so `make check` fails when the root gains one
+They do load default component paths, so `npm run check` fails when the root gains one
 (for example `.mcp.json`, `hooks/`, `agents/`, `commands/`, `bin/`, or `settings.json`):
 `validate --strict` reports each as `AR9T0 root-component-shipped`.
 Claude also runs a best-effort npm install for root `package.json`;
@@ -68,11 +68,11 @@ See [the single-plugin evidence](../evals/results/automation/single-plugin/READM
 so no tool provenance header enters procedures or artifact templates.
 `.ai-rulez-generated.json` records every generated file and its content hash instead.
 
-`make check-all` compares the checkout against that record without repairing it.
+`npm run check` compares the checkout against that record without repairing it.
 `verify --plugin` reports changed and missing files and drift in the manifests and the owned `package.json` keys;
 it reports that output is stale but does not name the file.
 It accepts files it did not record and symlinks with recorded content,
-so our wrapper reports any unrecorded file or symlink under `skills/` as well.
+so `tools/check_owned_tree.py` reports any unrecorded file or symlink under `skills/` as well.
 Explicit synchronization regenerates the tree and deletes unrecorded files,
 so deleting a canonical skill removes its generated copy.
 Source files and maintainer governance stay outside this replacement boundary.

@@ -4,16 +4,15 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 import shutil
 import tempfile
 
 try:
     from .build_skills import ROOT, build
-    from .sync_packaging import load_object, sync, write_json
 except ImportError:
     from build_skills import ROOT, build
-    from sync_packaging import load_object, sync, write_json
 
 
 HOSTS = {"claude": ".claude-plugin", "codex": ".codex-plugin"}
@@ -26,10 +25,22 @@ SKILL_PATHS = {
 }
 
 
+def load_object(path: Path) -> dict:
+    if path.is_symlink():
+        raise ValueError(f'Symlinked packaging source: {path}')
+    value = json.loads(path.read_text(encoding='utf-8'))
+    if not isinstance(value, dict):
+        raise ValueError(f'Expected JSON object: {path}')
+    return value
+
+
+def write_json(path: Path, value: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, indent=2) + '\n', encoding='utf-8')
+
+
 def build_plugins(root: Path, output: Path) -> dict[str, int]:
-    problems = sync(root, check=True)
-    if problems:
-        raise ValueError('Stale native packaging; run make sync: ' + '; '.join(problems))
+    # Staleness is `npm run check`'s job; this only bundles what is committed.
     if output.is_symlink():
         raise ValueError(f"Output must not be a symlink: {output}")
     output = output.resolve()
