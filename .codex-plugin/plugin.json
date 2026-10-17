@@ -1,6 +1,6 @@
 {
   "name": "ghost-library-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence.",
   "author": {
     "name": "Hasan Sezer Tasan",

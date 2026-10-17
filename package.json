@@ -267,5 +267,5 @@
     "postcheck": "${PYTHON:-python3} tools/check_owned_tree.py",
     "test": "PYTHONDONTWRITEBYTECODE=1 ${PYTHON:-python3} -m unittest discover -s tests -v"
   },
-  "version": "0.1.0"
+  "version": "0.2.0"
 }
