@@ -79,8 +79,9 @@ still differs from a plain render and why; it is not updated as the project evol
   Pi installs from a path or git URL, so installs are unaffected, but the name
   differs from before.
 - **`package.json` fields.** `license` is now `MIT` (the template requires one) and
-  the explicit `files` allowlist is gone (the package is private). The repo has no
-  `LICENSE` file; decide whether to add one or change the answer.
+  the explicit `files` allowlist is gone (the package is private). The repo had no
+  `LICENSE` file, so one was added with the standard MIT text, copied from
+  scoop-bucket-skills, so the declaration has terms behind it.
 - **Evaluation scripts.** `evals/automation/run.py` read the manifests through
   `tools/sync_packaging`, and `release-check.cjs` read
   `.config/release-please-config.json`. Both now read the committed catalog and the
