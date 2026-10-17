@@ -5,7 +5,10 @@
   },
   "description": "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence.",
   "devDependencies": {
-    "ai-rulez": "5.0.4"
+    "ai-rulez": "5.3.0"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "files": [
     "skills/ghost-audit/SKILL.md",
@@ -224,7 +227,6 @@
     "skills/ghost-verify/templates/reports/release.md",
     "skills/ghost-verify/templates/reports/upgrade.md",
     "skills/ghost-verify/templates/spec.md",
-    "assets/",
     "README.md"
   ],
   "keywords": [
@@ -234,7 +236,8 @@
     "skills",
     "pi-package"
   ],
-  "name": "@hasansezertasan/pi-ghost-library-skills",
+  "license": "MIT",
+  "name": "ghost-library-skills",
   "pi": {
     "skills": [
       "./skills/ghost-audit",
@@ -252,9 +255,17 @@
     ],
     "prompts": []
   },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/hasansezertasan/ghost-library-skills"
+  },
+  "scripts": {
+    "build": "${PYTHON:-python3} tools/build_plugins.py --output \"${OUTPUT:-dist/plugins}\"",
+    "check": "node scripts/check-repo.mjs && ai-rulez generate --check --no-self-mcp --strict-config && ai-rulez verify --plugin && ai-rulez validate --strict",
+    "generate": "ai-rulez generate --no-self-mcp --strict-config && ai-rulez generate --plugin",
+    "postcheck": "${PYTHON:-python3} tools/check_owned_tree.py",
+    "test": "PYTHONDONTWRITEBYTECODE=1 ${PYTHON:-python3} -m unittest discover -s tests -v"
   },
   "version": "0.1.0"
 }

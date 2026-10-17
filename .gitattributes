@@ -1,7 +1,7 @@
 # Unified diff artifacts need a context marker on otherwise empty lines.
 evals/results/**/*.patch -whitespace
 
-# Outputs fully owned by make sync; collapse them in reviews and language stats.
+# Outputs fully owned by `npm run generate`; collapse them in reviews and language stats.
 # package.json mixes generated identity and Pi fields with authored tooling, so stays visible.
 skills/** linguist-generated
 .claude-plugin/** linguist-generated

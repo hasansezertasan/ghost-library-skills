@@ -31,8 +31,9 @@ class BuildPluginsTests(unittest.TestCase):
             pi = json.loads((output / "pi/package.json").read_text())
             self.assertEqual(pi["version"], "0.1.0")
             self.assertIn("pi-package", pi["keywords"])
-            self.assertEqual(pi["name"], "@hasansezertasan/pi-ghost-library-skills")
-            self.assertEqual(sorted(pi["pi"]["skills"]), sorted(f"./skills/{s.name}" for s in (output / "pi/skills").iterdir()))
+            self.assertEqual(pi["name"], "ghost-library-skills")
+            # ai-rulez lists one entry per skill directory ([plugin.pi] in .ai-rulez/config.toml).
+            self.assertEqual(pi["pi"]["skills"], sorted(f"./skills/{path.name}" for path in (output / "pi/skills").iterdir() if path.is_dir()))
             self.assertIn("ai-rulez", pi["devDependencies"])
             claude_catalog = json.loads((output / "claude/.claude-plugin/marketplace.json").read_text())
             codex_catalog = json.loads((output / "codex/.agents/plugins/marketplace.json").read_text())

@@ -14,14 +14,12 @@ import tarfile
 import uuid
 
 try:
-    from .build_plugins import SKILL_PATHS
+    from .build_plugins import SKILL_PATHS, load_object
     from .build_skills import validate_links
-    from .sync_packaging import load_object
     from .smoke_plugins import app_server
 except ImportError:
-    from build_plugins import SKILL_PATHS
+    from build_plugins import SKILL_PATHS, load_object
     from build_skills import validate_links
-    from sync_packaging import load_object
     from smoke_plugins import app_server
 
 

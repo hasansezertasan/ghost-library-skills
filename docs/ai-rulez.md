@@ -1,9 +1,8 @@
 # ai-rulez authoring and generation
 
 Author plugin configuration and content in the committed `.ai-rulez/` tree.
-The pinned npm development dependency generates the skills, Claude/Codex manifests, both catalogs,
-and the Pi fields of `package.json` in place;
-our wrapper runs it and checks that the generated skill tree holds nothing it did not record.
+The pinned npm development dependency generates the skills, Claude/Codex manifests, both catalogs and the Pi fields of `package.json` in place;
+`npm run generate` runs it, and `npm run check` also verifies that the generated skill tree holds nothing it did not record.
 
 ## Sources and ownership
 
@@ -19,10 +18,11 @@ our wrapper runs it and checks that the generated skill tree holds nothing it di
 `package.json` is the sole plugin version source:
 `[plugin] version_from = "package.json"` reads it, so the TOML carries no version.
 The TOML `version = "5.0"` is the configuration schema version, not the plugin release version.
-ai-rulez merges the identity fields (`name`, `description`, `author`, `repository`, `keywords`),
-`version`, `pi`, and `files` into `package.json` (`[plugin.pi] package_json = "merge"`)
-and keeps every other key, so `devDependencies` stay authored there.
-The generated npm name is `@hasansezertasan/pi-ghost-library-skills`.
+`[plugin.pi] package_json = "merge"` makes ai-rulez rewrite `package.json` on `npm run generate` (sorted keys, expanded arrays).
+It derives the identity fields, `pi` (one `pi.skills` entry per skill), the `pi-package` keyword and the `files` allowlist from
+`.ai-rulez/config.toml` and the skills on disk; edit those sources, not the derived fields.
+The authored fields (`version`, `scripts`, `devDependencies`, `engines`, `private`, `license`) are kept as written.
+The npm name is `ghost-library-skills`; the repo is private and not published.
 
 `[plugin] shared_resources` copies `.ai-rulez/references/` and `.ai-rulez/templates/` into every skill
 and rewrites their `../../` links to the copies,
@@ -39,13 +39,13 @@ Edit their sources and regenerate instead of editing generated content directly.
 ## Generation and verification
 
 ```sh
-make sync
-make check-all
+npm run generate
+npm run check
 ```
 
-Use these wrapper commands rather than running ai-rulez directly.
-They install the locked development tool when needed and run it in the checkout:
-`make sync` runs `generate --plugin`, and `make check` runs `verify --plugin` and `validate --strict`.
+Use these npm scripts rather than running ai-rulez directly.
+They run the locked development tool in the checkout:
+`npm run generate` runs `generate` and `generate --plugin`, and `npm run check` runs the drift gate, `verify --plugin` and `validate --strict`.
 Python tooling uses the standard library;
 CI interpreter versions are selected by `.python-version` and `.node-version`.
 
@@ -57,9 +57,10 @@ the same tree OpenCode discovers, so each skill is generated once.
 
 Installing the root means each host's plugin cache also holds maintainer content
 such as `evals/`, `docs/`, and `tools/`; the hosts load none of it.
-They do load default component paths, so `make check` fails when the root gains one
-(for example `.mcp.json`, `hooks/`, `agents/`, `commands/`, `bin/`, or `settings.json`):
-`validate --strict` reports each as `AR9T0 root-component-shipped`.
+They do load default component paths, so `npm run check` fails when the root gains one
+(for example `.mcp.json`, `hooks/`, `agents/`, `commands/`, `bin/`, or `settings.json`).
+ai-rulez reports each as `AR9T0 root-component-shipped`, but that rule is off in `.ai-rulez/config.toml`
+because it also flags the Antigravity `plugin.json` adapter, so `tools/check_owned_tree.py` guards these paths instead.
 Claude also runs a best-effort npm install for root `package.json`;
 it adds only the ai-rulez wrapper, and installation succeeds without npm or network.
 See [the single-plugin evidence](../evals/results/automation/single-plugin/README.md).
@@ -68,24 +69,23 @@ See [the single-plugin evidence](../evals/results/automation/single-plugin/READM
 so no tool provenance header enters procedures or artifact templates.
 `.ai-rulez-generated.json` records every generated file and its content hash instead.
 
-`make check-all` compares the checkout against that record without repairing it.
+`npm run check` compares the checkout against that record without repairing it.
 `verify --plugin` reports changed and missing files and drift in the manifests and the owned `package.json` keys;
 it reports that output is stale but does not name the file.
 It accepts files it did not record and symlinks with recorded content,
-so our wrapper reports any unrecorded file or symlink under `skills/` as well.
+so `tools/check_owned_tree.py` reports any unrecorded file or symlink under `skills/` as well.
 Explicit synchronization regenerates the tree and deletes unrecorded files,
 so deleting a canonical skill removes its generated copy.
 Source files and maintainer governance stay outside this replacement boundary.
 
 ## Host and release boundaries
 
-Pi's root manifest lists each generated skill directory, and OpenCode's native skill path discovers generated root `skills/`.
+Pi's `package.json` lists each generated skill directory, and OpenCode's native skill path discovers the same tree.
 Every root skill contains its own references and templates;
 no root-level shared resource directory is needed for installation.
-The npm file allowlist lists each generated skill file and `README.md`;
-npm also includes the package manifest.
+The npm file allowlist lists each generated skill file and `README.md`; it is derived, and the package stays private.
 
-Only the Claude, Codex, and Pi plugin runtimes are enabled.
+The Claude, Codex, and Pi runtimes are enabled.
 OpenCode JavaScript plugin generation remains outside the package tree;
 new host runtimes require native validation before support is advertised.
 The Antigravity root `plugin.json` is a small hand-authored adapter because ai-rulez

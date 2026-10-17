@@ -1,36 +1,37 @@
-name: check
+name: Check
 
+# Unfiltered on purpose: a required check must always report. Reusable so the
+# release workflow runs the very same job before it releases.
 on:
-  pull_request:
   push:
-    branches: [main]
+  pull_request:
   workflow_call:
   workflow_dispatch:
-    inputs:
-      ref:
-        description: Commit or release PR branch to validate (empty uses this workflow's commit)
-        type: string
-        required: false
 
-permissions:
-  contents: read
+permissions: {}
 
 jobs:
-  validate:
+  check:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    permissions:
+      contents: read
+    env:
+      # The npm scripts run Python through this, so CI uses the .python-version interpreter, not the runner's.
+      PYTHON: uv run --no-project python
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: ${{ inputs.ref || github.sha }}
           persist-credentials: false
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .node-version
-          cache: npm
       - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
         with:
           enable-cache: false # Standard-library tooling; no dependency cache.
       - run: uv python install
-      - name: Validate sources, generated packages, and disposable builds
-        run: make check-all PYTHON="uv run --no-project python"
+      - run: npm ci
+      - run: npm run check
+      # Repo-specific: the Python unit tests and a disposable build of the host bundles.
+      - run: $PYTHON tools/build_skills.py --check
+      - run: npm test
+      - run: OUTPUT="$RUNNER_TEMP/plugins" npm run build

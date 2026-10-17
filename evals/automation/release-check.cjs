@@ -9,7 +9,7 @@ const {buildStrategy} = require(path.join(releasePlease, 'build/src/factory.js')
 const {Version} = require(path.join(releasePlease, 'build/src/version.js'));
 const {TagName} = require(path.join(releasePlease, 'build/src/util/tag-name.js'));
 const {parseConventionalCommits} = require(path.join(releasePlease, 'build/src/commit.js'));
-const config = JSON.parse(fs.readFileSync(path.join(root, '.config/release-please-config.json')));
+const config = JSON.parse(fs.readFileSync(path.join(root, 'release-please-config.json')));
 const settings = config.packages['.'];
 const original = fs.readFileSync(path.join(root, 'package.json'), 'utf8');
 const logger = {debug() {}, info() {}, warn() {}, error() {}, trace() {}};
@@ -30,10 +30,10 @@ const github = {
     ['feature', 'feat: add another workflow', '0.1.0', '0.2.0'],
     ['breaking-before-one', 'feat!: change contract format', '0.1.0', '0.2.0'],
   ]) {
-    const strategy = await buildStrategy({releaseType: config['release-type'], github, logger, targetBranch: 'main', path: '.',
-      packageName: settings['package-name'], initialVersion: settings['initial-version'],
-      includeComponentInTag: config['include-component-in-tag'],
-      bumpMinorPreMajor: config['bump-minor-pre-major'], changelogPath: settings['changelog-path']});
+    const strategy = await buildStrategy({releaseType: settings['release-type'] ?? config['release-type'], github, logger, targetBranch: 'main', path: '.',
+      packageName: settings['package-name'] ?? 'ghost-library-skills', initialVersion: settings['initial-version'],
+      includeComponentInTag: settings['include-component-in-tag'] ?? config['include-component-in-tag'] ?? false,
+      bumpMinorPreMajor: settings['bump-minor-pre-major'] ?? config['bump-minor-pre-major'], changelogPath: settings['changelog-path']});
     const latest = previous ? {tag: new TagName(Version.parse(previous)), sha: 'b'.repeat(40)} : undefined;
     const pr = await strategy.buildReleasePullRequest(parseConventionalCommits([
       {sha: 'a'.repeat(40), message, files: ['skills/ghost-init/SKILL.md']},
@@ -59,5 +59,5 @@ const github = {
       lockfile_checked: fs.existsSync(lockPath)});
   }
   console.log(JSON.stringify({release_please_version: require(path.join(releasePlease, 'package.json')).version,
-    config: '.config/release-please-config.json', success: true, cases: results}, null, 2));
+    config: 'release-please-config.json', success: true, cases: results}, null, 2));
 })().catch(error => { console.error(error); process.exitCode = 1; });
