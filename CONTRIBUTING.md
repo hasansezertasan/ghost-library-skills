@@ -16,7 +16,7 @@ Read [AGENTS.md](AGENTS.md) for source ownership. The [maintainer guide](docs/ma
 
 - Packaging is the template's: `npm run generate` rebuilds `skills/`, the host manifests and `.ai-rulez-generated.json` from `.ai-rulez/`, and `npm run check` reports drift. See [the ai-rulez integration](docs/ai-rulez.md).
 - The Python tooling under `tools/` uses only the standard library (Python 3.12 or newer; `uv python install` installs the version in `.python-version`).
-- `npm test` runs the unit tests. `python3 tools/check_owned_tree.py` rejects symlinks and files ai-rulez did not record under `skills/`, which its own checks accept, and `python3 tools/build_skills.py --check` validates the resource links in the sources.
+- `npm test` runs the unit tests. `npm run check` also runs `tools/check_owned_tree.py` (as its `postcheck` script), which rejects symlinks and files ai-rulez did not record under `skills/`, which its own checks accept, and `python3 tools/build_skills.py --check` validates the resource links in the sources.
 - `OUTPUT=dist/my-bundle npm run build` writes inspectable host bundles; choose an absent or empty destination. CI builds them into a temporary directory.
 - Keep canonical edits and their generated output together. Consult [host support](docs/host-support.md) for native installation and model evaluation evidence before changing host integration.
 

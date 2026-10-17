@@ -41,12 +41,16 @@ still differs from a plain render and why; it is not updated as the project evol
 
 - **Python tooling.** `tools/build_skills.py`, `build_plugins.py`, `smoke_*.py`,
   `run_workflow_evals.py` and the unit tests stay. `check.yml` has extra steps for
-  them after the template's `npm run check`: `check_owned_tree.py`,
-  `build_skills.py --check`, `npm test` and a disposable `npm run build`. The
-  builders no longer call `sync_packaging`; staleness is `npm run check`'s job.
+  them after the template's `npm run check`: `build_skills.py --check`,
+  `npm test` and a disposable `npm run build`. The npm scripts run Python as
+  `${PYTHON:-python3}`, and CI sets `PYTHON` to `uv run --no-project python` so it
+  uses the `.python-version` interpreter, not the runner's. The builders no
+  longer call `sync_packaging`; staleness is `npm run check`'s job.
 - **`tools/check_owned_tree.py`.** The strict check that `skills/` holds no symlink
   and no file ai-rulez did not record (ai-rulez accepts both) moved here from the
-  old wrapper, with tests.
+  old wrapper, with tests. It runs as the `postcheck` script, so `npm run check`
+  (local, CI and the release workflow) includes it without editing the
+  template-owned `check` line; `build_plugins.py` applies it too.
 - **`.ai-rulez/config.toml`.** `shared_resources = ["references", "templates"]`, the
   interface text and the default prompt stay. The `pi` runtime and `[plugin.pi]`
   are gone: Pi now reads `pi.skills = ["./skills"]` from the authored

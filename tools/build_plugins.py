@@ -11,8 +11,10 @@ import tempfile
 
 try:
     from .build_skills import ROOT, build
+    from .check_owned_tree import problems_in
 except ImportError:
     from build_skills import ROOT, build
+    from check_owned_tree import problems_in
 
 
 HOSTS = {"claude": ".claude-plugin", "codex": ".codex-plugin"}
@@ -40,7 +42,11 @@ def write_json(path: Path, value: dict) -> None:
 
 
 def build_plugins(root: Path, output: Path) -> dict[str, int]:
-    # Staleness is `npm run check`'s job; this only bundles what is committed.
+    # Staleness is `npm run check`'s job; this only bundles what is committed,
+    # and refuses symlinks and files ai-rulez did not record, which copytree would copy.
+    problems = problems_in(root)
+    if problems:
+        raise ValueError('Unsafe generated tree; run npm run generate: ' + '; '.join(problems))
     if output.is_symlink():
         raise ValueError(f"Output must not be a symlink: {output}")
     output = output.resolve()

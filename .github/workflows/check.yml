@@ -15,6 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    env:
+      # The npm scripts run Python through this, so CI uses the .python-version interpreter, not the runner's.
+      PYTHON: uv run --no-project python
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -29,7 +32,6 @@ jobs:
       - run: npm ci
       - run: npm run check
       # Repo-specific: the Python unit tests and a disposable build of the host bundles.
-      - run: python3 tools/check_owned_tree.py
-      - run: python3 tools/build_skills.py --check
+      - run: $PYTHON tools/build_skills.py --check
       - run: npm test
       - run: OUTPUT="$RUNNER_TEMP/plugins" npm run build
