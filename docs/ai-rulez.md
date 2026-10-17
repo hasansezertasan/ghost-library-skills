@@ -57,8 +57,9 @@ the same tree OpenCode discovers, so each skill is generated once.
 Installing the root means each host's plugin cache also holds maintainer content
 such as `evals/`, `docs/`, and `tools/`; the hosts load none of it.
 They do load default component paths, so `npm run check` fails when the root gains one
-(for example `.mcp.json`, `hooks/`, `agents/`, `commands/`, `bin/`, or `settings.json`):
-`validate --strict` reports each as `AR9T0 root-component-shipped`.
+(for example `.mcp.json`, `hooks/`, `agents/`, `commands/`, `bin/`, or `settings.json`).
+ai-rulez reports each as `AR9T0 root-component-shipped`, but that rule is off in `.ai-rulez/config.toml`
+because it also flags the Antigravity `plugin.json` adapter, so `tools/check_owned_tree.py` guards these paths instead.
 Claude also runs a best-effort npm install for root `package.json`;
 it adds only the ai-rulez wrapper, and installation succeeds without npm or network.
 See [the single-plugin evidence](../evals/results/automation/single-plugin/README.md).

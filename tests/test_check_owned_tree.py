@@ -34,6 +34,13 @@ class CheckOwnedTreeTests(unittest.TestCase):
         file.symlink_to(target)
         self.assertIn('symlink: skills/ghost-audit/SKILL.md', problems_in(self.root))
 
+    def test_host_loaded_root_components_are_reported(self):
+        (self.root / '.mcp.json').write_text('{}')
+        (self.root / 'hooks').mkdir()
+        problems = problems_in(self.root)
+        self.assertIn('root component: .mcp.json', problems)
+        self.assertIn('root component: hooks', problems)
+
     def test_symlinked_manifest_directory_is_reported(self):
         inside = self.root / 'elsewhere'
         shutil.move(self.root / '.claude-plugin', inside)

@@ -51,6 +51,10 @@ still differs from a plain render and why; it is not updated as the project evol
   old wrapper, with tests. It runs as the `postcheck` script, so `npm run check`
   (local, CI and the release workflow) includes it without editing the
   template-owned `check` line; `build_plugins.py` applies it too.
+- **`AR9T0` is off, so the root-component guard moved.** The template turns the
+  rule off because it also flags the Antigravity `plugin.json` adapter, but it
+  is the rule that rejects `.mcp.json`, `hooks/` and the other host-loaded root
+  paths. `tools/check_owned_tree.py` now rejects those paths itself, with a test.
 - **`.ai-rulez/config.toml`.** `shared_resources = ["references", "templates"]`, the
   interface text and the default prompt stay. The `pi` runtime and `[plugin.pi]`
   are gone: Pi now reads `pi.skills = ["./skills"]` from the authored

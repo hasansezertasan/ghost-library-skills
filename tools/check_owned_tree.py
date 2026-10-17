@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Reject symlinks and unrecorded files in the generated tree, which ai-rulez accepts.
+"""Reject symlinks, unrecorded files and host-loaded root components that ai-rulez accepts.
 
 ai-rulez records what it wrote in `.ai-rulez-generated.json`, but neither
 `verify` nor `generate --check` looks at files it did not record, and it follows
 symlinks inside the checkout. This repo owns `skills/`, so it checks both.
+
+Both catalogs install the repository root, so a path a host loads by default would
+ship to users. ai-rulez reports those as AR9T0, but that rule is off in
+`.ai-rulez/config.toml` because it also flags the Antigravity `plugin.json` adapter,
+so the other paths are guarded here.
 """
 
 from __future__ import annotations
@@ -20,6 +25,8 @@ MANIFEST_PATHS = (
 SIDECAR = Path('.ai-rulez-generated.json')
 ANTIGRAVITY_ADAPTER = Path('plugin.json')
 OWNED_TREE = Path('skills')
+# Paths Claude or Codex load from an installed plugin by default; plugin.json is the Antigravity adapter.
+ROOT_COMPONENTS = ('.mcp.json', '.lsp.json', 'hooks', 'agents', 'commands', 'bin', 'settings.json', 'output-styles', 'monitors')
 
 
 def symlinked(root: Path) -> list[str]:
@@ -51,12 +58,17 @@ def unrecorded(root: Path) -> list[str]:
     return problems
 
 
+def root_components(root: Path) -> list[str]:
+    """Name host-loaded paths at the repository root, which both catalogs would ship."""
+    return [f'root component: {name}' for name in ROOT_COMPONENTS if (root / name).exists() or (root / name).is_symlink()]
+
+
 def problems_in(root: Path) -> list[str]:
-    return symlinked(root) + unrecorded(root)
+    return symlinked(root) + unrecorded(root) + root_components(root)
 
 
 if __name__ == '__main__':
     found = problems_in(ROOT)
     if found:
         sys.exit('\n'.join(found) + '\nRun npm run generate, then remove what remains by hand.')
-    print('Generated tree has no symlinks or unrecorded files.')
+    print('Generated tree has no symlinks, unrecorded files or host-loaded root components.')
