@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "source_hash": "blake3:d520287f06e496e1757fc040ecd0b21592dbae89976ffe4beaff959f71b78547",
+  "source_hash": "blake3:5eb0bbdf5488931cc60c5e8f3b4a6181ebb708b7d8c1e0eae4be52a84a34ed8f",
   "outputs": {
     ".agents/plugins/marketplace.json": {
       "content_hash": "blake3:1761e93812464ae14e038516ee0d1819392261f8fae301b32d5c8ce75f7613cb",
@@ -16,6 +16,10 @@
     },
     ".codex-plugin/plugin.json": {
       "content_hash": "blake3:ad98a712d1b80c81c57e9bcf97ad5aa8cb4279f5523c4b0a724d5d815547dcfe",
+      "mode": "0644"
+    },
+    "package.json": {
+      "content_hash": "blake3:144ab8cc00ffdb1a35286f7aada52035fdb4763af1696c6b5b75316802f5d084",
       "mode": "0644"
     },
     "skills/ghost-audit/SKILL.md": {
@@ -882,5 +886,17 @@
       "content_hash": "blake3:2ccd2d4a4df11bbbc476f7d49f1e2e4f8968c53ba6ef21554214c18f7b5b2dd3",
       "mode": "0644"
     }
+  },
+  "managed": {
+    "package.json": [
+      "name",
+      "version",
+      "description",
+      "author",
+      "repository",
+      "keywords",
+      "pi",
+      "files"
+    ]
   }
 }

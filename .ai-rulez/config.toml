@@ -13,7 +13,9 @@ gitignore = false
 # Tested with codex-cli 0.162.1: a root plugin.json declaring the Antigravity
 # $schema is ignored and Codex falls back to .codex-plugin/plugin.json, but one
 # declaring the portable agent-plugins.org $schema is adopted as Codex's manifest.
-# Keep the Antigravity $schema, and re-test when Codex changes.
+# Keep the Antigravity $schema, and re-test when Codex changes. AR9T0 also
+# flags .mcp.json, hooks/ and the other host-loaded paths at the root, so
+# scripts/check-repo.mjs rejects those itself; keep its list in step with the rule.
 [lint.severity]
 AR9T0 = "off"
 
@@ -27,7 +29,7 @@ version_from = "package.json"
 description = "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence."
 repository = "https://github.com/hasansezertasan/ghost-library-skills"
 keywords = ["ghost-library", "specifications", "conformance", "skills", "pi-package"]
-runtimes = ["claude", "codex"]
+runtimes = ["claude", "codex", "pi"]
 category = "Productivity"
 content_root = ".ai-rulez"
 # Every skill bundles these shared files.
@@ -50,6 +52,14 @@ developer_name = "Hasan Sezer Tasan"
 # Single-plugin catalogs point at the repository root ("./").
 [plugin.codex]
 marketplace = true
+
+# Pi reads the root skills/ tree. ai-rulez derives the `pi` entry, the
+# `pi-package` keyword and the `files` allowlist in package.json from the skills
+# on disk and rewrites the whole file (sorted keys, expanded arrays), keeping
+# the authored fields (scripts, devDependencies). Edit those, not the derived ones.
+[plugin.pi]
+skills_dir = "skills"
+package_json = "merge"
 
 [marketplace]
 # Kept from before the adoption: it is part of the install command users run.
