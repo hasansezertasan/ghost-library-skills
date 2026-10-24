@@ -5,7 +5,7 @@
   },
   "description": "Maintain ghost-library specifications, portable fixtures, and downstream conformance evidence.",
   "devDependencies": {
-    "ai-rulez": "5.3.0"
+    "ai-rulez": "5.6.3"
   },
   "engines": {
     "node": ">=22"
